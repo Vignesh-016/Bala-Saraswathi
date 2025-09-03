@@ -1,0 +1,402 @@
+/* ============ Theme ============ */
+:root{
+  --ink:#0f172a;
+  --muted:#475569;
+  --primary:#2563eb;
+  --primary-600:#1e4ed8;
+  --panel:#ffffff;
+  --panel-soft:#eaf2ff;
+  --border:#e5e7eb;
+  --bg:#f4f8fc;
+}
+
+/* ============ Hero Banner ============ */
+.contact-hero {
+  position: relative;
+  width: min(1500px, 100%);
+  margin: 28px auto 10px;
+  height: 400px; /* Increased height */
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 16px 36px rgba(2, 6, 23, .18);
+}
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .15));
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push content to bottom */
+  padding: 40px; /* Add padding for spacing */
+  color: #fff;
+}
+.hero-inner h1 {
+  margin: 0 0 6px;
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: .3px;
+}
+.hero-inner p {
+  margin: 0;
+  font-size: clamp(14px, 2.4vw, 18px);
+  opacity: .95;
+}
+
+/* ============ Patterned Contact Area ============ */
+.contact-area{
+  position:relative;
+  background:#f7fbff;
+  padding:28px 0 70px;
+  overflow:hidden;
+}
+.contact-area::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(120deg, rgba(2,6,23,0.06) 1px, transparent 1px),
+    linear-gradient(300deg, rgba(2,6,23,0.06) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px;
+  opacity:.45;
+  pointer-events:none;
+}
+.contact-grid{
+  position:relative; z-index:1;
+  display:grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap:28px;
+}
+
+/* ============ Left meta ============ */
+.section-title{
+  font-size: clamp(22px, 3.2vw, 32px);
+  font-weight:800; margin:6px 0 10px;
+}
+.lead{
+  color:var(--muted);
+  line-height:1.9;
+  max-width:52ch;
+  margin:0 0 18px 0;
+  font-size:15.6px;
+}
+.subhead{ font-size:14px; letter-spacing:.6px; margin:20px 0 10px; color:#111; font-weight:800; }
+.info-row{
+  display:flex; gap:12px; align-items:flex-start;
+  margin:12px 0;
+}
+.info-row .icon{
+  flex:0 0 34px; width:34px; height:34px;
+  display:grid; place-items:center;
+  border-radius:8px; background:#fff;
+  color:var(--primary);
+  box-shadow:0 6px 14px rgba(37,99,235,.25);
+}
+.info-row .icon svg{ width:18px; height:18px; }
+.info-row .label{ font-weight:800; margin-bottom:2px; }
+.address{ margin:.2rem 0 0; color:var(--muted); }
+
+/* ============ Right form card ============ */
+.contact-card{
+  background:#eaf2ff;
+  border:1px solid #e7edf9;
+  border-radius:12px;
+  box-shadow:0 18px 36px rgba(2,6,23,.12);
+  overflow:hidden;
+}
+.card-head{
+  display:flex; justify-content:center; align-items:center;
+  padding:14px 18px; background:#eaf2ff;
+}
+.card-head span{
+  background:#fff;
+  border-radius:10px;
+  padding:10px 18px;
+  font-weight:800;
+  color:#1b2b5a;
+  box-shadow:0 8px 18px rgba(2,6,23,.08);
+}
+
+/* form layout */
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px 16px;
+  padding:16px;
+  background:#eaf2ff;
+}
+.form-grid label{ display:flex; flex-direction:column; gap:6px; font-size:13px; color:#1b2b5a; }
+.form-grid label.full{ grid-column:1 / -1; }
+input, select, textarea{
+  border:1px solid var(--border);
+  background:#fff;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:14px;
+  outline: none;
+}
+input:focus, select:focus, textarea:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+.select-wrap{ position:relative; }
+.select-wrap select{ width:100%; appearance:none; }
+.select-wrap::after{
+  content:"▾";
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  pointer-events:none; color:#475569; font-size:14px;
+}
+.cta{
+  grid-column:1 / -1;
+  height:44px;
+  border:none;
+  border-radius:10px;
+  font-weight:800;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 10px 22px rgba(37,99,235,.35);
+}
+.cta:hover{ background:var(--primary-600); }
+
+/* ============ Responsive tweaks ============ */
+@media (max-width: 980px){
+  .contact-grid{ grid-template-columns: 1fr; }
+  .contact-card{ max-width: 640px; }
+}
+@media (max-width: 600px){
+  .form-grid{ grid-template-columns: 1fr; }
+  .hero-inner{ padding-left:20px; }
+}
+
+/* Full Width Map */
+.map-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.map-section iframe {
+  width: 100%;
+  height: 500px; /* adjust height if needed */
+  border: none;
+  display: block;
+}
+
+/* ------------------------------------------------------- */
+/* -------------------- BRANCHES SECTION ----------------- */
+/* ------------------------------------------------------- */
+
+/* ============ Fix Bootstrap Conflicts ============ */
+.branches-sec * { box-sizing: border-box !important; }
+.branches-sec .container {
+  max-width: 1160px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+.branches-sec h2 {
+  margin: 0 0 8px 0 !important;
+  font-size: clamp(22px, 3.5vw, 32px) !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  text-align: start !important;
+}
+.branches-sec p {
+  margin: 0 0 24px 0 !important;
+  color: var(--muted) !important;
+  line-height: 1.8 !important;
+  max-width: 150ch !important;
+  text-align: start !important;
+}
+
+/* Grid */
+.branches-sec .branch-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 26px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media (max-width: 980px){
+  .branches-sec .branch-grid{ grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px){
+  .branches-sec .branch-grid{ grid-template-columns: 1fr !important; }
+  .branches-sec .photo{ height: 220px !important; }
+  .branches-sec .label{ bottom: 14px !important; }
+}
+
+/* Card */
+.branches-sec .branch-card {
+  position: relative !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;           /* CHANGED: keep overlay inside card */
+  background: #dbe7ff !important;
+  box-shadow: 0 12px 28px rgba(2,6,23,.12) !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.branches-sec .photo {
+  margin: 0 !important;
+  height: 210px !important;
+  background: #000 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.branches-sec .photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform .25s ease !important;
+}
+.branches-sec .branch-card:hover .photo img { transform: scale(1.02) !important; }
+
+/* City label */
+.branches-sec .label {
+  position: absolute !important;
+  left: 14px !important;
+  right: 14px !important;
+  bottom: 12px !important;
+  margin: 0 auto !important;
+  width: max-content !important;
+  max-width: calc(100% - 28px) !important;
+  padding: 10px 20px !important;
+  background: #fff !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  box-shadow: 0 8px 18px rgba(2,6,23,.2) !important;
+  outline: none !important;
+  text-decoration: none !important;
+  color: var(--ink) !important;
+}
+.branches-sec .label:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+  transition: all 0.2s ease !important;
+}
+.label, .label:hover { text-decoration: none; }
+
+/* Dropdown becomes in-card overlay (NOT a separate box) */
+.branches-sec .dropdown {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;                 /* CHANGED: anchor to bottom inside card */
+  top: auto !important;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.55) 45%,
+    rgba(0,0,0,.80) 100%
+  ) !important;                          /* CHANGED: dark overlay */
+  border: none !important;               /* CHANGED: no border box */
+  border-radius: 0 0 14px 14px !important;
+  box-shadow: none !important;           /* CHANGED: no external shadow */
+  padding: 14px 16px 12px !important;
+  color: #fff !important;                /* CHANGED: white text over dark */
+  opacity: 0 !important;
+  transform: translateY(8px) !important;
+  visibility: hidden !important;
+  transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s !important;
+  z-index: 5 !important;
+}
+.branches-sec .dropdown .caret { display: none !important; } /* CHANGED: no pointer */
+
+/* Show overlay in-card on hover/focus */
+.branches-sec .branch-card:hover .dropdown,
+.branches-sec .branch-card:focus-within .dropdown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+  transition-delay: 0s !important;
+}
+
+/* Overlay rows */
+.branches-sec .dropdown .row {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  padding: 6px 0 !important;
+  border-bottom: none !important;        /* CHANGED: no separators inside overlay */
+  margin: 0 !important;
+  color: #fff !important;
+}
+.branches-sec .dropdown .row:last-child { border-bottom: none !important; }
+.branches-sec .dropdown .ico {
+  flex: 0 0 28px !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #fff !important;                /* CHANGED: white icons */
+  background: rgba(255,255,255,.15) !important; /* CHANGED: subtle pill bg */
+  border-radius: 8px !important;
+  box-shadow: none !important;           /* CHANGED: no external shadow */
+}
+.branches-sec .dropdown svg { width: 16px !important; height: 16px !important; }
+.branches-sec .dropdown a {
+  color: #fff !important;                /* CHANGED: white links */
+  text-decoration: none !important;
+}
+
+/* Base & layout helpers (kept) */
+*{ box-sizing:border-box }
+html,body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:var(--ink); background:#fff; }
+a{ color:inherit; text-decoration:none; }
+.branches-sec{
+  position:relative;
+  padding:42px 0 64px;
+  background:var(--bg);
+  overflow:visible; /* section can overflow, card itself is hidden */
+}
+.branches-sec::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(120deg, rgba(2,6,23,.04) 1px, transparent 1px),
+    linear-gradient(300deg, rgba(2,6,23,.04) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px;
+  mask-image: linear-gradient(#000, rgba(0,0,0,.2));
+  pointer-events:none;
+}
+.dropdown a, .dropdown a:hover { text-decoration: none; }
+.container{ width:min(1160px, 100%); margin-inline:auto; padding-inline:20px; }
+.title{ margin:0 0 8px; font-size: clamp(22px, 3.5vw, 32px); font-weight:800; }
+.intro{ margin:0 0 24px; color:var(--muted); line-height:1.8; max-width:65ch; }
+
+/* generic grid fallbacks (non-namespaced) */
+.branch-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:26px;
+}
+@media (max-width: 980px){
+  .branch-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px){
+  .branch-grid{ grid-template-columns: 1fr; }
+}
+
+/* Touch devices: keep overlay visible for usability */
+@media (hover: none) {
+  .branches-sec .dropdown {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}

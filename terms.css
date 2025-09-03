@@ -1,0 +1,94 @@
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+a { color: #ffffff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { width: min(1100px, 95%); margin: auto; }
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-inner h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs {
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+/* Content Section */
+.content {
+  margin-bottom: 60px;
+}
+
+.content h2 {
+  font-size: 26px;
+  margin: 25px 0 15px;
+  color: #222;
+}
+
+.content h3 {
+  font-size: 20px;
+  margin: 20px 0 12px;
+  color: #444;
+}
+
+.content p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.content ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { height: 220px; }
+  .hero-inner h1 { font-size: 24px; }
+  .content h2 { font-size: 22px; }
+  .content h3 { font-size: 18px; }
+}
