@@ -196,7 +196,7 @@
   .founder-container {
     display: flex;
     align-items: flex-start;
-    max-width: 1200px;   /* can tweak */
+    max-width: 1400px;   /* can tweak */
     width: 100%;
     gap: 60px;
   }
@@ -226,13 +226,13 @@
   .icon-badge {
     position: absolute;
     bottom: -15px;
-    right: -15px;
+    right: 25px;
     background: #007bff;
     color: #fff;
     font-size: 22px;
     font-weight: bold;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,81 +268,109 @@
   }
   
 
-  :root{
-    --primary:#2563eb;
-    --ink:#0f172a;
-    --pill-bg:#ffffff;
-    --pill-br:#e5e7eb;
-    --section-bg:#f3f7fb;
+:root{
+  --primary:#2563eb;
+  --ink:#0f172a;
+  --pill-bg:#ffffff;
+  --pill-br:#e5e7eb;
+  --section-bg:#f3f7fb;
+  --timeline-banner-height: 320px; /* consistent banner height for all panels */
+}
+
+/* ===== Section wrapper ===== */
+.timeline-sec{
+  background: var(--section-bg);
+  padding: 42px 18px 64px;
+  display:flex;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Subtle geometric pattern */
+.timeline-sec::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(120deg, rgba(2,6,23,0.035) 1px, transparent 1px),
+    linear-gradient(300deg, rgba(2,6,23,0.035) 1px, transparent 1px);
+  background-size: 52px 52px, 52px 52px;
+  mask-image: linear-gradient(#000, rgba(0,0,0,0.25));
+  pointer-events:none;
+}
+
+.timeline{
+  width:min(1100px, 100%);
+  position:relative;
+  z-index:1;
+}
+
+/* ====== Tabs ====== */
+.tabbar{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+.tabbar input{ display:none; }
+/* Hide timeline radios that control panels */
+.timeline > input{ position:absolute; opacity:0; pointer-events:none; }
+
+.tab{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:108px;
+  height:44px;
+  padding:0 18px;
+  border-radius:12px;
+  background:var(--pill-bg);
+  border:2px solid var(--pill-br);
+  color:#0b1220;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s ease;
+}
+.tab:hover{ transform: translateY(-1px); }
+
+/* Active tab */
+#y1990:checked ~ .tabbar label[for="y1990"],
+#y2000:checked ~ .tabbar label[for="y2000"],
+#y2010:checked ~ .tabbar label[for="y2010"],
+#y2020:checked ~ .tabbar label[for="y2020"],
+#y2025:checked ~ .tabbar label[for="y2025"]{
+  background:var(--primary);
+  border-color:var(--primary);
+  color:#fff;
+  box-shadow: 0 6px 18px rgba(37,99,235,.35);
+}
+
+/* --- Ensure all timeline banners/panels are the same size --- */
+.panels {
+  min-height: var(--timeline-banner-height);
+}
+.panel {
+  min-height: var(--timeline-banner-height);
+  display: none;
+  opacity: 0;
+  transform: translateY(10px) scale(.995);
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(2,6,23,.15);
+  background: #000;
+  /* Make sure all panels have the same height and content is vertically centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .panels,
+  .panel {
+    min-height: 220px;
   }
-  
-  /* ===== Section wrapper ===== */
-  .timeline-sec{
-    background: var(--section-bg);
-    padding: 42px 18px 64px;
-    display:flex;justify-content:center;
-    position:relative;
-    overflow:hidden;
-  }
-  
-  /* Subtle geometric pattern */
-  .timeline-sec::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image:
-      linear-gradient(120deg, rgba(2,6,23,0.035) 1px, transparent 1px),
-      linear-gradient(300deg, rgba(2,6,23,0.035) 1px, transparent 1px);
-    background-size: 52px 52px, 52px 52px;
-    mask-image: linear-gradient(#000, rgba(0,0,0,0.25));
-    pointer-events:none;
-  }
-  
-  .timeline{
-    width:min(1100px, 100%);
-    position:relative;
-    z-index:1;
-  }
-  
-  /* ====== Tabs ====== */
-  .tabbar{
-    display:flex;
-    gap:24px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-bottom:28px;
-  }
-  .tabbar input{ display:none; }
-  /* Hide timeline radios that control panels */
-  .timeline > input{ position:absolute; opacity:0; pointer-events:none; }
-  
-  .tab{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-width:108px;
-    height:44px;
-    padding:0 18px;
-    border-radius:12px;
-    background:var(--pill-bg);
-    border:2px solid var(--pill-br);
-    color:#0b1220;
-    font-weight:700;
-    cursor:pointer;
-    transition:.2s ease;
-  }
-  .tab:hover{ transform: translateY(-1px); }
-  
-  /* Active tab */
-  #y1990:checked ~ .tabbar label[for="y1990"],
-  #y2000:checked ~ .tabbar label[for="y2000"],
-  #y2010:checked ~ .tabbar label[for="y2010"],
-  #y2020:checked ~ .tabbar label[for="y2020"],
-  #y2025:checked ~ .tabbar label[for="y2025"]{
-    background:var(--primary);
-    border-color:var(--primary);
-    color:#fff;
-    box-shadow: 0 6px 18px rgba(37,99,235,.35);
-  }
+}
   
  :root{
   --primary:#0b66ff;
@@ -586,15 +614,19 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sa
   padding: var(--section-y) 0;
 }
 
-/* Normalize banner to full-bleed background with aligned inner content */
-.about-banner{
-  width:100%;
-  max-width:none;
-  margin:0;
-  min-height:420px;
-  border-radius:0;
-  padding-left:0; padding-right:0;
+/* Boxed banner with reduced left/right size and centered */
+.about-banner {
+  width: 90%;               /* takes 90% of the screen */
+  max-width: 1400px;        /* don’t let it get too wide */
+  margin: 40px auto;        /* centers it horizontally */
+  min-height: 420px;
+  border-radius: 12px;      /* rounded corners */
+  padding-left: 40px; 
+  padding-right: 40px;
+  overflow: hidden;         /* keep content clipped */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
+
 
 /* Give inner wrappers a shared container behavior */
 .about-text,

@@ -18,39 +18,42 @@
 
 <body>
 
-    <!-- Top bar with contact -->
-    <div class="text-dark py-1 small d-flex justify-content-between px-3" style="background:#EFF8FF";>
-        <div>
-            <p><img src="/assets/images/phone.png">
-                +91 9629587444</p>
-        </div>
-        <div>
-            <p class="me-2"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-
-        </div>
-    </div>
-    <div class="align-item-center logo";>
-      <img src="assets/images/logo1.png" />
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white  sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <div>
+    <!-- Top bar with contact + social icons -->
+    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
+                    +91 9629587444</p>
+            </div>
+            
+            <div class="d-flex align-items-center">
+                <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
+                <!-- Social icons -->
+                <div class="social-icons">
                     <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Logo left, nav right in navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Logo on the left -->
+            <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+                <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
             </a>
+            <!-- Toggler for mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
                 aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-center">
+            <!-- Nav menu on the right -->
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
@@ -123,8 +126,15 @@ Join today and experience the freedom of flexible finance!
 
     <section class="plans-section">
         <div class="container">
-          <h2 class="fw-bold text-primary mb-3 text-center">OUR PLANS</h2>
-          <p class="mb-4 text-center">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="fw-bold text-primary mb-0">OUR PLANS</h2>
+            <button 
+              class="btn btn-outline-primary"
+              style="border-width:2px; border-radius:6px; font-weight:500; padding: 0.5rem 1.5rem;">
+              View all plans
+            </button>
+          </div>
+          <p class="mb-4 text-left">
             Life brings different dreams and challenges, and we’re here to support them all. 
             Our chit fund plans are designed to grow with your goals.
           </p>
@@ -137,7 +147,7 @@ Join today and experience the freedom of flexible finance!
                 <div class="plan-title">EDUCATION PLAN</div>
                 <div class="plan-desc">Build your child’s future step by step with disciplined savings and rewarding returns.</div>
                 <div class="plan-details">
-                  <p><i class="fa-solid fa-calendar"></i> Plan: ₹10,000 per month</p>
+                  <p><i class="fa-solid fa-calendar"></i> Plan: 5 lakh</p>
                   <p><i class="fa-solid fa-clock"></i> Duration: 50 Months</p>
                   <p><i class="fa-solid fa-location-dot"></i> Branch: Tirunelveli</p>
                 </div>
@@ -150,7 +160,7 @@ Join today and experience the freedom of flexible finance!
                 <div class="plan-title">BUSINESS PLAN</div>
                 <div class="plan-desc">Fuel your business dreams with flexible funds, right when you need them most.</div>
                 <div class="plan-details">
-                  <p><i class="fa-solid fa-briefcase"></i> Flexible monthly plan</p>
+                  <p><i class="fa-solid fa-briefcase"></i> Plan: 10lakh</p>
                   <p><i class="fa-solid fa-clock"></i> Duration: 36 Months</p>
                   <p><i class="fa-solid fa-location-dot"></i> Branch: Chennai</p>
                 </div>
@@ -163,7 +173,7 @@ Join today and experience the freedom of flexible finance!
                 <div class="plan-title">WEDDING PLAN</div>
                 <div class="plan-desc">Make your dream wedding stress-free with steady saving and timely payouts.</div>
                 <div class="plan-details">
-                  <p><i class="fa-solid fa-ring"></i> Affordable EMI</p>
+                  <p><i class="fa-solid fa-ring"></i> Plan: 25lakh </p>
                   <p><i class="fa-solid fa-clock"></i> Duration: 24 Months</p>
                   <p><i class="fa-solid fa-location-dot"></i> Branch: Madurai</p>
                 </div>
@@ -176,7 +186,7 @@ Join today and experience the freedom of flexible finance!
                 <div class="plan-title">HOUSING PLAN</div>
                 <div class="plan-desc">Turn your dream home into reality with smart, flexible savings schemes.</div>
                 <div class="plan-details">
-                  <p><i class="fa-solid fa-house"></i> Easy payment scheme</p>
+                  <p><i class="fa-solid fa-house"></i> Plan: 50lakh</p>
                   <p><i class="fa-solid fa-clock"></i> Duration: 60 Months</p>
                   <p><i class="fa-solid fa-location-dot"></i> Branch: Coimbatore</p>
                 </div>
@@ -612,23 +622,41 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                 </div>
             </div>
 
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Are there any joining fees??</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    Some schemes require a nominal registration fee. All charges are clearly outlined before joining.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>How does the auction process work?</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    Members bid discounts on the pooled amount; the highest discount bidder wins the prize money.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Who manages the chit fund?</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    A licensed organizer collects contributions, conducts auctions, distributes payouts, and ensures regulatory compliance.
+                </div>
+            </div>
+
         </div>
     </section>
 
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Footer Layout</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    </head>
-
-    <body>
+    
 
         <footer class="text-dark pt-5 pb-4" style="background:#EFF8FF">
             <div class="container">
@@ -679,18 +707,18 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                     <!-- Follow Us -->
                     <div class="col-md-3">
                         <h5 class="text-primary">Follow Us</h5>
-                        <p><img src="/assets/images/phone.png"> +91 8903125809</p>
+                        <p><img src="/assets/images/phone.png"> +91 9629587444</p>
                         <p><img src="/assets/images/mail.png">balasaraswathichitspvtltd@gmail.com</p>
                         <p><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
 
                         <!-- Social Icons -->
                         <div class="mt-3">
-                            <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-dark me-3"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="text-dark me-3"><i class="fas fa-phone"></i></a>
-                            <a href="#" class="text-dark me-3"><i class="fas fa-envelope"></i></a>
-                            <a href="#" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="tel:+919629587444" class="text-dark me-3" target="_blank" rel="noopener"><i class="fas fa-phone"></i></a>
+                            <a href="mailto:balasaraswathichitspvtltd@gmail.com" class="text-dark me-3" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+                            <a href="https://wa.me/+919629587444" class="text-dark" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
 

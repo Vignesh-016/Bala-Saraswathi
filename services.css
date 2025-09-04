@@ -1,0 +1,436 @@
+.services-banner {
+    position: relative;
+    max-width: 1350px;       /* Boxed width */
+    margin: 40px auto;       /* Center */
+    border-radius: 12px;     /* Rounded edges */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.services-banner .banner-img {
+    width: 100%;
+    height: 350px;           /* Fixed height like screenshot */
+    object-fit: cover;       /* Crops nicely */
+    display: block;
+}
+
+.services-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* Dark overlay */
+    z-index: 1;
+}
+
+.services-content {
+    position: absolute;
+    bottom: 30px;   /* push content near bottom */
+    left: 40px;     /* align to left */
+    z-index: 2;
+    color: white;
+    text-align: left;
+}
+
+
+.services-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services-content p {
+    font-size: 1.1rem;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+  }
+  
+  .plans-section {
+    padding: 20px;
+  }
+  
+  .plans-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .plans-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .plan-btn {
+    padding: 12px;
+    background: #ddd;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .plan-btn.active {
+    background: #0072ff;
+    color: #fff;
+  }
+  
+  .help-box {
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .help-box img {
+    width: 100%;
+    display: block;
+  }
+  
+  .help-content {
+    padding: 15px;
+  }
+  
+  .help-content h3 {
+    margin: 0 0 10px;
+  }
+  
+  .phone {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .plans-content {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .months-box {
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .month-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .month-btn.active {
+    background: #1e90ff;
+  }
+  
+  .cta-box {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .cta-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .cta-btn.primary {
+    background: #0072ff;
+  }
+  
+  .cta-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive */
+  @media(max-width: 992px) {
+    .plans-container {
+      flex-direction: column;
+    }
+  }
+  .plan-btn {
+    padding: 12px 16px;
+    background: #ddd;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative; /* needed for arrow */
+  }
+  
+  .plan-btn.active {
+    background: #0072ff;
+    color: #fff;
+  }
+  
+  /* Arrow for active plan */
+  .plan-btn.active::after {
+    content: "➔"; /* Arrow symbol */
+    position: absolute;
+    right: 10px;   /* adjust spacing */
+    font-size: 16px;
+    color: #fff;   /* arrow color */
+  }
+
+  
+  /*--- Working Model Section Styles ---*/
+.working-model {
+  background: #eaf4ff;
+  padding: 60px 0;
+}
+
+.working-model-container {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  gap: 10px;                 /* more gap between image & steps */
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.working-model-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.working-model-left img {
+  width: 100%;
+  max-width: 600px;   /* increased from 525px */
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.working-model-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* <-- NEW: center the steps horizontally */
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0072ff;
+  margin-bottom: 10px;
+  text-align: center;   /* center heading */
+}
+
+.section-desc {
+  font-size: 15px;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;   /* center description */
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;       /* <-- NEW: center align column */
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;   /* <-- NEW: center each step horizontally */
+  width: 100%;
+  max-width: 500px;          /* optional: keep column neat */
+}
+
+.step-icon {
+  background: #0072ff;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 32px;   /* slightly bigger */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.step-content {
+  max-width: 90%;
+}
+
+.step-number {
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+.step-desc {
+  font-size: 16px;
+  color: #444;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .working-model-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .working-model-right {
+    margin-top: 30px;
+    align-items: center;   /* center steps on smaller screens */
+  }
+  .step {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+
+
+  :root{
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#6b7280;
+    --star:#fbbf24;
+    --shadow:0 18px 40px rgba(2,6,23,.12);
+    --radius:14px;
+  }
+  
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  
+  .wrap{
+    max-width:1180px;
+    margin-inline:auto;
+    padding:56px 20px 80px;
+  }
+  .section-head{ margin-bottom:26px; }
+  .eyebrow{
+    letter-spacing:.08em;
+    font-weight:800;
+    font-size:26px;
+    color:#1e3a8a;
+    margin:0 0 10px;
+  }
+  .sub{
+    margin:0;
+    font-size:14px;
+    color:#667085;
+    max-width:900px;
+  }
+  
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap:22px;
+    margin-top:26px;
+  }
+  
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    min-height:240px;
+  }
+  .stars{
+    font-size:18px;
+    color:var(--star);
+    margin-bottom:12px;
+  }
+  .quote{
+    font-size:14px;
+    color:#1f2937;
+    margin:0 0 18px;
+  }
+  
+  /* === updated footer (no bg, no line) === */
+  .card-footer{
+    margin-top:auto;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:none;   /* remove bg */
+    border-top:none;   /* remove line */
+    padding:0;
+  }
+  .avatar{
+    width:36px;height:36px;border-radius:50%;
+    object-fit:cover;
+    display:block;
+  }
+  .person{
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .name{
+    font-weight:700;
+    font-size:14px;
+  }
+  .meta{
+    font-size:12px;color:var(--muted);
+  }
+  
+  @media (max-width: 1100px){
+    .grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  @media (max-width: 820px){
+    .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  @media (max-width: 560px){
+    .wrap{ padding:36px 16px 60px; }
+    .eyebrow{ font-size:22px; }
+    .sub{ font-size:13px; }
+    .grid{ grid-template-columns: 1fr; }
+  }
+  

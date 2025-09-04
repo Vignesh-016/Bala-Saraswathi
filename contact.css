@@ -13,7 +13,7 @@
 /* ============ Hero Banner ============ */
 .contact-hero {
   position: relative;
-  width: min(1500px, 100%);
+  width: min(1400px, 100%);
   margin: 28px auto 10px;
   height: 400px; /* Increased height */
   border-radius: 14px;

@@ -400,33 +400,43 @@
                 padding: 80px 10%;
                 background: url('/assets/images/testi.png');
                 display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
+                justify-content: center;
+                align-items: center;
                 gap: 50px;
             }
 
             /* Left Content */
             .faq-left {
                 flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
             }
 
             .faq-left h2 {
                 color: #1663f8;
                 font-size: 22px;
                 margin-bottom: 15px;
+                text-align: left;
+                width: 100%;
             }
 
             .faq-left p {
                 color: #333;
                 line-height: 1.6;
-                margin-bottom: 30px;
+                margin-bottom: 5px;
+                text-align: left;
+                width: 100%;
             }
 
             .faq-left .experience {
                 font-size: 90px;
                 font-weight: bold;
                 color: #1663f8;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
+                text-align: left;
+                width: 100%;
             }
 
             .faq-left span {
@@ -434,6 +444,8 @@
                 font-size: 22px;
                 font-weight: 600;
                 color: #000;
+                text-align: left;
+                width: 100%;
             }
 
             /* Right Accordion */
