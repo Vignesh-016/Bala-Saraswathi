@@ -1,94 +1,75 @@
 const plans = {
-    "1": {
-      title: "1 Lakh",
-      img: "https://via.placeholder.com/800x300/ff9999/333?text=1+Lakh",
-      desc: "This is the main description for the 1 Lakh plan.",
-      months: {
-        "20": "For 20 months: You pay smaller installments with steady growth.",
-        "40": "For 40 months: You pay lower monthly amounts with long-term benefits."
-      }
-    },
-    "2": {
-      title: "2 Lakhs",
-      img: "https://via.placeholder.com/800x300/99ccff/333?text=2+Lakhs",
-      desc: "This is the main description for the 2 Lakh plan.",
-      months: {
-        "20": "20 months option gives you a balanced short-term return.",
-        "40": "40 months option maximizes savings with extended timeline."
-      }
-    },
-    "5": {
-      title: "5 Lakhs",
-      img: "https://via.placeholder.com/800x300/ccffcc/333?text=5+Lakhs",
-      desc: "This is the main description for the 5 Lakh plan.",
-      months: {
-        "20": "For 20 months: higher monthly payments, faster maturity.",
-        "40": "For 40 months: lower payments, longer growth."
-      }
-    },
-    "10": {
-      title: "10 Lakhs",
-      img: "https://via.placeholder.com/800x300/ffcc99/333?text=10+Lakhs",
-      desc: "This is the main description for the 10 Lakh plan.",
-      months: {
-        "20": "20 months: aggressive savings with fast growth.",
-        "40": "40 months: steady, long-term plan."
-      }
-    },
-    "25": {
-      title: "25 Lakhs",
-      img: "https://via.placeholder.com/800x300/cc99ff/333?text=25+Lakhs",
-      desc: "This is the main description for the 25 Lakh plan.",
-      months: {
-        "20": "20 months: short-term high installment plan.",
-        "40": "40 months: relaxed payment with compounded growth."
-      }
-    },
-    "50": {
-      title: "50 Lakhs",
-      img: "https://via.placeholder.com/800x300/99ffcc/333?text=50+Lakhs",
-      desc: "This is the main description for the 50 Lakh plan.",
-      months: {
-        "20": "20 months: best for rapid wealth accumulation.",
-        "40": "40 months: extended plan for consistent savings."
-      }
+  "5": {
+    title: "5 Lakhs",
+    img: "/assets/images/Savings through chit.png", // Use local asset image as requested
+    desc: "The ₹5,00,000 chit fund scheme is perfect for achieving bigger financial goals, offering reliable savings, transparent bidding, and instant payouts. Flexible options ensure each member finds the right fit for their needs, whether planning for family, business, or major purchases. This is the main description for the 5 Lakh plan.",
+    months: {
+      "20": "Save ₹25,000 per month for 20 months and access your lump sum faster. This plan is ideal for those who want quick results and timely fund disbursement",
+      "40": "Contribute ₹12,500 per month over 40 months for a smoother savings journey. Enjoy lower monthly payments while gaining all the benefits of secure chit fund participation"
     }
-  };
-  
-  const planBtns = document.querySelectorAll(".plan-btn");
-  const monthBtns = document.querySelectorAll(".month-btn");
-  const planImage = document.getElementById("planImage");
-  const planTitle = document.getElementById("planTitle");
-  const planDesc = document.getElementById("planDesc");
-  const monthDesc = document.getElementById("monthDesc");
-  
-  let currentPlan = "1";
-  let currentMonth = "20";
-  
-  // Update Plan
-  planBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      planBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-  
-      currentPlan = btn.dataset.plan;
-      const data = plans[currentPlan];
-  
-      planImage.src = data.img;
-      planTitle.textContent = data.title;
-      planDesc.textContent = data.desc;
-      monthDesc.textContent = data.months[currentMonth];
-    });
+  },
+  "10": {
+    title: "10 Lakhs",
+    img: "https://via.placeholder.com/800x300/ffcc99/333?text=10+Lakhs",
+    desc: "The ₹10,00,000 chit fund scheme lets you save with confidence and enjoy spot payments for life’s bigger goals. Tailored for ambitious savers, this plan combines secure contributions, transparent auctions, and flexible options to fit your needs.",
+    months: {
+      "20": "Pay ₹50,000 per month for 20 months to accumulate ₹10,00,000 quickly. Choose this path for faster access to your lump sum and maximum financial flexibility.",
+      "40": "Opt for lower monthly payments: ₹25,000 per month over 40 months. Enjoy all the benefits of a secure chit fund with manageable installments spread over a longer term, ideal for steady savers."
+    }
+  },
+  "25": {
+    title: "25 Lakhs",
+    img: "https://via.placeholder.com/800x300/cc99ff/333?text=25+Lakhs",
+    desc: "The ₹25,00,000 chit fund scheme is designed for ambitious savers and business owners aiming for significant milestones. It offers secure savings, transparent bidding, and instant payouts with two flexible payment options.",
+    months: {
+      "20": "Pay ₹1,25,000 per month for 20 months and quickly accumulate a large corpus, perfect for major investments or business expansion.",
+      "40": "Contribute ₹62,500 per month over 40 months, making high-value savings more accessible with comfortable payments and all the benefits of a premium chit fund plan."
+    }
+  },
+  "50": {
+    title: "50 Lakhs",
+    img: "https://via.placeholder.com/800x300/99ffcc/333?text=50+Lakhs",
+    desc: "The ₹50,00,000 chit fund scheme is tailored for visionaries and entrepreneurs with grand financial goals. It ensures secure savings, transparent auctions, and timely payouts with two convenient payment choices.",
+    months: {
+      "20": "Pay ₹2,50,000 per month for 20 months to build a substantial fund quickly, ideal for large-scale investments, real estate, or business expansion.",
+      "40": "Contribute ₹1,25,000 per month for 40 months, offering a smoother payment schedule while enjoying all the advantages of a premium high-value chit fund plan."
+    }
+  }
+};
+
+const planBtns = document.querySelectorAll(".plan-btn");
+const monthBtns = document.querySelectorAll(".month-btn");
+const planImage = document.getElementById("planImage");
+const planTitle = document.getElementById("planTitle");
+const planDesc = document.getElementById("planDesc");
+const monthDesc = document.getElementById("monthDesc");
+
+let currentPlan = "5";  // ✅ Default set to 5 Lakhs
+let currentMonth = "20";
+
+// Update Plan
+planBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    planBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    currentPlan = btn.dataset.plan;
+    const data = plans[currentPlan];
+
+    // Banner stays static (no update to planImage)
+    planTitle.textContent = data.title;
+    planDesc.textContent = data.desc;
+    monthDesc.textContent = data.months[currentMonth];
   });
-  
-  // Update Month
-  monthBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      monthBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-  
-      currentMonth = btn.dataset.month;
-      monthDesc.textContent = plans[currentPlan].months[currentMonth];
-    });
+});
+
+// Update Month
+monthBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    monthBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    currentMonth = btn.dataset.month;
+    monthDesc.textContent = plans[currentPlan].months[currentMonth];
   });
-  
+});

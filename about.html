@@ -15,48 +15,51 @@
 
 </head>
 <body>
-        <!-- Top bar with contact -->
-        <div class="text-dark py-1 small d-flex justify-content-between px-3" style="background:#EFF8FF";>
-            <div>
-                <p><img src="/assets/images/phone.png">
-                    +91 9629587444</p>
-            </div>
-            <div>
-                <p class="me-2"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-    
-            </div>
-        </div>
-        <div class="align-item-center logo";>
-          <img src="assets/images/logo1.png" />
-        </div>
-    
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <div>
-                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navMenu">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       <!-- Top bar with contact + social icons -->
+    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+      <div class="container d-flex justify-content-between align-items-center">
+          <div>
+              <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
+                  +91 9629587444</p>
+          </div>
+          
+          <div class="d-flex align-items-center">
+              <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
+              <!-- Social icons -->
+              <div class="social-icons">
+                  <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Logo left, nav right in navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container d-flex align-items-center justify-content-between">
+          <!-- Logo on the left -->
+          <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+              <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+          </a>
+          <!-- Toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Nav menu on the right -->
+          <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+              <ul class="navbar-nav align-items-center">
+                  <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 
   <!-- About Us Banner -->
   <section class="about-banner">
@@ -72,8 +75,8 @@
   
       <!-- Left Side Images -->
       <div class="about-images">
-        <img src="./assets/images/image1.png" alt="Building" class="img1">
-        <img src="./assets/images/image1.png" alt="Office" class="img2">
+        <img src="./assets/images/Buildings.png" alt="Building" class="img1">
+        <img src="./assets/images/Working Space.png" alt="Office" class="img2">
       </div>
   
       <!-- Right Side Content -->
@@ -137,14 +140,14 @@ We focus on helping individuals, families, and business owners achieve their fin
     <div class="founder-container">
       <!-- Founder Image -->
       <div class="founder-image">
-        <img src="./assets/images/image1.png" alt="Founder">
+        <img src="./assets/images/Our Founde.jpeg" alt="Founder">
         <div class="icon-badge">✱</div>
       </div>
   
       <!-- Founder Info -->
       <div class="founder-info">
         <span class="badge">Founder</span>
-        <h2>Vasanth Kumar</h2>
+        <h2>Narayanan Bala Krishnan</h2>
         <p>
           The directors of Bala Saraswathi Chits Private Limited include Managing Director Narayanan Bala Krishnan, who drives the company’s strategic growth and vision; Director Balakrishnan Saraswathi, who oversees operations in Tuticorin with a focus on customer service and local engagement.
         </p>
@@ -257,7 +260,7 @@ We focus on helping individuals, families, and business owners achieve their fin
       <div class="exp-grid">
         <article class="stat-card">
           <div class="stat-icon">
-            <img src="./assets/images/cal.png" alt="Calendar" />
+            <img src="./assets/images/safe and regulated.png" alt="Calendar" />
           </div>
           <div class="stat-content">
             <h4>Safe and Regulated</h4>
@@ -267,7 +270,7 @@ We focus on helping individuals, families, and business owners achieve their fin
 
         <article class="stat-card">
           <div class="stat-icon">
-            <img src="./assets/images/people.png" alt="Team" />
+            <img src="./assets/images/flexible collatrel.png" alt="Team" />
           </div>
           <div class="stat-content">
             <h4>Flexible Collateral</h4>
@@ -277,7 +280,7 @@ We focus on helping individuals, families, and business owners achieve their fin
 
         <article class="stat-card">
           <div class="stat-icon">
-            <img src="./assets/images/mail.png" alt="Support" />
+            <img src="./assets/images/higher returns.png" alt="Support" />
           </div>
           <div class="stat-content">
             <h4>Higher Returns</h4>
@@ -287,7 +290,7 @@ We focus on helping individuals, families, and business owners achieve their fin
 
         <article class="stat-card">
           <div class="stat-icon">
-            <img src="./assets/images/time.png" alt="Badge" />
+            <img src="./assets/images/time and fund acess.png" alt="Badge" />
           </div>
           <div class="stat-content">
             <h4>Timely Fund Access</h4>

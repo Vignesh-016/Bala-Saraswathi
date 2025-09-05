@@ -1,340 +1,253 @@
-.about-banner {
-    position: relative;
-    max-width: 90%;
-    height: 500px;
-    margin: 40px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: url('./assets/images/people.png') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding-left: 40px;
-    color: #fff;
-  }
-  
-  .about-banner::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.55);
-    z-index: 1;
-  }
-  
-  .about-text {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .about-text h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .about-text p {
-    font-size: 1.1rem;
-    font-weight: 400;
-  }
-  
+/* =========================================================
+   ABOUT PAGE — CLEAN MERGED CSS (no conflicts)
+   - Bottom-left text on banners & timeline panels
+   - Fixed heights via variables (responsive)
+   - Rounded corners / shadows preserved
+   ========================================================= */
 
-  /* Who We Are Section */
-.who-we-are {
-    padding: 60px 10%;
-    background: #fff;
-  }
-  
-  .about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
-    flex-wrap: wrap; /* makes it responsive */
-  }
-  
-  /* Left Images */
-  .about-images {
-    position: relative;
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  .about-images .img1 {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .about-images .img2 {
-    position: absolute;
-    bottom: -40px;
-    left: 197px;
-    width: 70%;
-    border: 20px solid #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  }
-  
-  /* Right Content */
-  .about-content {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .about-content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .about-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #444;
-  }
-  
-/* ========== Mission / Vision cards ========== */
+/* ---------- GLOBAL TOKENS ---------- */
 :root{
-  --primary:#0b66ff;
-  --primary-600:#0a54e6;
-  --ink:#0f172a;
-  --muted:#475569;
-  --accent:#ffb400;        /* yellow icon */
+  /* Colors */
+  --primary: #2563eb;
+  --primary-600: #0a54e6;
+  --ink: #0f172a;
+  --muted: #475569;
+  --accent: #ffb400;        /* yellow icon */
+  --pill-bg: #ffffff;
+  --pill-br: #e6ecf8;
+  --section-bg: #f3f7fb;
+
+  /* Layout */
+  --container-max: 1300px;     /* content max width */
+  --container-x: 24px;         /* container side padding */
+  --section-y: 72px;           /* section vertical spacing */
+
+  /* Banners / Panels */
+  --banner-h: 500px;                /* About hero banner height (desktop) */
+  --timeline-banner-height: 320px;  /* Timeline panel height (desktop) */
+
+  /* Other */
+  --bg:#eaf3ff;
+  --text:#0f172a;
+  --chip:#1d4ed8;
+  --card:#ffffff;
+  --br:#e5e7eb;
 }
 
-/* wrapper */
+/* --------- Base resets --------- */
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+/* =========================================================
+   ABOUT BANNER (hero) — bottom-left text, fixed height
+   ========================================================= */
+.about-banner{
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  height: var(--banner-h);                      /* fixed by var */
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;                              /* keep rounded corners */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  background: url('./assets/images/Peoples.png') center/cover no-repeat;
+  padding-left: 40px;                            /* safe inner left */
+  padding-right: 40px;                           /* safe inner right */
+  color: #fff;
+}
+
+/* dark overlay */
+.about-banner::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,0.55);
+  z-index:1;
+}
+
+/* bottom-left text block */
+.about-text{
+  position:absolute;
+  left:40px;
+  right:40px;     /* keep text away from right edge */
+  bottom:28px;
+  z-index:2;
+  color:#fff;
+}
+.about-text h1{
+  font-size:2rem;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+.about-text p{
+  font-size:1.1rem;
+  font-weight:400;
+}
+
+/* =========================================================
+   WHO WE ARE
+   ========================================================= */
+.who-we-are{ padding: 60px 10%; background:#fff; }
+.about-container{
+  display:flex; align-items:flex-start; gap:50px; flex-wrap:wrap;
+}
+.about-images{ position:relative; flex:1; min-width:280px; }
+.about-images .img1{ width:100%; border-radius:8px; }
+.about-images .img2{
+  position:absolute; bottom:-40px; left:197px; width:70%;
+  border:20px solid #ffffff; border-radius:8px;
+  box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
+.about-content{ flex:1; min-width:300px; }
+.about-content h2{ font-size:2rem; margin-bottom:20px; }
+.about-content p{ font-size:1rem; line-height:1.6; margin-bottom:20px; color:#444; }
+
+/* =========================================================
+   Mission/Vision Cards
+   ========================================================= */
 .mv-wrap{
-  width:min(760px,96%);
-  margin:32px auto;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+  width:min(760px,96%); margin:32px auto;
+  display:flex; flex-direction:column; gap:18px;
 }
-
-/* base card — WHITE by default */
 .stack-card{
-  position:relative;
-  overflow:visible;                         /* lets the offset frame sit outside */
-  border-radius:16px;
-  padding:22px 24px;
-  background:#fff;                          /* <-- white */
-  color:var(--ink);
+  position:relative; overflow:visible; border-radius:16px;
+  padding:22px 24px; background:#fff; color:var(--ink);
   border:2px solid rgba(11,102,255,.35);
   box-shadow:0 14px 28px rgba(2,6,23,.10);
   isolation:isolate;
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    background .2s ease,
-    color .2s ease,
-    border-color .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
 }
-
-/* offset frame ONLY on bottom & right */
 .stack-card::after{
-  content:"";
-  position:absolute;
-  top:8px; left:8px; right:-10px; bottom:-10px;
+  content:""; position:absolute; top:8px; left:8px; right:-10px; bottom:-10px;
   border-right:3px solid rgba(11,102,255,.35);
   border-bottom:3px solid rgba(11,102,255,.35);
-  border-left:none; border-top:none;
-  border-radius:16px;
-  box-shadow:0 8px 18px rgba(2,6,23,.06);
-  pointer-events:none;
-  z-index:-1;
+  border-left:none; border-top:none; border-radius:16px;
+  box-shadow:0 8px 18px rgba(2,6,23,.06); pointer-events:none; z-index:-1;
 }
-
-/* inner layout */
 .mv-row{ display:flex; gap:14px; align-items:flex-start; }
 .mv-ico{
-  flex:0 0 44px; width:44px; height:44px;
-  display:grid; place-items:center;
-  border-radius:50%;
-  background:var(--accent);
-  box-shadow:0 6px 14px rgba(255,180,0,.35);
+  flex:0 0 44px; width:44px; height:44px; display:grid; place-items:center;
+  border-radius:50%; background:var(--accent); box-shadow:0 6px 14px rgba(255,180,0,.35);
 }
 .mv-content{ flex:1; }
-.mv-content h3{
-  margin:0 0 8px;
-  font-size:clamp(18px,2.6vw,20px);
-  font-weight:800;
-  color:inherit;
-}
-.mv-content p{
-  margin:0;
-  line-height:1.7;
-  color:var(--muted);
-  font-size:14.5px;
-}
+.mv-content h3{ margin:0 0 8px; font-size:clamp(18px,2.6vw,20px); font-weight:800; color:inherit; }
+.mv-content p{ margin:0; line-height:1.7; color:var(--muted); font-size:14.5px; }
 
-/* HOVER — turn BLUE */
 .stack-card:hover{
   transform:translateY(-3px);
   box-shadow:0 18px 36px rgba(2,6,23,.18);
   background:linear-gradient(180deg, var(--primary), var(--primary-600));
-  color:#fff;
-  border-color:transparent;
+  color:#fff; border-color:transparent;
 }
 .stack-card:hover .mv-content p{ color:#fff; }
+.stack-card:focus-within{ outline:3px solid rgba(11,102,255,.25); outline-offset:3px; }
 
-/* Accessibility focus */
-.stack-card:focus-within{
-  outline:3px solid rgba(11,102,255,.25);
-  outline-offset:3px;
-}
-
-/* Both are white by default; keep classes for semantics */
-.stack-card.mission,
-.stack-card.vision{ /* no color differences at rest */ }
-
-  
-  .founder-section {
-    background: #f0f7ff; /* Light background */
-    padding: 60px 10%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .founder-container {
-    display: flex;
-    align-items: flex-start;
-    max-width: 1400px;   /* can tweak */
-    width: 100%;
-    gap: 60px;
-  }
-  
-  .founder-container > div {
-    flex: 1 1 50%;      /* each child takes 50% */
-    max-width: 50%;
-  }
-  
- /* Founder Image */
-.founder-image {
-    position: relative;
-    flex: 1;
-    max-width: 1000px;   /* width set to 1000px */
-  }
-  
-  .founder-image img {
-    width: 550px;       /* fixed width */
-    height: 400px;       /* fixed height */
-    object-fit: cover;   /* crops neatly */
-    border-radius: 10px; /* rounded corners */
-  }
-  
-  
-  
-  /* Round Icon Badge */
-  .icon-badge {
-    position: absolute;
-    bottom: -15px;
-    right: 25px;
-    background: #007bff;
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 4px solid #f0f7ff; /* blends with section bg */
-  }
-  
-  /* Founder Info */
-  .founder-info {
-    flex: 2;
-    color: #333;
-  }
-  
-  .founder-info .badge {
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 4px 10px;
-    font-size: 0.85rem;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .founder-info h2 {
-    margin: 8px 0 15px;
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-  
-  .founder-info p {
-    margin-bottom: 12px;
-    line-height: 1.6;
-  }
-  
-
-:root{
-  --primary:#2563eb;
-  --ink:#0f172a;
-  --pill-bg:#ffffff;
-  --pill-br:#e5e7eb;
-  --section-bg:#f3f7fb;
-  --timeline-banner-height: 320px; /* consistent banner height for all panels */
-}
-
-/* ===== Section wrapper ===== */
-.timeline-sec{
-  background: var(--section-bg);
-  padding: 42px 18px 64px;
-  display:flex;
+/* =========================================================
+   Founder
+   ========================================================= */
+.founder-section{
+  background:#f0f7ff;
+  padding:60px 10%;
+  display:flex; 
   justify-content:center;
-  position:relative;
-  overflow:hidden;
 }
-
-/* Subtle geometric pattern */
+.founder-container{
+  display:flex; 
+  align-items:center; /* Changed from flex-start to center for vertical centering */
+  max-width:1400px; 
+  width:100%; 
+  gap:60px;
+}
+.founder-container > div{ flex:1 1 50%; max-width:50%; }
+.founder-image{ position:relative; flex:1; max-width:1000px; }
+.founder-image img{
+  width:550px; height:400px; object-fit:cover; border-radius:10px;
+}
+.icon-badge{
+  position:absolute; bottom:-15px; right:25px; background:#007bff; color:#fff;
+  font-size:22px; font-weight:bold; width:60px; height:60px; display:flex; align-items:center; justify-content:center;
+  border-radius:50%; border:4px solid #f0f7ff;
+}
+.founder-info{ 
+  flex:2; 
+  color:#333; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; /* Vertically center the content */
+  height: 100%; 
+}
+.founder-info .badge{
+  display:inline-block; background:#007bff; color:#fff; padding:4px 18px; font-size:.85rem;
+  border-radius:4px; margin-bottom:10px;
+  min-width: 80px; /* Reduce width of the button */
+  max-width: 120px;
+  text-align: center;
+}
+.founder-info h2{ margin:8px 0 15px; font-size:1.6rem; font-weight:bold; }
+.founder-info p{ margin-bottom:12px; line-height:1.6; }
+/* =========================================================
+   TIMELINE — tabs + panels (bottom-left content)
+   ========================================================= */
+.timeline-sec{
+  background:var(--section-bg);
+  padding: 42px 18px 64px;
+  display:flex; justify-content:bottom; position:relative; overflow:hidden;
+}
 .timeline-sec::before{
-  content:"";
-  position:absolute; inset:0;
+  content:""; position:absolute; inset:0;
   background-image:
     linear-gradient(120deg, rgba(2,6,23,0.035) 1px, transparent 1px),
     linear-gradient(300deg, rgba(2,6,23,0.035) 1px, transparent 1px);
-  background-size: 52px 52px, 52px 52px;
+  background-size:52px 52px, 52px 52px;
   mask-image: linear-gradient(#000, rgba(0,0,0,0.25));
   pointer-events:none;
 }
+.timeline{ width:min(1100px, 100%); position:relative; z-index:1; }
 
-.timeline{
-  width:min(1100px, 100%);
-  position:relative;
-  z-index:1;
-}
-
-/* ====== Tabs ====== */
+/* Tabs */
 .tabbar{
-  display:flex;
-  gap:24px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-bottom:28px;
+  --progress: 0px;
+  position:relative;
+  display:flex; justify-content:space-between; align-items:center;
+  gap:min(3.5vw,36px);
+  padding:12px 0 30px; margin-bottom:14px;
+}
+.tabbar::before{
+  content:""; position:absolute; left:12px; right:12px; top:32px;
+  height:3px; background:#e9f0ff; border-radius:2px;
+}
+.tabbar::after{
+  content:""; position:absolute; left:12px; top:32px;
+  width:var(--progress); height:3px; background:var(--primary); border-radius:2px;
+  transition: width .55s cubic-bezier(.22,.61,.36,1);
 }
 .tabbar input{ display:none; }
-/* Hide timeline radios that control panels */
-.timeline > input{ position:absolute; opacity:0; pointer-events:none; }
+.timeline > input{ position:absolute; opacity:0; pointer-events:none; } /* hide radios controlling panels */
 
 .tab{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:108px;
-  height:44px;
-  padding:0 18px;
-  border-radius:12px;
-  background:var(--pill-bg);
-  border:2px solid var(--pill-br);
-  color:#0b1220;
-  font-weight:700;
-  cursor:pointer;
-  transition:.2s ease;
+  position:relative; z-index:2;
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:110px; height:46px; padding:0 18px;
+  border-radius:12px; background:var(--pill-bg);
+  border:1px solid var(--pill-br);
+  color:#9aa6b2; font-weight:800; letter-spacing:.2px;
+  opacity:0; visibility:hidden; transform:translateY(10px) scale(.98);
+  pointer-events:none; transition:.2s ease;
 }
 .tab:hover{ transform: translateY(-1px); }
 
-/* Active tab */
+/* sequential reveal */
+@keyframes tabIn{
+  0%{ opacity:0; transform:translateY(12px) scale(.98); }
+  100%{ opacity:1; transform:translateY(0) scale(1); visibility:visible; }
+}
+.tab.is-visible{ animation: tabIn .55s cubic-bezier(.22,.61,.36,1) forwards; pointer-events:auto; }
+
+/* active year */
 #y1990:checked ~ .tabbar label[for="y1990"],
 #y2000:checked ~ .tabbar label[for="y2000"],
 #y2010:checked ~ .tabbar label[for="y2010"],
@@ -343,107 +256,22 @@
   background:var(--primary);
   border-color:var(--primary);
   color:#fff;
-  box-shadow: 0 6px 18px rgba(37,99,235,.35);
+  box-shadow:0 6px 18px rgba(37,99,235,.35);
 }
 
-/* --- Ensure all timeline banners/panels are the same size --- */
-.panels {
-  min-height: var(--timeline-banner-height);
-}
-.panel {
-  min-height: var(--timeline-banner-height);
-  display: none;
-  opacity: 0;
-  transform: translateY(10px) scale(.995);
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(2,6,23,.15);
-  background: #000;
-  /* Make sure all panels have the same height and content is vertically centered */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-@media (max-width: 700px) {
-  .panels,
-  .panel {
-    min-height: 220px;
-  }
-}
-  
- :root{
-  --primary:#0b66ff;
-  --primary-600:#0a54e6;
-  --pill-bg:#ffffff;
-  --pill-br:#e6ecf8;
-  --ink:#0b1220;
-  --muted:#5b6b7f;
-}
+/* Panels wrapper ensures space */
+.panels{ min-height: var(--timeline-banner-height); position:relative; }
 
-/* Layout */
-.timeline-sec{ padding:32px 0 48px; }
-.timeline{ width:min(1140px,96%); margin-inline:auto; }
-
-/* ---------- TAB BAR (years) ---------- */
-.tabbar{
-  --progress: 0px;                      /* gets updated by JS */
-  position:relative;
-  display:flex; justify-content:space-between; align-items:center;
-  gap:min(3.5vw,36px);
-  padding:12px 0 30px;
-  margin-bottom:14px;
-}
-.tabbar::before{
-  content:"";
-  position:absolute; left:12px; right:12px; top:32px;
-  height:3px; background:#e9f0ff; border-radius:2px;
-}
-.tabbar::after{
-  content:"";
-  position:absolute; left:12px; top:32px;
-  width:var(--progress); height:3px;
-  background:var(--primary); border-radius:2px;
-  transition: width .55s cubic-bezier(.22,.61,.36,1);
-}
-
-/* year pill */
-.tab{
-  position:relative; z-index:2;
-  display:inline-flex; align-items:center; justify-content:center;
-  min-width:110px; height:46px; padding:0 18px;
-  border-radius:12px;
-  background:var(--pill-bg);
-  border:1px solid var(--pill-br);
-  color:#9aa6b2; font-weight:800; letter-spacing:.2px;
-  opacity:0; visibility:hidden; transform:translateY(10px) scale(.98);
-  pointer-events:none;
-}
-
-/* sequential reveal */
-@keyframes tabIn{
-  0%{ opacity:0; transform:translateY(12px) scale(.98); }
-  100%{ opacity:1; transform:translateY(0) scale(1); visibility:visible; }
-}
-.tab.is-visible{
-  animation: tabIn .55s cubic-bezier(.22,.61,.36,1) forwards;
-  pointer-events:auto;
-}
-
-/* active pill (JS toggles .active) */
-.tab.active{
-  background:var(--primary);
-  border-color:var(--primary);
-  color:#fff;
-  box-shadow:0 10px 24px rgba(11,102,255,.35);
-}
-
-/* ---------- PANELS ---------- */
-.panels{ position:relative; }
+/* Each panel has fixed height and image cover; NO flex */
 .panel{
-  display:none; opacity:0; transform:translateY(10px) scale(.995);
-  position:relative; border-radius:14px; overflow:hidden;
-  box-shadow:0 18px 40px rgba(2,6,23,.15); background:#000;
+  position:relative;
+  height: var(--timeline-banner-height);
+  display:none;               /* shown by radio logic below */
+  opacity:0;
+  transform: translateY(10px) scale(.995);
+  border-radius:14px; overflow:hidden;
+  box-shadow:0 18px 40px rgba(2,6,23,.15);
+  background:#000;
 }
 @keyframes panelIn{
   from{ opacity:0; transform:translateY(10px) scale(.995); }
@@ -457,155 +285,95 @@
   display:block; animation: panelIn .6s ease forwards;
 }
 
-/* background photos */
+/* Background photo layers */
 .panel::before{
   content:""; position:absolute; inset:0;
   background-size:cover; background-position:center;
   filter:brightness(.55); transform:scale(1.02);
 }
-#p1990::before{ background-image:url("https://images.unsplash.com/photo-1526406915894-6c5a6f1b47ae?q=80&w=1900&auto=format&fit=crop"); }
-#p2000::before{ background-image:url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1900&auto=format&fit=crop"); }
-#p2010::before{ background-image:url("https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1900&auto=format&fit=crop"); }
-#p2020::before{ background-image:url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1900&auto=format&fit=crop"); }
-#p2025::before{ background-image:url("https://images.unsplash.com/photo-1523661149972-0becaca2016e?q=80&w=1900&auto=format&fit=crop"); }
+#p1990::before{ background-image:url("./assets/images/Finance\ buildings.png"); }
+#p2000::before{ background-image:url("./assets/images/Finance\ buildings.png"); }
+#p2010::before{ background-image:url("./assets/images/Finance\ buildings.png"); }
+#p2020::before{ background-image:url("./assets/images/Finance\ buildings.png"); }
+#p2025::before{ background-image:url("./assets/images/Finance\ buildings.png"); }
 
 .panel::after{
   content:""; position:absolute; inset:0;
   background:linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.25) 30%, rgba(0,0,0,.55));
 }
-.panel-content{ position:relative; color:#e5ecf7; padding:34px 34px 30px; }
-.panel h3{ margin:0 0 14px; font-weight:900; color:#fff; font-size:clamp(22px,3.2vw,34px); }
+
+/* ✅ Bottom-left content inside each panel */
+.panel-content{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:30px;
+  color:#e5ecf7;
+  z-index:2;
+  padding:0; /* offsets handle spacing */
+}
+.panel h3{
+  margin:0 0 14px; font-weight:900; color:#fff;
+  font-size:clamp(22px,3.2vw,34px);
+}
 .blue-chip{
   display:inline-block; background:var(--primary); color:#fff; font-weight:700;
   padding:10px 14px; border-radius:8px; box-shadow:0 8px 18px rgba(37,99,235,.35);
   margin-bottom:14px; white-space:nowrap; font-size:14px;
 }
 .panel p{ margin:0; line-height:1.8; color:#dbe4f3; font-size:15.8px; }
-@media (min-width:900px){ .panel-content{ padding:38px; } }
 
-  
-
-  :root{
-  --bg:#eaf3ff;            /* section background */
-  --text:#0f172a;          /* dark heading */
-  --muted:#475569;         /* body text */
-  --primary:#2563eb;       /* blue accent */
-  --chip:#1d4ed8;          /* icon chip deeper blue */
-  --card:#ffffff;          /* card bg */
-  --br:#e5e7eb;            /* soft border */
-}
-
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:#fff}
-
-/* SECTION */
-.experience-sec{
-  background:var(--bg);
-  padding:56px 18px;
-}
+/* =========================================================
+   EXPERIENCE SECTION
+   ========================================================= */
+.experience-sec{ background:var(--bg); padding:56px 18px; }
 .exp-wrap{
-  width:min(1180px, 100%);
-  margin:0 auto;
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:40px;
+  width:min(1180px, 100%); margin:0 auto;
+  display:grid; grid-template-columns: 1fr; gap:40px;
 }
 @media (min-width: 980px){
-  .exp-wrap{
-    grid-template-columns: 1.05fr 1.4fr;
-    align-items:start;
-  }
+  .exp-wrap{ grid-template-columns: 1.05fr 1.4fr; align-items:start; }
 }
-
-/* LEFT */
 .exp-title{
-  margin:0 0 16px 0;
-  font-size: clamp(28px, 4.2vw, 44px);
-  line-height:1.2;
-  letter-spacing:.2px;
-  font-weight:800;
+  margin:0 0 16px 0; font-size: clamp(28px, 4.2vw, 35px);
+  line-height:1.2; letter-spacing:.2px; font-weight:800;
 }
 .exp-text{
-  color:var(--muted);
-  line-height:1.85;
-  font-size:16px;
-  max-width:46ch;
-  margin:0 0 22px 0;
+  color:var(--muted); line-height:1.85; font-size:16px;
+  max-width:46ch; margin:0 0 22px 0;
 }
 .exp-btn{
-  display:inline-block;
-  background:var(--primary);
-  color:#fff;
-  text-decoration:none;
-  padding:12px 18px;
-  font-weight:700;
-  border-radius:10px;
+  display:inline-block; background:var(--primary); color:#fff; text-decoration:none;
+  padding:12px 18px; font-weight:700; border-radius:10px;
   box-shadow:0 10px 24px rgba(37,99,235,.35);
   transition:transform .15s ease, box-shadow .15s ease;
 }
 .exp-btn:hover{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(37,99,235,.4); }
 
-
-/* RIGHT GRID (Experience cards) */
 .exp-right{ display:block; }
-.exp-grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:22px;
-}
-@media (min-width: 700px){
-  .exp-grid{ grid-template-columns: 1fr 1fr; }
-}
+.exp-grid{ display:grid; grid-template-columns: 1fr; gap:22px; }
+@media (min-width: 700px){ .exp-grid{ grid-template-columns: 1fr 1fr; } }
 
 .stat-card{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  background:var(--card);
-  border:1px solid var(--br);
-  border-radius:12px;
-  padding:18px 18px;
+  display:flex; align-items:flex-start; gap:14px;
+  background:var(--card); border:1px solid var(--br);
+  border-radius:12px; padding:18px 18px;
   box-shadow:0 6px 14px rgba(15,23,42,0.08);
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .stat-card:hover{ transform: translateY(-2px); box-shadow:0 10px 22px rgba(15,23,42,0.12); }
-
 .stat-icon{
-  flex:0 0 44px;
-  width:44px; height:44px;
-  background:var(--primary);
-  border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
+  flex:0 0 44px; width:50px; height:44px; background:var(--primary);
+  border-radius:10px; display:flex; align-items:center; justify-content:center;
   box-shadow:0 6px 14px rgba(37,99,235,.35);
 }
 .stat-icon img{ width:22px; height:22px; filter:brightness(0) invert(1); }
+.stat-content h4{ margin:0 0 6px 0; font-size:20px; font-weight:750; color:var(--text); }
+.stat-content p{ margin:0; color:var(--muted); line-height:1.6; font-size:15px; }
 
-.stat-content h4{
-  margin:0 0 6px 0;
-  font-size:20px;
-  font-weight:800;
-  color:var(--text);
-}
-.stat-content p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.6;
-  font-size:14px;
-}
-
-/* ===============================
-   About Page: Unified Layout Grid
-   - Consistent container width
-   - Consistent horizontal and vertical spacing
-   =============================== */
-/* Controls */
-:root{
-  --container-max: 1300px;        /* max width for content */
-  --container-x: 24px;            /* equal left/right padding */
-  --section-y: 72px;              /* vertical spacing for sections */
-}
-
-/* Apply consistent vertical spacing to all sections */
+/* =========================================================
+   UNIFIED CONTAINERS & SECTION SPACING
+   ========================================================= */
 .about-banner,
 .who-we-are,
 .founder-section,
@@ -614,21 +382,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sa
   padding: var(--section-y) 0;
 }
 
-/* Boxed banner with reduced left/right size and centered */
-.about-banner {
-  width: 90%;               /* takes 90% of the screen */
-  max-width: 1400px;        /* don’t let it get too wide */
-  margin: 40px auto;        /* centers it horizontally */
-  min-height: 420px;
-  border-radius: 12px;      /* rounded corners */
-  padding-left: 40px; 
-  padding-right: 40px;
-  overflow: hidden;         /* keep content clipped */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-
-/* Give inner wrappers a shared container behavior */
+/* Shared container behavior for inner wrappers */
 .about-text,
 .about-container,
 .founder-container,
@@ -640,44 +394,40 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sa
   padding-right:var(--container-x);
 }
 
-/* Remove legacy per-section side paddings to avoid double spacing */
+/* remove extra side padding where we already boxed things */
 .who-we-are{ padding-left:0; padding-right:0; }
 .founder-section{ padding-left:0; padding-right:0; }
 .timeline-sec{ padding-left:0; padding-right:0; }
 .experience-sec{ padding-left:0; padding-right:0; }
 
-/* ===============================
-   Responsive: Tablet & Mobile
-   =============================== */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 @media (max-width: 991px){
-  :root{ --container-x: 18px; --section-y: 56px; }
+  :root{
+    --container-x: 18px;
+    --section-y: 56px;
+    --banner-h: 360px;               /* shorter hero */
+    --timeline-banner-height: 260px; /* shorter panels */
+  }
 
-  /* Banner */
-  .about-banner{ min-height:360px; }
   .about-text h1{ font-size:1.7rem; }
   .about-text p{ font-size:1rem; }
 
-  /* Who We Are */
   .about-container{ gap:28px; }
   .about-images .img2{
-    position:static;
-    width:82%;
-    margin:18px auto 0;
-    border-width:12px;
+    position:static; width:82%; margin:18px auto 0; border-width:12px;
   }
 
-  /* Founder */
   .founder-container{ flex-direction:column; gap:24px; }
   .founder-container > div{ flex:1 1 100%; max-width:100%; }
   .founder-image img{ width:100%; height:auto; }
   .icon-badge{ right:12px; bottom:12px; width:46px; height:46px; font-size:20px; }
 
-  /* Timeline tabs */
   .tabbar{ gap:14px; }
   .tab{ height:40px; padding:0 14px; font-size:.95rem; }
-  .panel-content{ padding:26px; }
 
-  /* Experience right cards */
+  .panel-content{ left:26px; right:26px; bottom:24px; }
   .stat-card{ padding:16px; }
   .stat-icon{ width:40px; height:40px; }
   .stat-icon img{ width:18px; height:18px; }
@@ -686,25 +436,20 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sa
 }
 
 @media (max-width: 575px){
-  :root{ --container-x: 14px; --section-y: 48px; }
+  :root{
+    --container-x: 14px;
+    --section-y: 48px;
+    --banner-h: 300px;               /* mobile hero height */
+    --timeline-banner-height: 220px; /* mobile panels */
+  }
 
-  /* Banner - center content on small screens */
-  .about-banner{ min-height:300px; }
-  .about-text{ text-align:center; }
-
-  /* Who We Are */
-  .about-images .img2{ width:100%; border-width:10px; }
-
-  /* Founder */
-  .icon-badge{ right:10px; bottom:10px; width:42px; height:42px; font-size:18px; }
-
-  /* Timeline */
+  .about-text{ left:16px; right:16px; bottom:18px; } /* still bottom-left */
   .tabbar{ gap:10px; }
   .tab{ min-width:auto; padding:0 12px; height:38px; font-size:14px; }
-  .panel-content{ padding:18px; }
+
+  .panel-content{ left:18px; right:18px; bottom:18px; }
   .blue-chip{ font-size:13px; padding:8px 12px; }
 
-  /* Experience section cards */
   .stat-card{ gap:12px; padding:14px; }
   .stat-icon{ width:36px; height:36px; }
   .stat-icon img{ width:16px; height:16px; }

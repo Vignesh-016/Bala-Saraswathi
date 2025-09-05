@@ -17,48 +17,51 @@
 </head>
 <body>
 
-     <!-- Top bar with contact -->
-     <div class="text-dark py-1 small d-flex justify-content-between px-3" style="background:#EFF8FF";>
+<!-- Top bar with contact + social icons -->
+<div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+    <div class="container d-flex justify-content-between align-items-center">
         <div>
-            <p><img src="/assets/images/phone.png">
+            <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
                 +91 9629587444</p>
         </div>
-        <div>
-            <p class="me-2"><i class="fa fa-map-marker" aria-hidden="true"></i>
+        
+        <div class="d-flex align-items-center">
+            <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
                 Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-
-        </div>
-    </div>
-    <div class="align-item-center logo";>
-      <img src="assets/images/logo1.png" />
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white  sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <div>
-                    <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-                </ul>
+            <!-- Social icons -->
+            <div class="social-icons">
+                <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-    </nav>
+    </div>
+</div>
+
+<!-- Logo left, nav right in navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo on the left -->
+        <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+            <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+        </a>
+        <!-- Toggler for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Nav menu on the right -->
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
   <!-- Hero Section -->
   <section class="hero">

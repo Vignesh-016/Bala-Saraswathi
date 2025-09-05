@@ -20,51 +20,54 @@
 
 <body>
 
-    <!-- Top bar with contact -->
-    <div class="text-dark py-1 small d-flex justify-content-between px-3" style="background:#EFF8FF";>
-        <div>
-            <p><img src="/assets/images/phone.png">
-                +91 9629587444</p>
-        </div>
-        <div>
-            <p class="me-2"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-
-        </div>
-    </div>
-    <div class="align-item-center logo";>
-      <img src="assets/images/logo1.png" />
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white  sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <div>
-                    <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Top bar with contact + social icons -->
+    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+      <div class="container d-flex justify-content-between align-items-center">
+          <div>
+              <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
+                  +91 9629587444</p>
+          </div>
+          
+          <div class="d-flex align-items-center">
+              <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
+              <!-- Social icons -->
+              <div class="social-icons">
+                  <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Logo left, nav right in navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container d-flex align-items-center justify-content-between">
+          <!-- Logo on the left -->
+          <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+              <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+          </a>
+          <!-- Toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Nav menu on the right -->
+          <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+              <ul class="navbar-nav align-items-center">
+                  <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 
     <section class="services-banner">
-        <img src="assets/images/family.png" alt="Services" class="banner-img">
+        <img src="./assets/images/Savings.png" alt="Services" class="banner-img">
         <div class="services-content">
           <h2>Services</h2>
           <p>Safe hands for your hard-earned money</p>
@@ -87,15 +90,12 @@
             
             <!-- Left Sidebar -->
             <div class="plans-sidebar">
-              <button class="plan-btn active" data-plan="1">1 Lakh</button>
-              <button class="plan-btn" data-plan="2">2 Lakhs</button>
-              <button class="plan-btn" data-plan="5">5 Lakhs</button>
+              <button class="plan-btn active" data-plan="5">5 Lakhs</button>
               <button class="plan-btn" data-plan="10">10 Lakhs</button>
               <button class="plan-btn" data-plan="25">25 Lakhs</button>
               <button class="plan-btn" data-plan="50">50 Lakhs</button>
-      
-              <div class="help-box" style="background-image: url('./assets/images/dance.png'); background-size: cover; background-position: center;">
-                <!-- <img src="https://via.placeholder.com/300x200" alt="Help"> -->
+        
+              <div class="help-box" style="background-image: url('./assets/images/Hands together.png'); background-size: cover; background-position: center;">
                 <div class="help-content">
                   <h3>Have Any Questions</h3>
                   <p>We’re here to help! Contact us for service inquiries, project assistance, or custom solutions.</p>
@@ -103,28 +103,29 @@
                 </div>
               </div>
             </div>
-      
+        
             <!-- Right Content -->
             <div class="plans-content">
               <div class="banner">
-                <img id="planImage" src="https://via.placeholder.com/800x300/ff9999/333?text=1+Lakh" alt="Plan Banner">
+                <img id="planImage" src="./assets/images/Family image.png" alt="Plan Banner">
               </div>
-              <h2 id="planTitle">1 Lakh</h2>
-              <p id="planDesc">This is the main description for the 1 Lakh plan.</p>
-      
+              <h2 id="planTitle">5 Lakhs</h2>
+              <p id="planDesc">The ₹5,00,000 chit fund scheme is perfect for achieving bigger financial goals, offering reliable savings, transparent bidding, and instant payouts. Flexible options ensure each member finds the right fit for their needs, whether planning for family, business, or major purchases</p>
+        
               <div class="months-box">
                 <button class="month-btn active" data-month="20">20 Months</button>
                 <button class="month-btn" data-month="40">40 Months</button>
-                <p id="monthDesc">For 20 months: You pay smaller installments with steady growth.</p>
+                <p id="monthDesc">For 20 months: higher monthly payments, faster maturity.</p>
               </div>
-      
+        
               <div class="cta-box">
                 <button class="cta-btn">Download Our Plans</button>
                 <button class="cta-btn primary">Start Your Journey →</button>
               </div>
             </div>
           </div>
-        </section>   
+        </section>
+        
 
         <section class="plans-section">
             <div class="container">
@@ -197,8 +198,7 @@
               <div style="width: 100%; max-width: 1200px;">
                 <h2 class="section-title" style="margin-top:0; text-align: left;">THE WORKING MODEL</h2>
                 <p class="section-desc" style="text-align: left;">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                  A simple, transparent process that guides you from enrolment to completion ensuring easy contributions, fair auctions, instant disbursements, and rewarding savings.
                 </p>
               </div>
               <!-- Main content: Image and Steps side by side -->
@@ -210,9 +210,9 @@
                 <!-- Right Column: Steps -->
                 <div class="working-model-right" style="text-align: left; position: relative;">
                   <div class="steps" style="position: relative;">
-                    <div style="position: absolute; left: 13px; top: 28px; bottom: 28px; width: 2px; background: #cce0f7; z-index: 0;"></div>
+                    <div style="position: absolute; left: 13px; top: 28px; bottom: 120px; width: 2px; background: #b6d8ff; z-index: 0;"></div>
                     <div class="step" style="position: relative; z-index: 1;">
-                      <span class="step-icon" style="background: #1976d2; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
+                      <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
                       <div class="step-content">
                         <p class="step-number">STEP 1</p>
                         <h3 class="step-title">Enrolment</h3>
@@ -220,7 +220,7 @@
                       </div>
                     </div>
                     <div class="step" style="position: relative; z-index: 1;">
-                      <span class="step-icon" style="background: #1976d2; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
+                      <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
                       <div class="step-content">
                         <p class="step-number">STEP 2</p>
                         <h3 class="step-title">CONTRIBUTION</h3>
@@ -228,7 +228,7 @@
                       </div>
                     </div>
                     <div class="step" style="position: relative; z-index: 1;">
-                      <span class="step-icon" style="background: #1976d2; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
+                      <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
                       <div class="step-content">
                         <p class="step-number">STEP 3</p>
                         <h3 class="step-title">BIDDING/AUCTION</h3>
@@ -236,7 +236,7 @@
                       </div>
                     </div>
                     <div class="step" style="position: relative; z-index: 1;">
-                      <span class="step-icon" style="background: #1976d2; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
+                      <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
                       <div class="step-content">
                         <p class="step-number">STEP 4</p>
                         <h3 class="step-title">DISBURSEMENT</h3>
@@ -244,7 +244,7 @@
                       </div>
                     </div>
                     <div class="step" style="position: relative; z-index: 1;">
-                      <span class="step-icon" style="background: #1976d2; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
+                      <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
                       <div class="step-content">
                         <p class="step-number">STEP 5</p>
                         <h3 class="step-title">COMPLETION</h3>
@@ -257,18 +257,17 @@
             </div>
           </section>
       
-<section class="wrap" aria-labelledby="testimonials-title">
+<!-- <section class="wrap" aria-labelledby="testimonials-title">
   <header class="section-head">
     <h2 id="testimonials-title" class="eyebrow">TESTIMONIALS</h2>
     <p class="sub">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud.
+      Every voice matters—hear directly from the people who have experienced our services and built their success with us.
     </p>
   </header>
 
-  <div class="grid">
+  <div class="grid"> -->
     <!-- Card 1 -->
-    <article class="card">
+    <!-- <article class="card">
       <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
       <p class="quote">
         “Booking through this site was so easy, and the entire trip exceeded our expectations! From the breathtaking views to the
@@ -281,10 +280,10 @@
           <span class="meta">Japan, 2023</span>
         </div>
       </div>
-    </article>
+    </article> -->
 
     <!-- Card 2 -->
-    <article class="card">
+    <!-- <article class="card">
       <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
       <p class="quote">
         “This was our first time booking with this service, and it won’t be the last! Every detail of our trip was perfectly
@@ -297,10 +296,10 @@
           <span class="meta">China, 2023</span>
         </div>
       </div>
-    </article>
+    </article> -->
 
     <!-- Card 3 -->
-    <article class="card">
+    <!-- <article class="card">
       <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
       <p class="quote">
         “From the moment we booked, everything was smooth and hassle-free. The customer support was fantastic,
@@ -313,10 +312,10 @@
           <span class="meta">Egypt, 2022</span>
         </div>
       </div>
-    </article>
+    </article> -->
 
     <!-- Card 4 -->
-    <article class="card">
+    <!-- <article class="card">
       <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
       <p class="quote">
         “From the moment we booked, everything was smooth and hassle-free. The customer support was fantastic,
@@ -331,7 +330,7 @@
       </div>
     </article>
   </div>
-</section>
+</section> -->
 
 <footer class="text-dark pt-5 pb-4" style="background:#EFF8FF">
   <div class="container">
