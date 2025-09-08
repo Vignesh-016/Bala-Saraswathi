@@ -200,7 +200,7 @@ input:focus, select:focus, textarea:focus{
 /* ============ Fix Bootstrap Conflicts ============ */
 .branches-sec * { box-sizing: border-box !important; }
 .branches-sec .container {
-  max-width: 1160px !important;
+  max-width: 1450px !important;
   width: 100% !important;
   margin: 0 auto !important;
   padding: 0 20px !important;
