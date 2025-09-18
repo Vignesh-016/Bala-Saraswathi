@@ -20,51 +20,57 @@
 
 <body>
 
-    <!-- Top bar with contact + social icons -->
+  <header class="main-header">
+    <!-- Top bar -->
     <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
-      <div class="container d-flex justify-content-between align-items-center">
-          <div>
-              <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
-                  +91 9629587444</p>
-          </div>
-          
-          <div class="d-flex align-items-center">
-              <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                  Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-              <!-- Social icons -->
-              <div class="social-icons">
-                  <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  <!-- Logo left, nav right in navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-      <div class="container d-flex align-items-center justify-content-between">
-          <!-- Logo on the left -->
-          <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
-              <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
-          </a>
-          <!-- Toggler for mobile -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Nav menu on the right -->
-          <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-              <ul class="navbar-nav align-items-center">
-                  <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <p class="mb-0">
+                    <img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
+                    +91 9629587444
+                </p>
+            </div>
+            <div class="d-flex align-items-center">
+                <p class="mb-0 me-3">
+                    <span class="icon">
+                        <img src="/assets/images/location_11080891.svg" alt="Location Icon" style="width:18px; height:18px; margin-right:6px; vertical-align:middle;">
+                    </span>
+                    Head Office, 148B, Deverpuram Road, Tuticorin - 628003
+                </p>
+                <!-- Social icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+                <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <section class="services-banner">
         <img src="./assets/images/Savings.png" alt="Services" class="banner-img">
@@ -76,15 +82,7 @@
       
       
       
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Plans Section</title>
-        <link rel="stylesheet" href="styles.css">
-      </head>
-      <body>
+      
         <section class="plans-section">
           <div class="plans-container">
             
@@ -120,10 +118,65 @@
         
               <div class="cta-box">
                 <button class="cta-btn">Download Our Plans</button>
-                <button class="cta-btn primary">Start Your Journey →</button>
+                <button id="openPopup" class="cta-btn primary">Start Your Journey →</button>
               </div>
             </div>
           </div>
+
+<!-- ======================
+     Popup Enquiry Form
+====================== -->
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup-box">
+    <button id="closePopup" class="close-btn">&times;</button>
+    <h3 class="popup-title">Enquiry Form</h3>
+    
+    <form class="popup-form">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" placeholder="Enter Name" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="Enter Email ID" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Enter your Phone Number" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Chit Value</label>
+          <select class="form-select" required>
+            <option selected disabled>Chit Value</option>
+            <option>₹1,00,000</option>
+            <option>₹2,00,000</option>
+            <option>₹5,00,000</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Tenure of Chit</label>
+          <input type="text" class="form-control" placeholder="Enter Tenure of Chit">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Monthly Income</label>
+          <input type="text" class="form-control" placeholder="Enter monthly income">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Branch</label>
+          <input type="text" class="form-control" placeholder="Enter Branch">
+        </div>
+        <div class="col-12">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="4" placeholder="Enter Message"></textarea>
+        </div>
+      </div>
+      <div class="mt-4 text-center">
+        <button class="btn btn-primary px-5 py-2 fw-bold" type="submit">Enquire Now</button>
+      </div>
+    </form>
+  </div>
+</div>
         </section>
         
 
@@ -149,10 +202,10 @@
                 <div class="plan-overlay">
                   <div class="plan-title">EDUCATION PLAN</div>
                   <div class="plan-hover">
-                    <div class="plan-price">₹10,00,000</div>
-                    <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹20,000 per month</p>
+                    <div class="plan-price">₹5,00,000</div>
+                    <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹25,000 per month</p>
                     <p><i class="fa-solid fa-clock"></i> Duration: 50 Months</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Branch: Tirunelveli</p>
+                    <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Tirunelveli</p> -->
                     <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
@@ -165,8 +218,9 @@
                   <div class="plan-title">BUSINESS PLAN</div>
                   <div class="plan-hover">
                     <div class="plan-price">₹10,00,000</div>
-                    <p><i class="fa-solid fa-briefcase"></i> Duration: 36 Months</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Branch: Chennai</p>
+                    <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹25,000 per month</p>
+                    <p><i class="fa-solid fa-briefcase"></i> Duration: 50 Months</p>
+                    <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Chennai</p> -->
                     <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
@@ -179,8 +233,9 @@
                   <div class="plan-title">WEDDING PLAN</div>
                   <div class="plan-hover">
                     <div class="plan-price">₹25,00,000</div>
-                    <p><i class="fa-solid fa-ring"></i> Duration: 24 Months</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Branch: Madurai</p>
+                    <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹1,25,000 per month</p>
+                    <p><i class="fa-solid fa-ring"></i> Duration: 20 Months</p>
+                    <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Madurai</p> -->
                     <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
@@ -193,8 +248,9 @@
                   <div class="plan-title">HOUSING PLAN</div>
                   <div class="plan-hover">
                     <div class="plan-price">₹50,00,000</div>
-                    <p><i class="fa-solid fa-house"></i> Duration: 60 Months</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Branch: Coimbatore</p>
+                    <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹2,50,000 per month</p>
+                    <p><i class="fa-solid fa-house"></i> Duration: 20 Months</p>
+                    <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Coimbatore</p> -->
                     <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
@@ -348,25 +404,21 @@
       <div class="row">
 
           <!-- Logo and Description -->
-          <div class="col-md-3">
-              <div>
-              </div>
+          <div class="col-md-3" style="padding-right: 10px;">
               <img src="/assets/images/logo.png" alt="Logo" class="img-fluid mb-3"
-                  style="max-width: 100px;">
-              <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut
-                  Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed
-                  Do.</p>
+                  style="max-width: 80px;">
+              <p style="padding-right: 5rem;">With 35+ years of trust, we help families and businesses achieve goals through transparent chit plans, ethical savings, and reliable support.</p>
           </div>
 
           <!-- Quick Links -->
           <div class="col-md-3">
               <h5 class="text-primary">Quick Links</h5>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">Services</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
+                  <li><a href="./index.html" class="text-dark text-decoration-none">Home</a></li>
+                  <li><a href="./about.html" class="text-dark text-decoration-none">About Us</a></li>
+                  <li><a href="./services.html" class="text-dark text-decoration-none">Services</a></li>
+                  <!-- <li><a href="#" class="text-dark text-decoration-none">Blog</a></li> -->
+                  <li><a href="./contact.html" class="text-dark text-decoration-none">Contact Us</a></li>
                   
                   </li>
               </ul>
@@ -394,7 +446,7 @@
               <h5 class="text-primary">Follow Us</h5>
               <p><img src="/assets/images/phone.png"> +91 9629587444</p>
               <p><img src="/assets/images/mail.png">balasaraswathichitspvtltd@gmail.com</p>
-              <p><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
+              <p style="white-space: nowrap;"><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
 
               <!-- Social Icons -->
               <div class="mt-3">
@@ -408,8 +460,8 @@
           </div>
 
       </div>
-  </div>                    
-          
+  </div>
+</footer>          
         <!-- Call JS here -->
         <script src="services.js"></script>
       </body>

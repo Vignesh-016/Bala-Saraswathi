@@ -54,8 +54,8 @@ body{
   margin: 40px auto;
   border-radius: 12px;
   overflow: hidden;                              /* keep rounded corners */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  background: url('./assets/images/Peoples.png') center/cover no-repeat;
+  box-shadow: 0 50px 18px rgba(0,0,0,0.15);
+  background: url('./assets/images/Indian\ Peoples.png') center/cover no-repeat;
   padding-left: 40px;                            /* safe inner left */
   padding-right: 40px;                           /* safe inner right */
   color: #fff;
@@ -65,7 +65,7 @@ body{
 .about-banner::before{
   content:"";
   position:absolute; inset:0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.65);
   z-index:1;
 }
 

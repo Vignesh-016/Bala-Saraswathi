@@ -17,6 +17,20 @@
                 transition: color 0.3s;
             }
 
+            .main-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1050; /* stays above everything */
+                background: #fff; /* ensure solid background */
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional nice shadow */
+            }
+            body {
+                padding-top: 140px; /* adjust based on header height */
+            }
+            
+
             .heroSection2 {
                 background: linear-gradient(45deg, black, transparent), url("/assets/images/girl.png");
                 color: white;
@@ -87,7 +101,7 @@
 
             /* Header Hero */
             .hero-section {
-                padding: 60px 0;
+                padding: 150px 0;
             }
 
             .hero-section .btn-primary {
@@ -184,7 +198,7 @@
 
             .trust-details p {
                 margin: 8px 0;
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 1.6;
             }
 
@@ -1010,7 +1024,7 @@
 
 
             .trustedFamiliesSection {
-                background-image: url('assets/images/people.png');
+                background-image: url('assets/images/Indian\ Peoples.png');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -1029,7 +1043,7 @@
                 content: "";
                 position: absolute;
                 inset: 0;
-                background-color: rgba(0,0,0,0.55); /* softer overlay for image */
+                background-color: rgba(0,0,0,0.65); /* softer overlay for image */
                 z-index: -1;
               }
               
@@ -1047,7 +1061,7 @@
               }
               
               .trustedFamiliesSection p {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 line-height: 1.6;
               }
               
@@ -1260,3 +1274,23 @@
   .plan-card { width: 90%; }
   .scroll-btn { display: none; } /* hide arrows on small mobile */
 }
+
+
+.modal-header {
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-size: 1.2rem;
+  }
+  
+  .form-control, .form-select {
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .btn-primary {
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  

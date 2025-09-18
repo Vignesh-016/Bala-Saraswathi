@@ -18,54 +18,61 @@
 
 <body>
 
-    <!-- Top bar with contact + social icons -->
-    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
-                    +91 9629587444</p>
-            </div>
-            
-            <div class="d-flex align-items-center">
-                <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                    Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-                <!-- Social icons -->
-                <div class="social-icons">
-                    <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+    <header class="main-header">
+        <!-- Top bar -->
+        <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="mb-0">
+                        <img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
+                        +91 9629587444
+                    </p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <p class="mb-0 me-3">
+                        <span class="icon">
+                            <img src="/assets/images/location_11080891.svg" alt="Location Icon" style="width:18px; height:18px; margin-right:6px; vertical-align:middle;">
+                        </span>
+                        Head Office, 148B, Deverpuram Road, Tuticorin - 628003
+                    </p>
+                    <!-- Social icons -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     
-    <!-- Logo left, nav right in navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-        <div class="container d-flex align-items-center justify-content-between">
-            <!-- Logo on the left -->
-            <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
-                <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
-            </a>
-            <!-- Toggler for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Nav menu on the right -->
-            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-                </ul>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container d-flex align-items-center justify-content-between">
+                <!-- Logo -->
+                <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+                    <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+                </a>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Nav menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    
 
     <!-- Hero Section -->
-    <!-- <section class="hero-section container my-5">
+    <section class="hero-section container my-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold">Secure Savings.<br />Stronger Tomorrow.!</h1>
@@ -81,27 +88,10 @@ Join today and experience the freedom of flexible finance!
             <div class="col-lg-6 d-flex justify-content-center">
                 <div class="position-relative" style="min-width: 410px; min-height: 320px;">
                     
-                    <div style="
-                        position: absolute;
-                        left: 0; top: 30px;
-                        width: 370px; height: 260px;
-                        background: radial-gradient(ellipse at 60% 60%, #2563eb 80%, #2563ebcc 100%, transparent 100%);
-                        border-radius: 50% 45% 50% 50%/55% 60% 45% 50%;
-                        z-index: 1;
-                        filter: blur(0.5px);
-                    "></div>
-                    
-                    
-                    <img src="assets/images/Womens.png" alt="Woman in red saree" 
-                        style="position: absolute; left: -120px; top: 80px; width: 250px; z-index: 2; border-radius: 16px;">
-                    
-                    <img src="assets/images/Women with savings.png" alt="Woman in yellow with piggy bank" 
-                        style="position: absolute; left: -100px; top: 62px; width: 460px; z-index: 3; border-radius: 16px;">
-                    
-                    <img src="assets/images/Men in Suits.png" alt="Man in suit" 
-                        style="position: absolute; left: 170px; top: 60px; width: 250px; z-index: 2; border-radius: 16px;">
+                    <img src="assets/images/Banner Image.png" alt="Chit Fund Hero Collage" 
+                        style="position: absolute; left: -100px; top: -60px; width: 650px; height: 420px; z-index: 1; border-radius: 24px; object-fit: cover;">
                     <div
-                        style="position: absolute; top: 0; left: -45px; background: #fff; padding: 10px 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 160px; font-size: 0.9rem; z-index: 10;">
+                        style="position: absolute; top: -20px; left: -150px; background: #fff; padding: 10px 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 160px; font-size: 0.9rem; z-index: 10;">
                         <strong>Shiva Kumar</strong>
                         <div class="stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -124,9 +114,9 @@ Join today and experience the freedom of flexible finance!
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <section class="hero-section container my-5">
+    <!-- <section class="hero-section container my-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold">Secure Savings.<br />Stronger Tomorrow.!</h1>
@@ -136,25 +126,23 @@ Join today and experience the freedom of flexible finance!
 Join today and experience the freedom of flexible finance!
 
                 </p>
-                <button class="btn btn-primary btn-lg">Start Your Journey <i
-                        class="fas fa-arrow-right ms-2"></i></button>
-            </div>
-            <div class="col-lg-6 d-flex justify-content-center">
+                <a href="services.html" class="btn btn-primary btn-lg">Start Your Journey <i
+                        class="fas fa-arrow-right ms-2"></i></a>
+            </div> -->
+            <!-- <div class="col-lg-6 d-flex justify-content-center">
                 <div class="position-relative">
                     <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                         alt="Happy People" class="rounded"
-                        style="max-width: 320px; box-shadow: 0 8px 20px rgb(13 110 253 / 0.3);" />
+                        style="max-width: 320px; box-shadow: 0 8px 20px rgb(13 110 253 / 0.3);" /> -->
                     <!-- Adding small testimonial cards near image -->
-                    <div
+                    <!-- <div
                         style="position: absolute; top: 15%; left: -30px; background: #fff; padding: 10px 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 160px; font-size: 0.9rem;">
                         <strong>Shiva Kumar</strong>
                         <div class="stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-
-
+                        </div> -->
+                    <!-- </div>
 
                     <div
                         style="position: absolute; bottom: 10%; right: -30px; background: #fff; padding: 10px 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 140px; font-size: 0.9rem;">
@@ -164,10 +152,10 @@ Join today and experience the freedom of flexible finance!
                                 class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Trusted Families Section -->
 <section class="trustedFamiliesSection d-flex align-items-center text-center text-white">
@@ -176,12 +164,12 @@ Join today and experience the freedom of flexible finance!
         <div class="col-lg-10 overlay-box p-5">
           <h2 class="fw-bold display-5 mb-4">
             TRUSTED BY 25,000+ FAMILIES AND INVESTORS FOR<br />
-            SECURE AND RELIABLE CHIT FUND SOLUTIONS.
+            SECURE AND RELIABLE CHIT FUND SOLUTIONS
           </h2>
           <p class="lead text-white-50 mb-0">
             From your child’s education and dream wedding to growing a business or
             facing emergencies, we bring financial support to your doorstep with ease
-            and trust.
+            and trust
           </p>
         </div>
       </div>
@@ -210,11 +198,11 @@ Join today and experience the freedom of flexible finance!
           <div class="plan-overlay">
             <div class="plan-title">EDUCATION PLAN</div>
             <div class="plan-hover">
-              <div class="plan-price">₹10,00,000</div>
-              <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹20,000 per month</p>
-              <p><i class="fa-solid fa-clock"></i> Duration: 50 Months</p>
-              <p><i class="fa-solid fa-location-dot"></i> Branch: Tirunelveli</p>
-              <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
+              <div class="plan-price">₹5,00,000</div>
+              <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹25,000 per month</p>
+              <p><i class="fa-solid fa-clock"></i> Duration: 20 Months</p>
+              <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Tirunelveli</p> -->
+              <a href="./services.html" class="inquiry-btn">Know More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -226,9 +214,10 @@ Join today and experience the freedom of flexible finance!
             <div class="plan-title">BUSINESS PLAN</div>
             <div class="plan-hover">
               <div class="plan-price">₹10,00,000</div>
-              <p><i class="fa-solid fa-briefcase"></i> Duration: 36 Months</p>
-              <p><i class="fa-solid fa-location-dot"></i> Branch: Chennai</p>
-              <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
+              <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹50,000 per month</p>
+              <p><i class="fa-solid fa-briefcase"></i> Duration: 20 Months</p>
+              <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Chennai</p> -->
+              <a href="./services.html" class="inquiry-btn">Know More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -240,9 +229,10 @@ Join today and experience the freedom of flexible finance!
             <div class="plan-title">WEDDING PLAN</div>
             <div class="plan-hover">
               <div class="plan-price">₹25,00,000</div>
-              <p><i class="fa-solid fa-ring"></i> Duration: 24 Months</p>
-              <p><i class="fa-solid fa-location-dot"></i> Branch: Madurai</p>
-              <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
+              <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹1,25,000 per month</p>
+              <p><i class="fa-solid fa-ring"></i> Duration: 20 Months</p>
+              <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Madurai</p> -->
+              <a href="./services.html" class="inquiry-btn">Know More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -254,9 +244,10 @@ Join today and experience the freedom of flexible finance!
             <div class="plan-title">HOUSING PLAN</div>
             <div class="plan-hover">
               <div class="plan-price">₹50,00,000</div>
-              <p><i class="fa-solid fa-house"></i> Duration: 60 Months</p>
-              <p><i class="fa-solid fa-location-dot"></i> Branch: Coimbatore</p>
-              <a href="#" class="inquiry-btn">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
+              <p><i class="fa-solid fa-indian-rupee-sign"></i> ₹2,50,000 per month</p>
+              <p><i class="fa-solid fa-house"></i> Duration: 20 Months</p>
+              <!-- <p><i class="fa-solid fa-location-dot"></i> Branch: Thoothukudi</p> -->
+              <a href="./services.html" class="inquiry-btn">Know More <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -269,19 +260,23 @@ Join today and experience the freedom of flexible finance!
             <div class="hero-image1">
             </div>
             <div class="hero-text1">
-                <h2 class="animate-text1">“Savings That Strengthen Your Family’s Tomorrow.”</h2>
+                <h2 class="animate-text1">Savings That Strengthen Your Family’s Tomorrow</h2>
                 <p class="animate-text1 delay-1">
-                    Join trusted chit funds for reliable savings and financial growth.
+                    Join trusted chit funds for reliable savings and financial growth
                 </p>
-                <a href="#" class="btn-hero animate-text1 delay-2">
-                    Start Your Journey →
-                </a>
+                <a href="#" 
+   class="btn btn-primary btn-lg" 
+   data-bs-toggle="modal" 
+   data-bs-target="#enquiryModal">
+   Start Your Journey
+</a>
+
             </div>
         </div>
     </section>
 
     <section class="trust-section">
-        <h2>WHY PEOPLE TRUST US •</h2>
+        <h2>WHY PEOPLE TRUST US </h2>
 
         <div class="trust-container">
             <!-- Large Box -->
@@ -291,7 +286,7 @@ Join today and experience the freedom of flexible finance!
                     <div class="trust-title">SPOT PAYMENT BENEFITS <i
                             class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     <div class="trust-details">
-                        <p><i class="fa-solid fa-check-circle"></i> Receive your payout instantly as soon as your bid wins.</p>
+                        <p><i class="fa-solid fa-check-circle"></i> Receive your payout instantly as soon as your bid wins</p>
                         <p><i class="fa-solid fa-check-circle"></i>Access funds exactly when you need them, without delays</p>
                     </div>
                 </div>
@@ -304,8 +299,8 @@ Join today and experience the freedom of flexible finance!
                     <div class="trust-title">DOOR-TO-DOOR COLLECTION <i
                             class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     <div class="trust-details">
-                        <p><i class="fa-solid fa-check-circle"></i> Convenient payment collection from your location, saving time and effort.</p>
-                        <p><i class="fa-solid fa-check-circle"></i> Personalized service ensures your experience is smooth every month.</p>
+                        <p><i class="fa-solid fa-check-circle"></i> Convenient payment collection from your location, saving time and effort</p>
+                        <p><i class="fa-solid fa-check-circle"></i> Personalized service ensures your experience is smooth every month</p>
                     </div>
                 </div>
             </div>
@@ -314,10 +309,10 @@ Join today and experience the freedom of flexible finance!
             <div class="trust-box">
                 <img src="/assets/images/right2.png" alt="Renew Discount">
                 <div class="trust-content">
-                    <div class="trust-title">RENEW DISCOUNT <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <div class="trust-title">Flexible Collateral <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </div>
                     <div class="trust-details">
-                        <p><i class="fa-solid fa-check-circle"></i> Minimal security requirements make joining simple for everyone.</p>
+                        <p><i class="fa-solid fa-check-circle"></i> Minimal security requirements make joining simple for everyone</p>
                         <p><i class="fa-solid fa-check-circle"></i> Our team will reach you directly, review, and invest if all is satisfactory</p>
                     </div>
                 </div>
@@ -327,89 +322,121 @@ Join today and experience the freedom of flexible finance!
 
     <section class="offer-section">
         <div class="offer-header">
-            <h2>WHAT WE OFFER •</h2>
-            <button>View all plans</button>
+          <h2>WHAT WE OFFER </h2>
+          <button>View all plans</button>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.</p>
+        <p>Transparent chit plans with flexible options to help you save, invest, and achieve your financial goal</p>
+      
+        <div class="offer-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      
+          <!-- Card 1 -->
+          <div class="offer-card active">
+            <div class="icon"><img src="/assets/images/pot.png"></div>
+            <h3>₹5,00,000</h3>
+            <hr>
+            <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
+            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+            <button onclick="window.location.href='services.html?plan=1'">
+              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="offer-card active">
+            <div class="icon"><img src="/assets/images/pot.png"></div>
+            <h3>₹10,00,000</h3>
+            <hr>
+            <p><img src="/assets/images/cal.png"> PLAN: ₹50,000 per month</p>
+            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+            <button onclick="window.location.href='services.html?plan=10'">
+              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="offer-card active">
+            <div class="icon"><img src="/assets/images/pot.png"></div>
+            <h3>₹25,00,000</h3>
+            <hr>
+            <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000per month</p>
+            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+            <button onclick="window.location.href='services.html?plan=25'">
+              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+      
+          <!-- Card 4 -->
+          <div class="offer-card active">
+            <div class="icon"><img src="/assets/images/pot.png"></div>
+            <h3>₹50,00,000</h3>
+            <hr>
+            <p><img src="/assets/images/cal.png"> PLAN: ₹2,50,000 per month</p>
+            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+            <button onclick="window.location.href='services.html?plan=50'">
+              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+      
+          <!-- Card 5 -->
+          <div class="offer-card active">
+            <div class="icon"><img src="/assets/images/pot.png"></div>
+            <h3>₹5,00,000</h3>
+            <hr>
+            <p><img src="/assets/images/cal.png"> PLAN: 12,500 per month</p>
+            <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+            <button onclick="window.location.href='services.html?plan=1'">
+              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+      
+          <!-- Card 6 -->
+          <div class="offer-card active">
+            <div class="icon"><img src="/assets/images/pot.png"></div>
+            <h3>₹10,00,000</h3>
+            <hr>
+            <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
+            <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+            <button onclick="window.location.href='services.html?plan=10'">
+              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
 
-        <div class="offer-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-            <!-- Card 1 (Active) -->
-            <div class="offer-card active">
-                <div class="icon">
-                    <img src="/assets/images/pot.png">
-                </div>
-                <h3>₹1,00,000</h3>
-                <hr>
-                <p><img src="/assets/images/cal.png"> PLAN: ₹20,000 per month</p>
-                <p><img src="/assets/images/time.png"> DURATION: 50 months</p>
-                <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p>
-                <button>Start Your Journey <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="offer-card active">
-                <div class="icon"> <img src="/assets/images/pot.png">
-                </div>
-                <h3>₹5,00,000</h3>
-                <hr>
-                <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
-                <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-                <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p>
-                <button>Start Your Journey <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="offer-card active">
-                <div class="icon"> <img src="/assets/images/pot.png">
-                </div>
-                <h3>₹10,00,000</h3>
-                <hr>
-                <p><img src="/assets/images/cal.png"> PLAN: ₹50,000 per month</p>
-                <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-                <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p>
-                <button>Start Your Journey <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="offer-card active">
-                <div class="icon"> <img src="/assets/images/pot.png">
-                </div>
-                <h3>₹25,00,000</h3>
-                <hr>
-                <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000 per month</p>
-                <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-                <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p>
-                <button>Start Your Journey <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="offer-card active">
-                <div class="icon"> <img src="/assets/images/pot.png">
-                </div>
-                <h3>₹50,00,000</h3>
-                <hr>
-                <p><img src="/assets/images/cal.png"> PLAN: ₹2,50,000 per month</p>
-                <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-                <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p>
-                <button>Start Your Journey <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="offer-card active">
-                <div class="icon"> <img src="/assets/images/pot.png">
-                </div>
-                <h3>₹50,00,000</h3>
-                <hr>
-                <p><img src="/assets/images/cal.png"> PLAN: ₹20,000 per month</p>
-                <p><img src="/assets/images/time.png"> DURATION: 50 months</p>
-                <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p>
-                <button>Start Your Journey <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </div>  
-    </section>
-
-    
+      <!-- Card 7 -->
+      <div class="offer-card active">
+        <div class="icon"><img src="/assets/images/pot.png"></div>
+        <h3>₹25,00,000</h3>
+        <hr>
+        <p><img src="/assets/images/cal.png"> PLAN: ₹62,500 per month</p>
+        <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+        <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+        <button onclick="window.location.href='services.html?plan=25'">
+          Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+          
+<!-- Card 8 -->
+<div class="offer-card active">
+    <div class="icon"><img src="/assets/images/pot.png"></div>
+    <h3>₹50,00,000</h3>
+    <hr>
+    <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000 per month</p>
+    <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+    <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+    <button onclick="window.location.href='services.html?plan=50'">
+      Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+      
+        </div>
+      </section>
+      
+      
     <!-- Hero Section 2 -->
     <section class="heroSection2 d-flex align-items-center text-white">
         <div class="container">
@@ -417,15 +444,19 @@ Join today and experience the freedom of flexible finance!
 
                 <!-- Left Content -->
                 <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-start">
-                    <h1 class="fw-bold display-5">“STRATEGIC SAVINGS. SMARTER INVESTMENTS ”</h1>
+                    <h1 class="fw-bold display-5">STRATEGIC SAVINGS SMARTER INVESTMENTS </h1>
                     <p class="mt-3 fs-5">
                         Join A Trusted Chit Fund Network Designed For Business Professionals And Grow Your Wealth With
                         Confidence.
                     </p>
-                    <a href="#" class="btn btn-primary btn-lg mt-3 d-inline-flex align-items-center">
-                        Start Your Journey
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
+                    <a href="#" 
+                    class="btn btn-primary btn-lg" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#enquiryModal">
+                    Enquire Now
+                 </a>
+                 
+
                 </div>
 
 
@@ -540,7 +571,7 @@ Join today and experience the freedom of flexible finance!
         </div>
     </section> -->
 
-    <section style="background:#EFF8FF;padding-top:40px;">
+    <!-- <section style="background:#EFF8FF;padding-top:40px;">
         <div class="container ">
             <div class="row">
                 <div class="col-lg-4">
@@ -552,20 +583,20 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
 
                     </p>
                     <div style="position:absolute;">
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-prev"></div>
+                        Navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
+ -->
 
-
-                </div>
+                <!-- </div>
                 <div class="col-lg-8">
-                    <!-- Slider main container -->
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
+                    Slider main container -->
+                    <!-- <div class="swiper">
+                        <div class="swiper-wrapper"> -->
 
                             <!-- Slides -->
-                            <div class="swiper-slide">
+                            <!-- <div class="swiper-slide">
                                 <img src="/assets/images/image1.png" alt="Article">
                                 <div class="card-content">
                                     <h3>Are Chit Funds Safe? Myths vs Reality</h3>
@@ -631,7 +662,7 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
             </div>
         </div>
 
-    </section>
+    </section> -->
 
 
     <section class="faq-section">
@@ -661,7 +692,7 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-content">
-                    Through a fair, open auction process where the highest bidder receives the payout each cycle.
+                    Each cycle, a lucky draw is conducted, and the selected member receives the payout.
                 </div>
             </div>
 
@@ -711,7 +742,7 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-content">
-                    A licensed organizer collects contributions, conducts auctions, distributes payouts, and ensures regulatory compliance.
+                    A foreman organizer collects contributions, conducts auctions, distributes payouts, and ensures regulatory compliance.
                 </div>
             </div>
 
@@ -726,25 +757,21 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                 <div class="row">
 
                     <!-- Logo and Description -->
-                    <div class="col-md-3">
-                        <div>
-                        </div>
+                    <div class="col-md-3" style="padding-right: 10px;">
                         <img src="/assets/images/logo.png" alt="Logo" class="img-fluid mb-3"
-                            style="max-width: 100px;">
-                        <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut
-                            Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed
-                            Do.</p>
+                            style="max-width: 80px;">
+                        <p style="padding-right: 5rem;">With 35+ years of trust, we help families and businesses achieve goals through transparent chit plans, ethical savings, and reliable support.</p>
                     </div>
 
                     <!-- Quick Links -->
                     <div class="col-md-3">
                         <h5 class="text-primary">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
-                            <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
-                            <li><a href="#" class="text-dark text-decoration-none">Services</a></li>
-                            <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
-                            <li><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
+                            <li><a href="./index.html" class="text-dark text-decoration-none">Home</a></li>
+                            <li><a href="./about.html" class="text-dark text-decoration-none">About Us</a></li>
+                            <li><a href="./services.html" class="text-dark text-decoration-none">Services</a></li>
+                            <!-- <li><a href="#" class="text-dark text-decoration-none">Blog</a></li> -->
+                            <li><a href="./contact.html" class="text-dark text-decoration-none">Contact Us</a></li>
                             
                             </li>
                         </ul>
@@ -772,7 +799,7 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                         <h5 class="text-primary">Follow Us</h5>
                         <p><img src="/assets/images/phone.png"> +91 9629587444</p>
                         <p><img src="/assets/images/mail.png">balasaraswathichitspvtltd@gmail.com</p>
-                        <p><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
+                        <p style="white-space: nowrap;"><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
 
                         <!-- Social Icons -->
                         <div class="mt-3">
@@ -787,6 +814,8 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
 
                 </div>
             </div>
+</footer>
+
             <!-- Bootstrap 5 JS Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <!-- jQuery -->
@@ -846,6 +875,83 @@ Empower your financial journey with knowledge and insights from Bala Saraswathi 
                     }
                 });
             </script>
-    </body>
 
+<!-- ======================
+     Enquiry Form Modal
+====================== -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="border-radius:15px; overflow:hidden;">
+        
+        <!-- Modal Header -->
+        <div class="modal-header bg-white">
+          <h5 class="modal-title fw-bold text-primary w-100 text-center" id="enquiryModalLabel">
+            Enquiry Form
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body" style="background:#f5f9ff;">
+          <form class="p-3">
+            <div class="row g-3">
+              
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter Name" required>
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="Enter Email ID" required>
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="Enter your Phone Number" required>
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Chit Value</label>
+                <select class="form-select" required>
+                  <option selected disabled>Chit Value</option>
+                  <option>₹1,00,000</option>
+                  <option>₹2,00,000</option>
+                  <option>₹5,00,000</option>
+                </select>
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Tenure of Chit</label>
+                <input type="text" class="form-control" placeholder="Enter Tenure of Chit">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Monthly Income</label>
+                <input type="text" class="form-control" placeholder="Enter monthly income">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Branch</label>
+                <input type="text" class="form-control" placeholder="Enter Branch">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" placeholder="Enter Message"></textarea>
+              </div>
+            </div>
+  
+            <div class="mt-4 text-center">
+              <button class="btn btn-primary px-5 py-2 fw-bold" type="submit">
+                Enquire Now
+              </button>
+            </div>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+    </body>
     </html>

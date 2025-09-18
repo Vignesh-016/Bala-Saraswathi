@@ -16,61 +16,68 @@
 </head>
 <body>
 
-<!-- Top bar with contact + social icons -->
-<div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
-  <div class="container d-flex justify-content-between align-items-center">
-      <div>
-          <p class="mb-0"><img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
-              +91 9629587444</p>
-      </div>
-      
-      <div class="d-flex align-items-center">
-          <p class="mb-0 me-3"><i class="fa fa-map-marker" aria-hidden="true"></i>
-              Head Office, 148B, Deverpuram Road, Tuticorin - 628003</p>
-          <!-- Social icons -->
-          <div class="social-icons">
-              <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
-          </div>
-      </div>
-  </div>
-</div>
+  <header class="main-header">
+    <!-- Top bar -->
+    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <p class="mb-0">
+                    <img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
+                    +91 9629587444
+                </p>
+            </div>
+            <div class="d-flex align-items-center">
+                <p class="mb-0 me-3">
+                    <span class="icon">
+                        <img src="/assets/images/location_11080891.svg" alt="Location Icon" style="width:18px; height:18px; margin-right:6px; vertical-align:middle;">
+                    </span>
+                    Head Office, 148B, Deverpuram Road, Tuticorin - 628003
+                </p>
+                <!-- Social icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Logo left, nav right in navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-  <div class="container d-flex align-items-center justify-content-between">
-      <!-- Logo on the left -->
-      <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
-          <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
-      </a>
-      <!-- Toggler for mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-          aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Nav menu on the right -->
-      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-          <ul class="navbar-nav align-items-center">
-              <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-              <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-          </ul>
-      </div>
-  </div>
-</nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+                <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
 <!-- ===== Hero / Banner ===== -->
-<section class="contact-hero">
+<section class="contact-hero" style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);">
   <img
-    src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1800&auto=format&fit=crop"
+    src="./assets/images/Contact Us banner.png"
     alt="Happy family"
     class="hero-img"
+    style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);"
   />
   <div class="hero-overlay"></div>
-  <div class="hero-inner">
+  <div class="hero-inner" style="box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.10);">
     <h1>CONTACT US</h1>
     <p>Where Family Dreams Find Support</p>
   </div>
@@ -84,7 +91,7 @@
 <div class="contact-left">
     <h2 class="section-title">CONTACT US</h2>
     <p class="lead">
-      Have questions or need assistance? Our team is here to help you with service inquiries, plan details, or personalized guidance. Reach out to us anytime—we’d love to hear from you.
+      Have questions or need assistance? Our team is here to help you with service inquiries, plan details, or personalized guidance. Reach out to us anytime we’d love to hear from you.
     </p>
   
     <h3 class="subhead">HEADQUARTER ADDRESS</h3>
@@ -96,7 +103,7 @@
       </span>
       <div>
         <h5>Mail Id</h5>
-        <a href="mailto:balasaraswathichitspvtltd@gmail.com">balasaraswathichitspvtltd@gmail.com</a>
+        <a href="mailto:balasaraswathichitspvtltd@gmail.com" style="text-decoration: none;">balasaraswathichitspvtltd@gmail.com</a>
       </div>
     </div>
   
@@ -107,7 +114,7 @@
       </span>
       <div>
         <h5>Phone Number</h5>
-        <a href="tel:+919629587444">+91 9629587444</a>
+        <a href="tel:+919629587444" style="text-decoration: none;">+91 9629587444</a>
       </div>
     </div>
   
@@ -213,7 +220,7 @@
       <!-- Card 1 -->
       <article class="branch-card">
         <figure class="photo">
-          <img src="https://images.unsplash.com/photo-1582582621959-48d0b2ae5e9b?q=80&w=1200&auto=format&fit=crop" alt="Chennai branch" />
+          <img src="./assets/images/Thoothukudi Beach.jpg" alt="Chennai branch" />
         </figure>
 
         <!-- City “button” (focusable for accessibility) -->
@@ -223,7 +230,7 @@
           <div class="caret"></div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/location.svg" alt="Location Icon" width="24" height="24" />
+              <img src="/assets/images/location_11080891.svg" alt="Location Icon" width="24" height="24" />
             </span>
             <span>BALASARASWATHI CHITS PVT LTD,
               148B, DEVARPURAM ROAD, 
@@ -232,7 +239,7 @@
           </div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/phone.svg" alt="Phone Icon" width="24" height="24" />
+              <img src="/assets/images/telephone_7980616.svg" alt="Phone Icon" width="24" height="24" />
             </span>
             <a href="tel:+9196295 87444">+91 96295 87444</a>
           </div>
@@ -242,14 +249,14 @@
       <!-- Card 2 -->
       <article class="branch-card">
         <figure class="photo">
-          <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop" alt="Madurai branch" />
+          <img src="./assets/images/tiruchendur Temple.jpg" alt="Madurai branch" />
         </figure>
         <a href="#" class="label" tabindex="0">Thiruchendur</a>
         <div class="dropdown">
           <div class="caret"></div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/location.svg" alt="Location Icon" width="24" height="24" />
+              <img src="/assets/images/location_11080891.svg" alt="Location Icon" width="24" height="24" />
             </span>
             <span>BALASARASWATHI CHITS PVT LTD,
               3/15 SOUTH MADA STREET,
@@ -259,7 +266,7 @@
           </div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/phone.svg" alt="Phone Icon" width="24" height="24" />
+              <img src="/assets/images/telephone_7980616.svg" alt="Phone Icon" width="24" height="24" />
             </span>
             <a href="tel:+918903777520">+91 8903777520</a>
           </div>
@@ -269,14 +276,14 @@
       <!-- Card 3 -->
       <article class="branch-card">
         <figure class="photo">
-          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop" alt="Tuticorin branch" />
+          <img src="./assets/images/Kovilpatti.jpg" alt="Tuticorin branch" />
         </figure>
         <a href="#" class="label" tabindex="0">Kovilpatti</a>
         <div class="dropdown">
           <div class="caret"></div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/location.svg" alt="Location Icon" width="24" height="24" />
+              <img src="/assets/images/location_11080891.svg" alt="Location Icon" width="24" height="24" />
             </span>
             <span>BALASARASWATHI CHITS PVT LTD,
             181, MAHALAKSHMI PLAZA,
@@ -286,7 +293,7 @@
           </div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/phone.svg" alt="Phone Icon" width="24" height="24" />
+              <img src="/assets/images/telephone_7980616.svg" alt="Phone Icon" width="24" height="24" />
             </span>
             <a href="tel:+9199405 88520">+91 99405 88520</a>
           </div>
@@ -296,14 +303,14 @@
       <!-- Card 4 -->
       <article class="branch-card">
         <figure class="photo">
-          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop" alt="Tirunelveli branch" />
+          <img src="./assets/images/Tirunelveli.jpg" alt="Tirunelveli branch" />
         </figure>
         <a href="#" class="label" tabindex="0">Tirunelveli</a>
         <div class="dropdown">
           <div class="caret"></div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/location.svg" alt="Location Icon" width="24" height="24" />
+              <img src="/assets/images/location_11080891.svg" alt="Location Icon" width="24" height="24" />
             </span>
             <span>BALASARASWATHI CHITS PVT LTD,
             SINDUPOONDURAI CENTRE STREET,
@@ -313,7 +320,7 @@
           </div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/phone.svg" alt="Phone Icon" width="24" height="24" />
+              <img src="/assets/images/telephone_7980616.svg" alt="Phone Icon" width="24" height="24" />
             </span>
             <a href="tel:+9196299 45944">+91 96299 45944</a>
           </div>
@@ -323,14 +330,14 @@
       <!-- Card 5 -->
       <article class="branch-card">
         <figure class="photo">
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Kovilpatti branch" />
+          <img src="./assets/images/Madurai Temple.jpg" alt="Kovilpatti branch" />
         </figure>
         <a href="#" class="label" tabindex="0">Madurai</a>
         <div class="dropdown">
           <div class="caret"></div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/location.svg" alt="Location Icon" width="24" height="24" />
+              <img src="/assets/images/location_11080891.svg" alt="Location Icon" width="24" height="24" />
             </span>
             <span>BALASARASWATHI CHITS PVT LTD,
             36/1 BANGAJAM COLONY,
@@ -340,7 +347,7 @@
           </div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/phone.svg" alt="Phone Icon" width="24" height="24" />
+              <img src="/assets/images/telephone_7980616.svg" alt="Phone Icon" width="24" height="24" />
             </span>
             <a href="tel:+9197905 78204">+91 97905 78204</a>
           </div>
@@ -350,14 +357,14 @@
       <!-- Card 6 -->
       <article class="branch-card">
         <figure class="photo">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Thiruchendur branch" />
+          <img src="./assets/images/Chennai Central.jpg" alt="Thiruchendur branch" />
         </figure>
         <a href="#" class="label" tabindex="0">Chennai</a>
         <div class="dropdown">
           <div class="caret"></div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/location.svg" alt="Location Icon" width="24" height="24" />
+              <img src="/assets/images/location_11080891.svg" alt="Location Icon" width="24" height="24" />
             </span>
             <span>BALASARASWATHI CHITS PVT LTD,
             7/663 MOGAPPAIR WEST,
@@ -367,7 +374,7 @@
           </div>
           <div class="row">
             <span class="ico">
-              <img src="/assets/icons/phone.svg" alt="Phone Icon" width="24" height="24" />
+              <img src="/assets/images/telephone_7980616.svg" alt="Phone Icon" width="24" height="24" />
             </span>
             <a href="tel:+918139936100">+91 8139936100</a>
           </div>
@@ -382,25 +389,21 @@
       <div class="row">
 
           <!-- Logo and Description -->
-          <div class="col-md-3">
-              <div>
-              </div>
+          <div class="col-md-3" style="padding-right: 10px;">
               <img src="/assets/images/logo.png" alt="Logo" class="img-fluid mb-3"
-                  style="max-width: 100px;">
-              <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut
-                  Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed
-                  Do.</p>
+                  style="max-width: 80px;">
+              <p style="padding-right: 5rem;">With 35+ years of trust, we help families and businesses achieve goals through transparent chit plans, ethical savings, and reliable support.</p>
           </div>
 
           <!-- Quick Links -->
           <div class="col-md-3">
               <h5 class="text-primary">Quick Links</h5>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">Services</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">Blog</a></li>
-                  <li><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
+                  <li><a href="./index.html" class="text-dark text-decoration-none">Home</a></li>
+                  <li><a href="./about.html" class="text-dark text-decoration-none">About Us</a></li>
+                  <li><a href="./services.html" class="text-dark text-decoration-none">Services</a></li>
+                  <!-- <li><a href="#" class="text-dark text-decoration-none">Blog</a></li> -->
+                  <li><a href="./contact.html" class="text-dark text-decoration-none">Contact Us</a></li>
                   
                   </li>
               </ul>
@@ -428,7 +431,7 @@
               <h5 class="text-primary">Follow Us</h5>
               <p><img src="/assets/images/phone.png"> +91 9629587444</p>
               <p><img src="/assets/images/mail.png">balasaraswathichitspvtltd@gmail.com</p>
-              <p><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
+              <p style="white-space: nowrap;"><img src="/assets/images/contact.png">148 B, Deverpuram Road, Tuticorin - 628003</p>
 
               <!-- Social Icons -->
               <div class="mt-3">
@@ -443,6 +446,6 @@
 
       </div>
   </div>
-
+</footer>
 </body>
 </html>
