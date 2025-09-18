@@ -45,7 +45,7 @@ const plans = {
         desc: "Contribute ₹62,500 per month over 40 months, making high-value savings more accessible with comfortable payments and all the benefits of a premium chit fund plan.",
         pdf: "./assets/25L 40M.pdf"
       }
-    }
+    } 
   },
   "50": {
     title: "50 Lakhs",
