@@ -40,7 +40,7 @@
                 background-position: center;
             
                 /* Boxed layout */
-                max-width: 1400px;       /* set width limit */
+                max-width: 1330px;       /* set width limit */
                 margin: 40px auto;       /* center + spacing top/bottom */
                 border-radius: 12px;     /* smooth corners */
                 overflow: hidden;        /* keep overlay clean */
@@ -98,21 +98,33 @@
                 font-size: 18px;
             }
 
+            footer {
+                max-width: 1700px;
+                margin: 0 auto;
+            }
+
 
             /* Header Hero */
             .hero-section {
-                padding: 150px 0;
+                padding: 100px 0;
             }
 
             .hero-section .btn-primary {
                 padding: 12px 30px;
                 font-size: 1.1rem;
-                border-radius: 30px;
+                border-radius: 10px;
+            }
+
+            .hero-section h1,
+            .hero-section p {
+                color: #000;
             }
 
             .trust-section {
                 padding: 50px 8%;
                 color: #fff;
+                max-width: 1600px;
+                margin: 0 auto;
             }
 
             .trust-section h2 {
@@ -520,8 +532,8 @@
             }
 
             .faq-left .experience {
-                font-size: 90px;
-                font-weight: bold;
+                font-size: 150px !important;
+                font-weight: 300;
                 color: #1663f8;
                 margin-bottom: 5px;
                 text-align: left;
@@ -634,7 +646,7 @@
                 background-position: center;
             
                 /* Boxed look */
-                max-width: 1400px;   /* Control width */
+                max-width: 1300px;   /* Control width */
                 margin: 40px auto;   /* Center section with spacing */
                 border-radius: 12px; /* Optional rounded corners */
                 box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Optional shadow */
@@ -881,6 +893,8 @@
             .offer-section {
                 padding: 50px 8%;
                 text-align: start;
+                max-width: 1600px;
+                margin: 0 auto; 
             }
 
             .offer-section h2 {
@@ -1032,7 +1046,7 @@
                 position: relative;
                 z-index: 1;
               
-                max-width: 1400px;
+                max-width: 1300px;
                 margin: 40px auto;
                 border-radius: 12px;
                 overflow: hidden;

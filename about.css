@@ -335,8 +335,8 @@ body{
   .exp-wrap{ grid-template-columns: 1.05fr 1.4fr; align-items:start; }
 }
 .exp-title{
-  margin:0 0 16px 0; font-size: clamp(28px, 4.2vw, 35px);
-  line-height:1.2; letter-spacing:.2px; font-weight:800;
+  margin:0 0 16px 0; font-size: clamp(28px, 4.2vw, 40px);
+  line-height:1.2; letter-spacing:.2px; font-weight:600;
 }
 .exp-text{
   color:var(--muted); line-height:1.85; font-size:16px;
@@ -368,7 +368,7 @@ body{
   box-shadow:0 6px 14px rgba(37,99,235,.35);
 }
 .stat-icon img{ width:22px; height:22px; filter:brightness(0) invert(1); }
-.stat-content h4{ margin:0 0 6px 0; font-size:20px; font-weight:750; color:var(--text); }
+.stat-content h4{ margin:0 0 6px 0; font-size:20px; font-weight:500; color:var(--text); }
 .stat-content p{ margin:0; color:var(--muted); line-height:1.6; font-size:15px; }
 
 /* =========================================================
