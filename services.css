@@ -528,3 +528,12 @@ body {
 .popup-overlay {
   display: none;
 }
+
+/* Jost Font Family for All Services Page Sections */
+body,
+.services-banner,
+.plans-section,
+.working-model,
+footer {
+  font-family: 'Jost', Arial, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif !important;
+}

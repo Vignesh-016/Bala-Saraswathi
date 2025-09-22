@@ -454,3 +454,14 @@ body{
   .stat-icon{ width:36px; height:36px; }
   .stat-icon img{ width:16px; height:16px; }
 }
+
+/* Jost Font Family for All About Page Sections */
+body,
+.about-banner,
+.who-we-are,
+.founder-section,
+.timeline-sec,
+.experience-sec,
+footer {
+  font-family: 'Jost', system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, sans-serif !important;
+}

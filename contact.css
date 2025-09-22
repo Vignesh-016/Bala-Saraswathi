@@ -406,3 +406,13 @@ a{ color:inherit; text-decoration:none; }
     visibility: visible !important;
   }
 }
+
+/* Jost Font Family for All Contact Page Sections */
+body,
+.contact-hero,
+.contact-area,
+.map-section,
+.branches-sec,
+footer {
+  font-family: 'Jost', system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, sans-serif !important;
+}
