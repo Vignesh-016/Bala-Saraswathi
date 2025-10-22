@@ -17,11 +17,14 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style.css">
-  
+  <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+
 </head>
 <body>
 
-  <header class="main-header">
+  <header class="main-header" data-aos="fade-down">
     <!-- Top bar -->
     <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
         <div class="container d-flex justify-content-between align-items-center">
@@ -74,7 +77,7 @@
 </header>
 
 <!-- ===== Hero / Banner ===== -->
-<section class="contact-hero" style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);">
+<section class="contact-hero" data-aos="zoom-in" style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);">
   <img
     src="./assets/images/Contact Us banner.png"
     alt="Happy family"
@@ -93,7 +96,7 @@
   <div class="container contact-grid">
 
    <!-- Left: Copy + Addresses -->
-<div class="contact-left">
+<div class="contact-left" data-aos="fade-right">
     <h2 class="section-title">CONTACT US</h2>
     <p class="lead">
       Have questions or need assistance? Our team is here to help you with service inquiries, plan details, or personalized guidance. Reach out to us anytime we’d love to hear from you.
@@ -137,7 +140,7 @@
   
 
     <!-- Right: Enquiry Form -->
-    <aside class="contact-card">
+    <aside class="contact-card" data-aos="fade-left">
       <div class="card-head">
         <span>Enquiry Form</span>
       </div>
@@ -203,7 +206,7 @@
 </section>
 
 <!-- Full Width Map Section -->
-<section class="map-section">
+<section class="map-section" data-aos="fade-up">
   <iframe 
   src="https://www.google.com/maps/d/u/0/embed?mid=1gzXG6wY-CC_ymZwMhfcFNy3icln0KXQ&ehbc=2E312F&noprof=1" 
   width="100%" 
@@ -214,7 +217,7 @@
 </section>
 
 
-<section class="branches-sec">
+<section class="branches-sec" data-aos="fade-up">
   <div class="container">
     <h2 class="">Our Branch</h2>
     <p class="">
@@ -223,7 +226,7 @@
 
     <div class="branch-grid">
       <!-- Card 1 -->
-      <article class="branch-card">
+      <article class="branch-card" data-aos="zoom-in">
         <figure class="photo">
           <img src="./assets/images/Thoothukudi Beach.jpg" alt="Chennai branch" />
         </figure>
@@ -252,7 +255,7 @@
       </article>
 
       <!-- Card 2 -->
-      <article class="branch-card">
+      <article class="branch-card" data-aos="zoom-in">
         <figure class="photo">
           <img src="./assets/images/tiruchendur Temple.jpg" alt="Madurai branch" />
         </figure>
@@ -279,7 +282,7 @@
       </article>
 
       <!-- Card 3 -->
-      <article class="branch-card">
+      <article class="branch-card" data-aos="zoom-in">
         <figure class="photo">
           <img src="./assets/images/Kovilpatti.jpg" alt="Tuticorin branch" />
         </figure>
@@ -306,7 +309,7 @@
       </article>
 
       <!-- Card 4 -->
-      <article class="branch-card">
+      <article class="branch-card" data-aos="zoom-in">
         <figure class="photo">
           <img src="./assets/images/Tirunelveli.jpg" alt="Tirunelveli branch" />
         </figure>
@@ -333,7 +336,7 @@
       </article>
 
       <!-- Card 5 -->
-      <article class="branch-card">
+      <article class="branch-card" data-aos="zoom-in">
         <figure class="photo">
           <img src="./assets/images/Madurai Temple.jpg" alt="Kovilpatti branch" />
         </figure>
@@ -360,7 +363,7 @@
       </article>
 
       <!-- Card 6 -->
-      <article class="branch-card">
+      <article class="branch-card" data-aos="zoom-in">
         <figure class="photo">
           <img src="./assets/images/Chennai Central.jpg" alt="Thiruchendur branch" />
         </figure>
@@ -389,7 +392,7 @@
   </div>
 </section>
 
-<footer class="text-dark pt-5 pb-4" style="background:#EFF8FF">
+<footer data-aos="fade-up" class="text-dark pt-5 pb-4" style="background:#EFF8FF">
   <div class="container">
       <div class="row">
 
@@ -452,5 +455,16 @@
       </div>
   </div>
 </footer>
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,      // animation speed (ms)
+    once: true,          // animate only once per scroll
+    offset: 120,         // how early the animation starts
+    easing: 'ease-in-out'
+  });
+</script>
+
 </body>
 </html>

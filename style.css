@@ -1243,7 +1243,7 @@ font-size: 1.1em;
 
 
              .trustedFamiliesSection {
-                 background-image: url('assets/images/Indian\ Peoples.png');
+                 background-image: url('./assets/images/Peoples-image.png');
                  background-size: cover;
                  background-position: center;
                  background-repeat: no-repeat;

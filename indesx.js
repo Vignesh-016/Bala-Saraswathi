@@ -59,3 +59,44 @@ document.addEventListener('DOMContentLoaded', () => {
   /* start: hide pills (CSS does), reveal them one by one */
   revealSequentially();
 });
+
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+    const icon = item.querySelector('.accordion-icon');
+    
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other accordion items
+      accordionItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherContent = otherItem.querySelector('.accordion-content');
+          const otherIcon = otherItem.querySelector('.accordion-icon');
+          otherContent.style.maxHeight = '0';
+          otherContent.style.opacity = '0';
+          otherIcon.textContent = '+';
+        }
+      });
+      
+      // Toggle current item
+      if (isActive) {
+        item.classList.remove('active');
+        content.style.maxHeight = '0';
+        content.style.opacity = '0';
+        icon.textContent = '+';
+      } else {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        icon.textContent = '−';
+      }
+    });
+  });
+});
+
