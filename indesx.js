@@ -100,3 +100,156 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+
+// =================== FIXED VIDEO TESTIMONIAL CAROUSEL ===================
+class TestimonialCarousel {
+  constructor() {
+    this.currentIndex = 0;
+    this.isAnimating = false;
+
+    // ✅ manually add local videos from /assets/videos/
+    this.testimonials = [
+      { name: "Anitha | Chennai", src: "../assets/images/testimonials 1.mp4" },
+      { name: "Karthik | Madurai", src: "./assets/images/testimonials 2.mp4" },
+      { name: "Priya | Coimbatore", src: "./assets/images/testimonials 3.mp4" },
+      { name: "Rahul | Tirunelveli", src: "./assets/images/testimonials 4.mp4" },
+      { name: "Meera | Thanjavur", src: "./assets/images/testimonials 5.mp4" },
+      { name: "Deepa | Trichy", src: "./assets/images/testimonials 6.mp4" },
+      { name: "Sanjay | Salem", src: "./assets/images/testimonials 7.mp4" },
+      { name: "Nisha | Erode", src: "./assets/images/testimonials 8.mp4" },
+      { name: "Gokul | Karur", src: "./assets/images/testimonials 9.mp4" },
+      { name: "Divya | Tuticorin", src: "./assets/images/testimonials 10.mp4" },
+      { name: "Vignesh | Cuddalore", src: "./assets/images/testimonials 11.mp4" },
+      { name: "Harini | Dindigul", src: "./assets/images/testimonials 12.mp4" },
+      { name: "Kavya | Nagercoil", src: "./assets/images/testimonials 13.mp4" },
+      { name: "Rajesh | Puducherry", src: "./assets/images/testimonials 14.mp4" },
+    ];
+
+    this.total = this.testimonials.length;
+    this.track = document.getElementById("carouselTrack");
+    this.prevBtn = document.getElementById("prevBtn");
+    this.nextBtn = document.getElementById("nextBtn");
+    this.slides = [];
+    this.init();
+  }
+
+  init() {
+    this.createSlides();
+    this.setupEvents();
+    this.updateCarousel();
+  }
+
+  createSlides() {
+    this.testimonials.forEach((t, index) => {
+      const slide = document.createElement("div");
+      slide.className = "carousel-slide";
+      slide.dataset.index = index;
+      slide.style.display = "none";
+
+      slide.innerHTML = `
+        <div class="testimonial-card">
+          <div class="testimonial-video-container">
+            <video preload="metadata" playsinline>
+              <source src="${t.src}" type="video/mp4">
+            </video>
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="testimonial-reviewer">${t.name}</div>
+          </div>
+        </div>
+      `;
+      this.track.appendChild(slide);
+      this.slides.push(slide);
+    });
+  }
+
+  setupEvents() {
+    this.prevBtn.addEventListener("click", () => this.prev());
+    this.nextBtn.addEventListener("click", () => this.next());
+  
+    // ✅ Fixed Play/Pause button event handling
+    this.track.addEventListener("click", (e) => {
+      // Check if click is on play button or its icon
+      const playBtn = e.target.closest(".play-btn");
+      if (!playBtn) return;
+
+      const video = playBtn.parentElement.querySelector("video");
+      if (!video) return;
+
+      // Pause all OTHER videos first (not the current one)
+      this.slides.forEach((s) => {
+        const otherVideo = s.querySelector("video");
+        const otherBtn = s.querySelector(".play-btn");
+        if (otherVideo && otherVideo !== video) {
+          otherVideo.pause();
+          if (otherBtn) otherBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+      });
+
+      // Toggle current video
+      if (video.paused) {
+        video.play();
+        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        video.pause();
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      }
+
+      // When video ends, reset icon
+      video.onended = () => {
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      };
+    });
+  }
+  
+
+  next() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.currentIndex = (this.currentIndex + 1) % this.total;
+    this.updateCarousel();
+    setTimeout(() => (this.isAnimating = false), 600);
+  }
+
+  prev() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.currentIndex = (this.currentIndex - 1 + this.total) % this.total;
+    this.updateCarousel();
+    setTimeout(() => (this.isAnimating = false), 600);
+  }
+
+  updateCarousel() {
+    this.slides.forEach((s) => {
+      s.classList.remove("active", "prev", "next");
+      s.style.display = "none";
+      const v = s.querySelector("video");
+      const b = s.querySelector(".play-btn");
+      if (v) v.pause();
+      if (b) b.innerHTML = '<i class="fas fa-play"></i>';
+    });
+
+    const prevIndex = (this.currentIndex - 1 + this.total) % this.total;
+    const nextIndex = (this.currentIndex + 1) % this.total;
+
+    this.slides[this.currentIndex].classList.add("active");
+    this.slides[this.currentIndex].style.display = "block";
+
+    this.slides[prevIndex].classList.add("prev");
+    this.slides[prevIndex].style.display = "block";
+
+    this.slides[nextIndex].classList.add("next");
+    this.slides[nextIndex].style.display = "block";
+  }
+
+  pauseAllVideos() {
+    this.slides.forEach((s) => {
+      const v = s.querySelector("video");
+      const b = s.querySelector(".play-btn");
+      if (v) v.pause();
+      if (b) b.innerHTML = '<i class="fas fa-play"></i>';
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => new TestimonialCarousel());
