@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts for Playfair Display and Sans Serif (Roboto as example) -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -29,28 +31,32 @@
   <!-- Header -->
   <header class="main-header" data-aos="fade-down">
     <!-- Top bar -->
-    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
+    <div class="top-bar text-dark py-2 small" style="background:#f7fafd; border-bottom: 0.1px solid #e0dfdf;">
       <div class="container d-flex justify-content-between align-items-center">
         <div>
           <p class="mb-0">
-            <img src="/assets/images/phone.png" style="width:25px; margin-right:6px;"> +91 9629587444
+            <img src="/assets/images/icons/phone.png" style="width:20px; margin-right:6px; margin-top: -4px;">
+            <span style="color: rgba(0, 0, 0, 0.6); font-size:small;">+91 9629587444</span>
           </p>
         </div>
-        <div class="d-flex align-items-center">
-          <p class="mb-0 me-3">
-            <span class="icon">
-              <img src="/assets/images/location_11080891.svg" alt="Location Icon"
-                style="width:18px; height:18px; margin-right:6px; vertical-align:middle;">
+        <div class="d-flex align-items-center ">
+          <div class="d-flex align-items-center me-5" style="gap:6px;">
+            <img src="/assets/images/icons/location.png" alt="Location Icon"
+              style="width:18px; height:18px;">
+            <span style="color: rgba(0, 0, 0, 0.6); font-size:small; display: inline-block;">
+              Head Office, 148B, Deverpuram Road, Tuticorin - 628003
             </span>
-            Head Office, 148B, Deverpuram Road, Tuticorin - 628003
-          </p>
+          </div>
           <div class="social-icons">
-            <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank"><i
-                class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3"
-              target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/balasaraswathi.chits/" class="me-1" target="_blank" style="text-decoration: none;">
+              <i class="fab fa-facebook-f" style="color: rgba(0, 0, 0, 0.6);"></i>
+            </a>
+            <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="me-1" target="_blank" style="text-decoration: none;">
+              <i class="fab fa-instagram mt-1" style="color: rgba(0, 0, 0, 0.6);"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/balasaraswathichits/" class="me-1" target="_blank" style="text-decoration: none;">
+              <i class="fab fa-linkedin-in" style="color: rgba(0, 0, 0, 0.6);"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -67,10 +73,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navMenu" style="font-family: 'Playfair Display', serif;">
-          <ul class="navbar-nav align-items-center">
+          <ul class="navbar-nav align-items-center" style="display: flex; gap: 45px;">
             <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -79,8 +86,7 @@
   </header>
 
   <!-- Hero Section -->
-<!-- Google Fonts for Playfair Display and Sans Serif (Roboto as example) -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 
 <section class="hero-section" style="font-family:'Roboto', Arial, Helvetica, sans-serif; border-radius:18px; max-width:1700px; margin:40px auto;">
   <div class="container">
@@ -657,7 +663,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-dark pt-5 pb-4" style="background:#EFF8FF" data-aos="fade-up">
+  <footer class="text-dark pt-5 pb-4" style="background:#EFF8FF" >
 <div class="container">
                 <div class="row">
 
