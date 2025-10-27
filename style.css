@@ -32,6 +32,11 @@
             }
             
 
+            body {
+                padding-top: 140px; /* adjust based on header height */
+            }
+            
+
             .heroSection2 {
                 background: linear-gradient(45deg, black, transparent), url("/assets/images/girl.png");
                 color: white;
@@ -39,57 +44,34 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                background-color: #f8f8f8;
-            
+
                 /* Boxed layout */
-                max-width: 1330px;       /* set width limit */
+                max-width: 1400px;       /* set width limit */
                 margin: 40px auto;       /* center + spacing top/bottom */
                 border-radius: 12px;     /* smooth corners */
                 overflow: hidden;        /* keep overlay clean */
                 box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* subtle depth */
-
-                /* Center content horizontally and vertically */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-
-            /* Ensure inner container is centered for .heroSection2 */
-            .heroSection2 .container,
-            .heroSection2 .row,
-            .heroSection2 .col-lg-6,
-            .heroSection2 .col-md-12 {
-                display: flex !important;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                width: 100%;
+                font-size: 0.97rem;      /* reduced base font size */
             }
             
             .heroSection2 h1 {
                 color: #fff;
-                font-weight: 700;
-                text-align: center;
-                width: 100%;
+                font-weight: 600;
+                font-size: 2.1rem;       /* reduce heading font size */
             }
             
             .heroSection2 p {
                 color: #f1f1f1;
-                text-align: center;
-                width: 100%;
+                font-size: 1rem;         /* reduce paragraph font size */
             }
             
             .heroSection2 .btn-primary {
                 background-color: #1e90ff;
                 border: none;
-                padding: 12px 24px;
-                font-size: 1.1rem;
+                padding: 10px 20px;             /* slightly reduce button size */
+                font-size: 1rem;                /* reduce button text size */
                 font-weight: 600;
                 transition: all 0.3s ease;
-                margin: 0 auto;
-                display: inline-block;
             }
             
             .heroSection2 .btn-primary:hover {

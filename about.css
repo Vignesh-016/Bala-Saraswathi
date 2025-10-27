@@ -48,7 +48,7 @@ body{
    ========================================================= */
 .about-banner{
   position: relative;
-  width: 90%;
+  width: 85%;
   max-width: 1400px;
   height: var(--banner-h);                      /* fixed by var */
   margin: 40px auto;
@@ -74,17 +74,17 @@ body{
   position:absolute;
   left:40px;
   right:40px;     /* keep text away from right edge */
-  bottom:28px;
+  bottom:90px;
   z-index:2;
   color:#fff;
 }
 .about-text h1{
-  font-size:2rem;
+  font-size:60px;
   font-weight:bold;
   margin-bottom:8px;
 }
 .about-text p{
-  font-size:1.1rem;
+  font-size:30px;
   font-weight:400;
 }
 
@@ -93,18 +93,18 @@ body{
    ========================================================= */
 .who-we-are{ padding: 60px 10%; background:#fff; }
 .about-container{
-  display:flex; align-items:flex-start; gap:50px; flex-wrap:wrap;
+  display:flex; align-items:flex-start; gap:100px; flex-wrap:wrap;
 }
 .about-images{ position:relative; flex:1; min-width:280px; }
 .about-images .img1{ width:100%; border-radius:8px; }
 .about-images .img2{
-  position:absolute; bottom:-40px; left:197px; width:70%;
-  border:20px solid #ffffff; border-radius:8px;
-  box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+  position:absolute; bottom:-120px; left:180px; width:70%;
+  border:5px solid #ffffff; border-radius:1px;
+  /* box-shadow:0px 5px 15px #000000; */
 }
 .about-content{ flex:1; min-width:300px; }
-.about-content h2{ font-size:2rem; margin-bottom:20px; }
-.about-content p{ font-size:1rem; line-height:1.6; margin-bottom:20px; color:#444; }
+.about-content h2{ font-size:45px; margin-bottom:20px; font-weight:400; }
+.about-content p{ font-size:17px; line-height:1.6; margin-bottom:20px; color:#000000; }
 
 /* =========================================================
    Mission/Vision Cards
@@ -134,7 +134,7 @@ body{
   border-radius:50%; background:var(--accent); box-shadow:0 6px 14px rgba(255,180,0,.35);
 }
 .mv-content{ flex:1; }
-.mv-content h3{ margin:0 0 8px; font-size:clamp(18px,2.6vw,20px); font-weight:800; color:inherit; }
+.mv-content h3{ margin:0 0 8px; font-size:clamp(18px,2.6vw,20px); font-weight:400; color:inherit; }
 .mv-content p{ margin:0; line-height:1.7; color:var(--muted); font-size:14.5px; }
 
 .stack-card:hover{
@@ -154,7 +154,7 @@ body{
   padding:60px 10%;
   display:flex; 
   justify-content:center;
-}
+} 
 .founder-container{
   display:flex; 
   align-items:center; /* Changed from flex-start to center for vertical centering */
@@ -181,13 +181,19 @@ body{
   height: 100%; 
 }
 .founder-info .badge{
-  display:inline-block; background:#007bff; color:#fff; padding:4px 18px; font-size:.85rem;
-  border-radius:4px; margin-bottom:10px;
+  display:inline-block; 
+  background:#007bff; 
+  color:#fff; 
+  padding:4px 18px; 
+  font-size:18px;   /* Added explicit px font size */
+  font-weight:300;  /* Added font weight */
+  border-radius:4px; 
+  margin-bottom:10px;
   min-width: 80px; /* Reduce width of the button */
   max-width: 120px;
   text-align: center;
 }
-.founder-info h2{ margin:8px 0 15px; font-size:1.6rem; font-weight:bold; }
+.founder-info h2{ margin:8px 0 15px; font-size:1.6rem; font-weight:550; }
 .founder-info p{ margin-bottom:12px; line-height:1.6; }
 /* =========================================================
    TIMELINE — tabs + panels (bottom-left content)
