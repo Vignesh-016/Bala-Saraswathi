@@ -31,21 +31,7 @@
             }
 
             /* Universal Mobile Spacing Fix */
-            @media (max-width: 767.98px) {
-                .top-bar .container > div:nth-child(2) > div:first-child {
-                    gap: 15px !important;
-                    margin-bottom: 10px !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child img {
-                    margin-right: 0 !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child span {
-                    margin-left: 0 !important;
-                }
-                .top-bar .social-icons {
-                    margin-top: 10px !important;
-                }
-            }
+    
 
             /* Professional Mobile Navbar */
             @media (max-width: 767.98px) {
@@ -208,165 +194,10 @@
                 color: #0d6efd;
             }
 
-            /* Medium Mobile Range - 450px to 740px - FIXED SPACING */
-            @media (max-width: 740px) and (min-width: 450px) {
-                .top-bar .container {
-                    padding: 0 20px !important;
-                }
-                .top-bar .container > div:nth-child(2) {
-                    display: flex !important;
-                    flex-direction: column !important;
-                    align-items: center !important;
-                    gap: 15px !important;
-                    width: 100% !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child {
-                    display: flex !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    gap: 15px !important;
-                    margin-bottom: 10px !important;
-                    width: 100% !important;
-                    padding: 0 15px !important;
-                    box-sizing: border-box !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child img {
-                    flex-shrink: 0 !important;
-                    width: 18px !important;
-                    height: 18px !important;
-                    margin-right: 0 !important;
-                    order: 1 !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child span {
-                    text-align: left !important;
-                    display: inline-block !important;
-                    flex: 1 !important;
-                    line-height: 1.3 !important;
-                    margin-left: 0 !important;
-                    order: 2 !important;
-                }
-                .top-bar .social-icons {
-                    display: flex !important;
-                    justify-content: center !important;
-                    align-items: center !important;
-                    gap: 15px !important;
-                    margin-top: 10px !important;
-                }
-            }
+     
 
             /* Professional Mobile Top Bar - All Elements Centered - FIXED SPACING */
-            @media (max-width: 767.98px) {
-                .top-bar {
-                    padding: 10px 0 !important;
-                    background: #f8f9fa !important;
-                }
-                .top-bar .container {
-                    display: flex !important;
-                    flex-direction: column !important;
-                    align-items: center !important;
-                    text-align: center !important;
-                    gap: 12px !important;
-                    padding: 0 15px !important;
-                    max-width: 100% !important;
-                    overflow: visible !important;
-                }
-                .top-bar .container > div:first-child {
-                    order: 1;
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 0;
-                    padding: 0 10px;
-                    box-sizing: border-box;
-                }
-                .top-bar .container > div:first-child p {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 6px;
-                    margin: 0;
-                }
-                .top-bar .container > div:first-child img {
-                    flex-shrink: 0;
-                    width: 20px;
-                    height: 20px;
-                }
-                .top-bar .container > div:nth-child(2) {
-                    order: 2 !important;
-                    width: 100% !important;
-                    display: flex !important;
-                    flex-direction: column !important;
-                    align-items: center !important;
-                    gap: 15px !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child {
-                    display: flex !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    gap: 15px !important;
-                    margin-bottom: 8px !important;
-                    width: 100% !important;
-                    padding: 0 10px !important;
-                    box-sizing: border-box !important;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child img {
-                    flex-shrink: 0;
-                    width: 18px;
-                    height: 18px;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child span {
-                    text-align: center;
-                    display: block;
-                    flex: 1;
-                    line-height: 1.3;
-                }
-                .top-bar .social-icons {
-                    display: flex !important;
-                    justify-content: center !important;
-                    align-items: center !important;
-                    gap: 15px !important;
-                    margin-top: 8px !important;
-                }
-                .top-bar .container p {
-                    margin-bottom: 0 !important;
-                    font-size: 0.9rem !important;
-                    font-weight: 500;
-                }
-                .top-bar .container span {
-                    font-size: 0.85rem !important;
-                    font-weight: 400;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child {
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                }
-                .top-bar .container > div:nth-child(2) > div:first-child img {
-                    flex-shrink: 0;
-                }
-                .top-bar .social-icons a {
-                    padding: 6px;
-                    border-radius: 50%;
-                    background: rgba(0, 0, 0, 0.05);
-                    transition: all 0.3s ease;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 32px;
-                    height: 32px;
-                }
-                .top-bar .social-icons a:hover {
-                    background: #0d6efd;
-                    transform: translateY(-2px);
-                }
-                .top-bar .social-icons i {
-                    font-size: 14px !important;
-                }
-                .top-bar .social-icons a:hover i {
-                    color: white !important;
-                }
-            }
+     
 
             /* Extra small mobile devices */
             @media (max-width: 480px) {
@@ -395,7 +226,7 @@
                     justify-content: center;
                     align-items: center;
                     text-align: center;
-                    padding: 0 5px;
+                    padding: 0 42px;
                     gap: 8px;
                 }
                 .top-bar .container > div:nth-child(2) > div:first-child img {
@@ -2246,4 +2077,125 @@ font-size: 1.1em;
       width: 45px;
       height: 45px;
     }
+  }
+  /* ======================
+   TOP BAR STYLES
+====================== */
+.top-bar {
+  background: #f7fafd;
+  border-bottom: 1px solid #e0dfdf;
+  padding: 8px 0;
+  font-family: "Jost", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.top-bar .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+/* Left section */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-left img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Right section */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.top-right .location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-right .location img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1976d2;
+  transform: translateY(-2px);
+}
+
+/* ======================
+   RESPONSIVE DESIGN
+====================== */
+
+/* Tablet & small screens */
+@media (max-width: 991px) {
+  .top-bar .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .top-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .top-bar {
+    padding: 10px 5px;
+  }
+
+  .top-left span,
+  .top-right .location span {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+}
+/* -----------------------------------
+   Mobile override: location not centered
+----------------------------------- */
+@media (max-width: 576px) {
+  .top-bar .container > div:nth-child(2) > div:first-child {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+
   }
