@@ -879,6 +879,38 @@ footer {
                  }
              }
 
+            /* plan title underline  */
+
+             /* Ensures underline matches text width only */
+          .plan-title-underline {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            width: fit-content;
+          }
+          .plan-title-text {
+            position: relative;
+            z-index: 1;
+            font-family: inherit;
+            font-size: inherit;
+          }
+          .plan-title-underline-bar {
+            display: block;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            margin-top: 2px;
+            width: 0;
+            opacity: 0;
+            transition: opacity 0.22s, width 0.28s cubic-bezier(.5,1.7,.55,.95);
+          }
+          .plan-card:hover .plan-title-underline .plan-title-underline-bar,
+          .plan-card:focus-within .plan-title-underline .plan-title-underline-bar {
+            width: 100%;
+            opacity: 1;
+          }
+          
 /* Container scroll */
 .plan-hover-icon-bg {
 display: inline-flex;
@@ -942,7 +974,7 @@ font-size: 1.1em;
   .plan-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.5);   
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1937,6 +1969,24 @@ font-size: 1.1em;
   .testimonial-content .stars {
     color: #ffb400;
     font-size: 20px;
+  }
+
+  /* our plans - home page  */
+  .plan-card .plan-desc {
+    transition: opacity 0.2s;
+    pointer-events: auto;
+  }
+  .plan-card:hover .plan-desc,
+  .plan-card:focus-within .plan-desc {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /* Optional: Hide plan-desc if .plan-hover is visible (in case of plans using JS instead of CSS hover) */
+  .plan-card .plan-hover {
+    pointer-events: auto;
   }
   
   /* ===========================
