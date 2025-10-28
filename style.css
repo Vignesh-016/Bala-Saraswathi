@@ -120,28 +120,240 @@
                 }
             }
 
-            footer h5 {
-                margin-bottom: 20px;
-                font-weight: bold;
-            }
-
-            footer ul li {
-                margin-bottom: 10px;
-            }
-
-            footer .fa {
-                font-size: 18px;
-            }
-
-            footer .fab,
-            footer .fas {
-                font-size: 18px;
-            }
-
-            footer {
-                max-width: 1700px;
-                margin: 0 auto;
-            }
+     /* ========== UNIVERSAL FOOTER LAYOUT ========== */
+footer {
+    background: #EFF8FF;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    text-align: left; /* ✅ All left aligned */
+  }
+  
+  footer h5 {
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #0066ff;
+    text-align: left;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #111;
+    text-align: left;
+  }
+  
+  footer a {
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  footer a:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+  }
+  
+  footer ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  
+  footer .fa,
+  footer .fab,
+  footer .fas {
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  footer .fa:hover,
+  footer .fab:hover,
+  footer .fas:hover {
+    color: #0d6efd;
+  }
+  
+  /* Search box */
+  footer form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  footer form input {
+    width: 150px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+  }
+  
+  footer form button {
+    background: #0d6efd;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  footer form button:hover {
+    background: #084cd9;
+  }
+  
+  /* Row structure fix */
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  
+  footer .col-md-3 {
+    flex: 1 1 22%;
+    min-width: 220px;
+  }
+  
+  /* Social icons area */
+  footer .d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 10px;
+  }
+  
+  /* ========== DESKTOP VIEW (≥1200px) ========== */
+  @media (min-width: 1200px) {
+    footer {
+      padding: 60px 100px;
+    }
+  
+    footer .row {
+      gap: 50px;
+    }
+  
+    footer p,
+    footer a {
+      font-size: 1rem;
+    }
+  }
+  
+  /* ========== TABLET VIEW (768px–1199px) ========== */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    footer {
+      padding: 50px 40px;
+    }
+  
+    footer .row {
+      gap: 30px;
+      justify-content: flex-start;
+    }
+  
+    footer .col-md-3 {
+      flex: 1 1 45%; /* 2 columns layout */
+      min-width: 280px;
+    }
+  
+    footer p,
+    footer a {
+      font-size: 0.95rem;
+    }
+  
+    footer form input {
+      width: 160px;
+    }
+  
+    footer .d-flex.align-items-center {
+      justify-content: flex-start;
+    }
+  }
+  
+  /* ========== MOBILE VIEW (<768px) ========== */
+  @media (max-width: 767.98px) {
+    footer {
+      padding: 40px 20px;
+    }
+  
+    footer .row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  
+    footer .col-md-3 {
+      width: 100%;
+      text-align: left;
+    }
+  
+    footer img {
+      margin: 0 0 12px 0;
+    }
+  
+    footer ul {
+      text-align: left;
+    }
+  
+    footer form {
+      justify-content: flex-start;
+    }
+  
+    footer form input {
+      width: 70%;
+    }
+  
+    footer .d-flex.align-items-center {
+      justify-content: flex-start;
+    }
+  
+    footer h5 {
+      font-size: 1.1rem;
+    }
+  
+    footer p,
+    footer a {
+      font-size: 0.95rem;
+    }
+  
+    footer .fab,
+    footer .fas {
+      font-size: 18px;
+    }
+  }
+  
+  /* ========== EXTRA SMALL MOBILE (<400px) ========== */
+  @media (max-width: 400px) {
+    footer {
+      padding: 30px 15px;
+    }
+  
+    footer p,
+    footer a {
+      font-size: 0.9rem;
+    }
+  
+    footer form input {
+      width: 85%;
+    }
+  
+    footer .fab,
+    footer .fas {
+      font-size: 17px;
+    }
+  }
+  
 
             /* Header Hero */
             /* ----------------------------

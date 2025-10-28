@@ -33,13 +33,13 @@
 
 
 .services-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .services-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 
@@ -229,7 +229,7 @@ body {
   }
 
   
-  /*--- Working Model Section Styles ---*/
+/* --- Working Model Section Styles --- */
 .working-model {
   background: #eaf4ff;
   padding: 60px 0;
@@ -237,9 +237,9 @@ body {
 
 .working-model-container {
   display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  gap: 10px;                 /* more gap between image & steps */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   max-width: 1340px;
   margin: 0 auto;
   padding: 0 20px;
@@ -254,7 +254,7 @@ body {
 
 .working-model-left img {
   width: 100%;
-  max-width: 600px;   /* increased from 525px */
+  max-width: 600px;
   border-radius: 12px;
   display: block;
   box-shadow: 0 4px 18px rgba(0,0,0,0.15);
@@ -264,8 +264,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertical center */
-  align-items: center;       /* <-- NEW: center the steps horizontally */
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .section-title {
@@ -273,31 +273,29 @@ body {
   font-weight: bold;
   color: #0072ff;
   margin-bottom: 10px;
-  text-align: center;   /* center heading */
-  /* border-bottom removed to eliminate line under heading */
+  text-align: left;
 }
 
 .section-desc {
   font-size: 16px;
   margin-bottom: 40px;
   color: #333;
-  text-align: center;   /* center description */
+  text-align: left;
 }
 
 .steps {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  align-items: center;       /* <-- NEW: center align column */
 }
 
 .step {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  justify-content: center;   /* <-- NEW: center each step horizontally */
+  justify-content: flex-start;
   width: 100%;
-  max-width: 500px;          /* optional: keep column neat */
+  max-width: 500px;
 }
 
 .step-icon {
@@ -305,7 +303,7 @@ body {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  width: 32px;   /* slightly bigger */
+  width: 32px;
   height: 32px;
   display: flex;
   align-items: center;
@@ -337,21 +335,111 @@ body {
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+/* ✅ Tablet (max-width: 991px) */
+@media (max-width: 991px) {
   .working-model-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .working-model-right {
-    margin-top: 30px;
-    align-items: center;   /* center steps on smaller screens */
-  }
-  .step {
-    justify-content: flex-start;
+    flex-direction: column; /* Stack image and content */
+    align-items: center;
     text-align: left;
+    gap: 30px;
+  }
+
+  .working-model-left {
+    order: 1; /* Image comes first */
+    width: 100%;
+  }
+
+  .working-model-right {
+    order: 2; /* Content below image */
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .working-model-left img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section-title {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .section-desc {
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .step {
+    flex-direction: row;
+    gap: 15px;
   }
 }
+
+/* ✅ Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .working-model {
+    padding: 40px 0;
+  }
+
+  .working-model-container {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .working-model-left {
+    order: 1; /* Image stays on top */
+    width: 100%;
+  }
+
+  .working-model-left img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .working-model-right {
+    order: 2; /* Text below image */
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .step-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
+
+  .step-desc {  
+    font-size: 14px;
+  }
+}
+
 
 
 
