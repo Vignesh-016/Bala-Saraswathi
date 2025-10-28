@@ -30,37 +30,30 @@
 
   <!-- Header -->
   <header class="main-header" data-aos="fade-down">
-    <!-- Top bar -->
-    <div class="top-bar text-dark py-2 small" style="background:#f7fafd; border-bottom: 0.1px solid #e0dfdf;">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div>
-          <p class="mb-0">
-            <img src="/assets/images/icons/phone.png" style="width:20px; margin-right:6px; margin-top: -4px;">
-            <span style="color: rgba(0, 0, 0, 0.6); font-size:small;">+91 9629587444</span>
-          </p>
-        </div>
-        <div class="d-flex align-items-center  ">
-          <div class="d-flex align-items-center " style="gap:6px;">
-            <img src="/assets/images/icons/location.png" alt="Location Icon"
-              style="width:18px; height:18px;">
-            <span style="color: rgba(0, 0, 0, 0.6); font-size:small; display: inline-block;">
-              Head Office, 148B, Deverpuram Road, Tuticorin - 628003
-            </span>
-          </div>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/balasaraswathi.chits/" class="me-1" target="_blank" style="text-decoration: none;">
-              <i class="fab fa-facebook-f" style="color: rgba(0, 0, 0, 0.6);"></i>
-            </a>
-            <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="me-1" target="_blank" style="text-decoration: none;">
-              <i class="fab fa-instagram mt-1" style="color: rgba(0, 0, 0, 0.6);"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/balasaraswathichits/" class="me-1" target="_blank" style="text-decoration: none;">
-              <i class="fab fa-linkedin-in" style="color: rgba(0, 0, 0, 0.6);"></i>
-            </a>
-          </div>
-        </div>
+<!-- ✅ Responsive Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <!-- Left Section -->
+    <div class="top-left">
+      <img src="/assets/images/icons/phone.png" alt="Phone" />
+      <span>+91 9629587444</span>
+    </div>
+
+    <!-- Right Section -->
+    <div class="top-right">
+      <div class="location">
+        <img src="/assets/images/icons/location.png" alt="Location" />
+        <span>Head Office, 148B, Deverpuram Road, Tuticorin - 628003</span>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/balasaraswathi.chits/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/balasaraswathichits/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
+  </div>
+</div>
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -77,7 +70,7 @@
             <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
             <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -114,19 +107,19 @@
 
         <!-- Left Image -->
         <div class="hero-img hero-left d-flex align-items-start justify-content-start" data-aos="fade-up" data-aos-delay="100" style="left: 20px; top: -25px;">
-          <img src="./assets/images/Left-Image.png" alt="Left Person"
+          <img src="./assets/images/Home/Left-Image.webp" alt="Left Person"
             style="height:450px; border-radius:18px; object-fit:cover; object-position:left top;">
         </div>
 
         <!-- Center Image -->
         <div class="hero-img hero-center d-flex align-items-start justify-content-start" data-aos="fade-up" data-aos-delay="800" style="left: 50px; top: -25px;">
-          <img src="./assets/images/Centre-image.png" alt="Main Customer"
+          <img src="./assets/images/Home/Centre-image.webp" alt="Main Customer"
             style="height:450px; border-radius:18px; object-fit:cover; object-position:left top;">
         </div>
 
         <!-- Right Image -->
         <div class="hero-img hero-right d-flex align-items-start justify-content-start" data-aos="fade-up" data-aos-delay="1800" style="right: -160px; top: -25px;">
-          <img src="./assets/images/Right-image.png" alt="Right Person"
+          <img src="./assets/images/Home/Right-image.webp" alt="Right Person"
             style="height:450px; border-radius:18px; object-fit:cover; object-position:left top;">
         </div>
       </div>
@@ -185,7 +178,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10 overlay-box p-5">
-          <h2 class="fw-bold display-5 mb-4" style="font-family: 'Playfair Display', serif;">
+          <h2 class="fw-bold display-5 mb-2" style="font-family: 'Jost', sans-serif;">
             TRUSTED BY 25,000+ FAMILIES AND INVESTORS FOR<br />
             SECURE AND RELIABLE CHIT FUND SOLUTIONS
           </h2>
@@ -220,10 +213,18 @@
       
       <div class="plans-scroll">
         <!-- Education -->
-        <div class="plan-card" style="background-image:url('/assets/images/Education.png')">
-          <div class="plan-icon"><i class="fa-solid fa-up-right-from-square"></i></div>
+        <div class="plan-card" style="background-image:url('/assets/images/Home/Education.webp')">
+          <div class="plan-icon">
+            <img src="/assets/images/Home/icons/arrow-icon.png" alt="Education Icon" style="width:12px; height:12px;">
+          </div>
           <div class="plan-overlay">
-            <div class="plan-title">EDUCATION PLAN</div>
+            <div class="plan-title plan-title-underline">
+              <span class="plan-title-text">EDUCATION PLAN</span>
+              <span class="plan-title-underline-bar"></span>
+            </div>
+            <div class="plan-desc" style="font-size: 0.92rem; color: #ffffff; margin-bottom: 8px; font-family: 'Jost', sans-serif; font-weight: 500;">
+              Build your child’s future step by step with disciplined savings and rewarding returns.
+            </div>
             <div class="plan-hover">
               <div class="plan-price">₹ 5,00,000</div>
               <p>
@@ -242,12 +243,23 @@
             </div>
           </div>
         </div>
+      
+        
   
         <!-- Business -->
-        <div class="plan-card" style="background-image:url('/assets/images/Men\ in\ Coats.png')">
-          <div class="plan-icon"><i class="fa-solid fa-user"></i></div>
+        <div class="plan-card" style="background-image:url('/assets/images/Home/Men\ in\ Coats.webp')">
+          <div class="plan-icon">
+            <img src="/assets/images/Home/icons/profile-icon.png" alt="Education Icon" style="width:14px; height:14px;">
+          </div>
           <div class="plan-overlay">
-            <div class="plan-title">BUSINESS PLAN</div>
+            <div class="plan-title plan-title-underline">
+              <span class="plan-title-text">BUSINESS PLAN</span>
+              <span class="plan-title-underline-bar"></span>
+            </div>
+            <div class="plan-desc" style="font-size: 0.92rem; color: #ffffff; margin-bottom: 8px; font-family: 'Jost', sans-serif; font-weight: 500;">
+              Fuel your business dreams with flexible funds, right when you need them most.
+
+            </div>
             <div class="plan-hover">
               <div class="plan-price">₹ 10,00,000</div>
               <p>
@@ -266,12 +278,21 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Wedding -->
-        <div class="plan-card" style="background-image:url('/assets/images/Wedding\ clicks.png')">
-          <div class="plan-icon"><i class="fa-solid fa-user"></i></div>
+        <div class="plan-card" style="background-image:url('/assets/images/Home/dance.webp')">
+          <div class="plan-icon">
+            <img src="/assets/images/Home/icons/ring-icon.png" alt="Education Icon" style="width:18px; height:18px;">
+          </div>
           <div class="plan-overlay">
-            <div class="plan-title">WEDDING PLAN</div>
+            <div class="plan-title plan-title-underline">
+              <span class="plan-title-text">WEDDING PLAN</span>
+              <span class="plan-title-underline-bar"></span>
+            </div>
+            <div class="plan-desc" style="font-size: 0.92rem; color: #ffffff; margin-bottom: 8px; font-family: 'Jost', sans-serif; font-weight: 500;">
+              Make your dream wedding stress-free by saving steadily and receiving timely payouts.
+
+            </div>
             <div class="plan-hover">
               <div class="plan-price">₹ 25,00,000</div>
               <p>
@@ -290,12 +311,20 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Housing -->
-        <div class="plan-card" style="background-image:url('/assets/images/Vintage\ Home.png')">
-          <div class="plan-icon"><i class="fa-solid fa-user"></i></div>
+        <div class="plan-card" style="background-image:url('/assets/images/Home/Vintage Home.webp')">
+          <div class="plan-icon">
+            <img src="/assets/images/Home/icons/home-icon.png" alt="Education Icon" style="width:14px; height:14px;">
+          </div>
           <div class="plan-overlay">
-            <div class="plan-title">HOUSING PLAN</div>
+            <div class="plan-title plan-title-underline">
+              <span class="plan-title-text">HOUSING PLAN</span>
+              <span class="plan-title-underline-bar"></span>
+            </div>
+            <div class="plan-desc" style="font-size: 0.92rem; color: #ffffff; margin-bottom: 8px; font-family: 'Jost', sans-serif; font-weight: 500;">
+              Turn your dream home into reality with smart, flexible savings schemes.
+            </div>
             <div class="plan-hover">
               <div class="plan-price">₹ 50,00,000</div>
               <p>
@@ -314,7 +343,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -328,7 +356,9 @@
             Join trusted chit funds for reliable savings and financial growth.
           </p>
           <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+    
             Start Your Journey
+            <img src="/assets/images/Home/icons/arrow-jou.png" alt="Start Icon" style="width: 40px; height: 40px; margin-left: 5px;  vertical-align: middle;">
           </a>
         </div>
       </div>
@@ -348,10 +378,9 @@
   <div class="trust-container">
       <!-- Large Box -->
       <div class="trust-box box-large">
-          <img src="/assets/images/right1.png" alt="Spot Payment">
+          <img src="/assets/images/Home/right.webp" alt="Spot Payment">
           <div class="trust-content">
-              <div class="trust-title">SPOT PAYMENT BENEFITS <i
-                      class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="trust-title">SPOT PAYMENT BENEFITS <img src="/assets/images/Home/icons/arrow-jou.png" alt="Start Icon" style="width: 28px; height: 28px; vertical-align: middle;"></div>
               <div class="trust-details">
                   <p><i class="fa-solid fa-check-circle"></i> Receive your payout instantly as soon as your bid wins</p>
                   <p><i class="fa-solid fa-check-circle"></i>Access funds exactly when you need them, without delays</p>
@@ -361,7 +390,7 @@
 
       <!-- Small Box 1 -->
       <div class="trust-box">
-          <img src="/assets/images/left1.png" alt="Door to Door">
+          <img src="/assets/images/Home/left1.webp" alt="Door to Door">
           <div class="trust-content">
               <div class="trust-title">DOOR-TO-DOOR COLLECTION <i
                       class="fa-solid fa-arrow-up-right-from-square"></i></div>
@@ -374,7 +403,7 @@
 
       <!-- Small Box 2 -->
       <div class="trust-box">
-          <img src="/assets/images/right2.png" alt="Renew Discount">
+          <img src="/assets/images/Home/Savings.webp" alt="Renew Discount">
           <div class="trust-content">
               <div class="trust-title">Flexible Collateral <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </div>
@@ -388,127 +417,128 @@
   </section>
 
   <!-- What We Offer -->
-  <section class="offer-section" data-aos="fade-up" >
-    <div class="offer-header">
-          <h2 style="display: flex; align-items: center; font-weight: 700; color: #1769e0; letter-spacing: 1px; font-size: 2rem; margin-bottom: 0; font-family: 'Playfair Display', serif;">
-            WHAT WE OFFER
-            <span style="display: inline-flex; align-items: center; margin-left: 12px;">
-              <span style="display: inline-block; width: 16px; height: 16px; background: #1769e0; border-radius: 50%; margin-right: 10px;"></span>
-              <span style="display: inline-block; width: 48px; height: 2px; background: #1769e0; opacity: 0.3;"></span>
-            </span>
-          </h2>
-          <button>View all plans</button>
+ <!-- What We Offer -->
+ <section class="offer-section" data-aos="fade-up" >
+  <div class="offer-header">
+        <h2 style="display: flex; align-items: center; font-weight: 700; color: #1769e0; letter-spacing: 1px; font-size: 2rem; margin-bottom: 0; font-family: 'Playfair Display', serif;">
+          WHAT WE OFFER
+          <span style="display: inline-flex; align-items: center; margin-left: 12px;">
+            <span style="display: inline-block; width: 16px; height: 16px; background: #1769e0; border-radius: 50%; margin-right: 10px;"></span>
+            <span style="display: inline-block; width: 48px; height: 2px; background: #1769e0; opacity: 0.3;"></span>
+          </span>
+        </h2>
+        <button>View all plans</button>
+      </div>
+      <p>Transparent chit plans with flexible options to help you save, invest, and achieve your financial goal</p>
+    
+      <div class="offer-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+    
+        <!-- Card 1 -->
+        <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+          <div class="icon"><img src="/assets/images/pot.png"></div>
+          <h3>₹5,00,000</h3>
+          <hr>
+          <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
+          <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+          <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+          <button onclick="window.location.href='services.html?plan=1'">
+            Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
-        <p>Transparent chit plans with flexible options to help you save, invest, and achieve your financial goal</p>
-      
-        <div class="offer-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
-      
-          <!-- Card 1 -->
-          <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-            <div class="icon"><img src="/assets/images/pot.png"></div>
-            <h3>₹5,00,000</h3>
-            <hr>
-            <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
-            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-            <button onclick="window.location.href='services.html?plan=1'">
-              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-      
-          <!-- Card 2 -->
-          <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-            <div class="icon"><img src="/assets/images/pot.png"></div>
-            <h3>₹10,00,000</h3>
-            <hr>
-            <p><img src="/assets/images/cal.png"> PLAN: ₹50,000 per month</p>
-            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-            <button onclick="window.location.href='services.html?plan=10'">
-              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-      
-          <!-- Card 3 -->
-          <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-            <div class="icon"><img src="/assets/images/pot.png"></div>
-            <h3>₹25,00,000</h3>
-            <hr>
-            <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000per month</p>
-            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-            <button onclick="window.location.href='services.html?plan=25'">
-              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-      
-          <!-- Card 4 -->
-          <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-            <div class="icon"><img src="/assets/images/pot.png"></div>
-            <h3>₹50,00,000</h3>
-            <hr>
-            <p><img src="/assets/images/cal.png"> PLAN: ₹2,50,000 per month</p>
-            <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
-            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-            <button onclick="window.location.href='services.html?plan=50'">
-              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-      
-          <!-- Card 5 -->
-          <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-            <div class="icon"><img src="/assets/images/pot.png"></div>
-            <h3>₹5,00,000</h3>
-            <hr>
-            <p><img src="/assets/images/cal.png"> PLAN: 12,500 per month</p>
-            <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
-            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-            <button onclick="window.location.href='services.html?plan=1'">
-              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-      
-          <!-- Card 6 -->
-          <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-            <div class="icon"><img src="/assets/images/pot.png"></div>
-            <h3>₹10,00,000</h3>
-            <hr>
-            <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
-            <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
-            <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-            <button onclick="window.location.href='services.html?plan=10'">
-              Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+    
+        <!-- Card 2 -->
+        <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+          <div class="icon"><img src="/assets/images/pot.png"></div>
+          <h3>₹10,00,000</h3>
+          <hr>
+          <p><img src="/assets/images/cal.png"> PLAN: ₹50,000 per month</p>
+          <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+          <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+          <button onclick="window.location.href='services.html?plan=10'">
+            Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+          <div class="icon"><img src="/assets/images/pot.png"></div>
+          <h3>₹25,00,000</h3>
+          <hr>
+          <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000per month</p>
+          <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+          <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+          <button onclick="window.location.href='services.html?plan=25'">
+            Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+          <div class="icon"><img src="/assets/images/pot.png"></div>
+          <h3>₹50,00,000</h3>
+          <hr>
+          <p><img src="/assets/images/cal.png"> PLAN: ₹2,50,000 per month</p>
+          <p><img src="/assets/images/time.png"> DURATION: 20 months</p>
+          <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+          <button onclick="window.location.href='services.html?plan=50'">
+            Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+          <div class="icon"><img src="/assets/images/pot.png"></div>
+          <h3>₹5,00,000</h3>
+          <hr>
+          <p><img src="/assets/images/cal.png"> PLAN: 12,500 per month</p>
+          <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+          <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+          <button onclick="window.location.href='services.html?plan=1'">
+            Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+    
+        <!-- Card 6 -->
+        <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+          <div class="icon"><img src="/assets/images/pot.png"></div>
+          <h3>₹10,00,000</h3>
+          <hr>
+          <p><img src="/assets/images/cal.png"> PLAN: ₹25,000 per month</p>
+          <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+          <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+          <button onclick="window.location.href='services.html?plan=10'">
+            Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
 
-      <!-- Card 7 -->
-      <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-        <div class="icon"><img src="/assets/images/pot.png"></div>
-        <h3>₹25,00,000</h3>
-        <hr>
-        <p><img src="/assets/images/cal.png"> PLAN: ₹62,500 per month</p>
-        <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
-        <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-        <button onclick="window.location.href='services.html?plan=25'">
-          Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-          
-    <!-- Card 8 -->
+    <!-- Card 7 -->
     <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
-        <div class="icon"><img src="/assets/images/pot.png"></div>
-        <h3>₹50,00,000</h3>
-        <hr>
-        <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000 per month</p>
-        <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
-        <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
-        <button onclick="window.location.href='services.html?plan=50'">
-          Start Your Journey <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-      
-  </div>
-  </section>
+      <div class="icon"><img src="/assets/images/pot.png"></div>
+      <h3>₹25,00,000</h3>
+      <hr>
+      <p><img src="/assets/images/cal.png"> PLAN: ₹62,500 per month</p>
+      <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+      <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+      <button onclick="window.location.href='services.html?plan=25'">
+        Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+        
+  <!-- Card 8 -->
+  <div class="offer-card active" style="background-image: url('./assets/images/testi.png'); background-size: cover; background-position: center;">
+      <div class="icon"><img src="/assets/images/pot.png"></div>
+      <h3>₹50,00,000</h3>
+      <hr>
+      <p><img src="/assets/images/cal.png"> PLAN: ₹1,25,000 per month</p>
+      <p><img src="/assets/images/time.png"> DURATION: 40 months</p>
+      <!-- <p><img src="/assets/images/home.png"> BRANCH: Tirunelveli</p> -->
+      <button onclick="window.location.href='services.html?plan=50'">
+        Start Your Journey <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    
+</div>
+</section>
 
   
   <section class="testimonial-section">
