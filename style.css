@@ -1393,7 +1393,7 @@ font-size: 1.1em;
                  display: flex;
                  align-items: center;
                  justify-content: center;
-                 background: linear-gradient(268deg, black, transparent), url("/assets/images/family.png");
+                 background: linear-gradient(268deg, black, transparent), url("/assets/images/Home/family.webp");
                  color: white;
                  overflow: hidden;
                  padding: 30px 40px;
@@ -1849,7 +1849,7 @@ font-size: 1.1em;
 
              .trustedFamiliesSection {
                  background-color: #f8f8f8;
-                 background-image: url('./assets/images/Peoples-image.png');
+                 background-image: url('./assets/images/Home/Peoples-image.webp');
                  background-size: cover;
                  background-position: center;
                  background-repeat: no-repeat;
@@ -1861,7 +1861,7 @@ font-size: 1.1em;
                  margin: 40px auto;
                  border-radius: 12px;
                  overflow: hidden;
-                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
                }
 
                /* Mobile responsive for trusted families section */
@@ -1890,7 +1890,7 @@ font-size: 1.1em;
                 content: "";
                 position: absolute;
                 inset: 0;
-                background-color: rgba(0,0,0,0.65); /* softer overlay for image */
+                background-color: rgba(0,0,0,0.45);
                 z-index: -1;
               }
               
@@ -1932,20 +1932,20 @@ font-size: 1.1em;
 
               /* NEW overlay box behind text */
               .overlay-box {
-                background-color: rgba(64, 64, 64, 0.404); /* #404040 with opacity */
+                background-color: rgba(64, 64, 64, 0.5); /* semi-transparent allows bg view, rgb for customization */
                 border-radius: 12px;
               }
               
               /* Responsive typography */
               .trustedFamiliesSection h2 {
                 font-weight: 800;
-                font-size: 2.3rem;
+                font-size: 2.1rem;
                 line-height: 1.4;
               }
               
               .trustedFamiliesSection p {
-                font-size: 1.2rem;
-                line-height: 1.6;
+                font-size: 1.0rem;
+                line-height: 1.5;
               }
 
 
