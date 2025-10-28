@@ -13,7 +13,7 @@
 /* ============ Hero Banner ============ */
 .contact-hero {
   position: relative;
-  width: min(1200px, 100%);
+  width: min(1300px, 100%);
   margin: 60px auto 10px;
   height: 400px; /* Increased height */
   border-radius: 14px;
@@ -206,7 +206,7 @@ input:focus, select:focus, textarea:focus{
 /* ============ Fix Bootstrap Conflicts ============ */
 .branches-sec * { box-sizing: border-box !important; }
 .branches-sec .container {
-  max-width: 1450px !important;
+  max-width: 1350px !important;
   width: 100% !important;
   margin: 0 auto !important;
   padding: 0 20px !important;
