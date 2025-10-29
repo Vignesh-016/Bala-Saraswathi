@@ -26,64 +26,59 @@
 
 </head>
 
-<body>
+<body class="services-page">
 
-  <header class="main-header" data-aos="fade-down" data-aos-delay="100">
-    <!-- Top bar -->
-    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div>
-          <p class="mb-0">
-            <img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
-            +91 9629587444
-          </p>
+  <header class="main-header" data-aos="fade-down">
+    <!-- ✅ Responsive Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <!-- Left Section -->
+        <div class="top-left">
+          <img src="/assets/images/icons/phone.png" alt="Phone" />
+          <span>+91 9629587444</span>
         </div>
-        <div class="d-flex align-items-center">
-          <p class="mb-0 me-3">
-            <span class="icon">
-              <img src="/assets/images/location_11080891.svg" alt="Location Icon" style="width:18px; height:18px; margin-right:6px; vertical-align:middle;">
-            </span>
-            Head Office, 148B, Deverpuram Road, Tuticorin - 628003
-          </p>
-          <!-- Social icons -->
+    
+        <!-- Right Section -->
+        <div class="top-right">
+          <div class="location">
+            <img src="/assets/images/icons/location.png" alt="Location" />
+            <span>Head Office, 148B, Deverpuram Road, Tuticorin - 628003</span>
+          </div>
           <div class="social-icons">
-            <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/balasaraswathi.chits/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/balasaraswathichits/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
     </div>
-  
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container d-flex align-items-center justify-content-between">
-        <!-- Logo -->
-        <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
-          <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
-        </a>
-  
-        <!-- Toggler (visible only below 992px) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-          aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <!-- Nav menu -->
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link active" href="./services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+    
+    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+              <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu" style="font-family: 'Jost', Arial, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;">
+              <ul class="navbar-nav align-items-center" style="display: flex; gap: 45px;">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./services.html">Services</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
   
 
-    <section class="services-banner" data-aos="zoom-in" >
+    <section class="services-banner"  data-aos="zoom-in" >
         <img src="./assets/images/service/Savings.webp" alt="Services" class="banner-img">
         <div class="services-content" data-aos="fade-up" data-aos-delay="150" >
           <h2>Services</h2>
@@ -102,90 +97,36 @@
               <button class="plan-btn" data-plan="50">50 Lakhs</button>
         
               <div class="help-box" data-aos="zoom-in" style="background-image: url('./assets/images/service/Hands\ together.webp'); background-size: cover; background-position: center;">
-                <div class="help-content">
+                <div class="help-content" style="text-align: center;">
                   <h3>Have Any Questions</h3>
-                  <p>We’re here to help! Contact us for service inquiries, project assistance, or custom solutions.</p>
+                  <p style="font-size:medium;">We're here to help! Contact us for service inquiries, project assistance, or custom solutions.</p>
                   <p class="phone">📞 +91 8903125809</p>
                 </div>
               </div>
             </div>
         
             <!-- Right Content -->
-            <div class="plans-content" data-aos="fade-left" >
+            <div class="plans-content" data-aos="fade-left" style="text-align: center;">
               <div class="banner">
                 <img id="planImage" src="./assets/images/service/Family image.png" alt="Plan Banner">
               </div>
-              <h2 id="planTitle">5 Lakhs</h2>
+              <h2 id="planTitle">5 Lakh</h2>
               <p id="planDesc">The ₹5,00,000 chit fund scheme is perfect for achieving bigger financial goals, offering reliable savings, transparent bidding, and instant payouts. Flexible options ensure each member finds the right fit for their needs, whether planning for family, business, or major purchases</p>
         
-              <div class="months-box">
+              <div class="months-box" style="text-align: center;">
                 <button class="month-btn active" data-month="20">20 Months</button>
                 <button class="month-btn" data-month="40">40 Months</button>
-                <p id="monthDesc">For 20 months: higher monthly payments, faster maturity.</p>
+                <p id="monthDesc" class="month-desc" style="text-align: left;">Save ₹25,000 per month for 20 months and access your lump sum faster. This plan is ideal for those who want quick results and timely fund disbursement</p>
+                <div class="cta-box" style="text-align: center;">
+                  <button class="cta-btn">Download Our Plans</button>
+                  <!-- <button id="openPopup" class="cta-btn primary">Start Your Journey →</button> -->
+                  <button class="cta-btns cta-btn" data-popup-open="enquiry">Start Your Journey</button>
+                </div>
               </div>
         
-              <div class="cta-box">
-                <button class="cta-btn">Download Our Plans</button>
-                <!-- <button id="openPopup" class="cta-btn primary">Start Your Journey →</button> -->
-                <button class="cta-btn primary" data-popup-open="enquiry">Start Your Journey →</button>
-              </div>
+              
             </div>
           </div>
-
-<!-- ======================
-     Popup Enquiry Form
-====================== -->
-<!-- <div id="popupOverlay" class="popup-overlay">
-  <div class="popup-box">
-    <button id="closePopup" class="close-btn">&times;</button>
-    <h3 class="popup-title">Enquiry Form</h3>
-    
-    <form class="popup-form">
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label class="form-label">Name</label>
-          <input type="text" class="form-control" placeholder="Enter Name" required>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Email Address</label>
-          <input type="email" class="form-control" placeholder="Enter Email ID" required>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" placeholder="Enter your Phone Number" required>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Chit Value</label>
-          <select class="form-select" required>
-            <option selected disabled>Chit Value</option>
-            <option>₹1,00,000</option>
-            <option>₹2,00,000</option>
-            <option>₹5,00,000</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Tenure of Chit</label>
-          <input type="text" class="form-control" placeholder="Enter Tenure of Chit">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Monthly Income</label>
-          <input type="text" class="form-control" placeholder="Enter monthly income">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Branch</label>
-          <input type="text" class="form-control" placeholder="Enter Branch">
-        </div>
-        <div class="col-12">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" rows="4" placeholder="Enter Message"></textarea>
-        </div>
-      </div>
-      <div class="mt-4 text-center">
-        <button class="btn btn-primary px-5 py-2 fw-bold" type="submit">Enquire Now</button>
-      </div>
-    </form>
-  </div>
-</div>
 </section>
         
         <section class="plans-section" data-aos="fade-up">
@@ -340,11 +281,11 @@
       </section>
     
           <section class="working-model" data-aos="fade-up">
-            <div class="container working-model-container" style="flex-direction: column; align-items: flex-start;">
-              <!-- Heading and Description at the top left -->
-              <div style="width: 100%; max-width: 1200px;">
-                <h2 class="section-title" style="margin-top:0; text-align: left;">THE WORKING MODEL</h2>
-                <p class="section-desc" style="text-align: left;">
+            <div class="container working-model-container" style="flex-direction: column; align-items: center;">
+              <!-- Heading and Description at the top center -->
+              <div style="width: 100%; max-width: 1200px; text-align: center;">
+                <h2 class="section-title" style="margin-top:0; text-align: center;">THE WORKING MODEL</h2>
+                <p class="section-desc" style="text-align: center;">
                   A simple, transparent process that guides you from enrolment to completion ensuring easy contributions, fair auctions, instant disbursements, and rewarding savings.
                 </p>
               </div>
@@ -355,44 +296,44 @@
                   <img src="./assets/images/service/image1.webp" alt="Working Model">
                 </div>
                 <!-- Right Column: Steps -->
-                <div class="working-model-right" data-aos="fade-left" style="text-align: left; position: relative;">
-                  <div class="steps" style="position: relative;">
+                <div class="working-model-right" data-aos="fade-left" style="text-align: center; position: relative;">
+                  <div class="steps" style="position: relative; text-align: center;">
                     <div style="position: absolute; left: 13px; top: 28px; bottom: 120px; width: 2px; z-index: 0;"></div>
-                    <div class="step" style="position: relative; z-index: 1;">
+                    <div class="step" style="position: relative; z-index: 1; text-align: center;">
                       <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
-                      <div class="step-content">
+                      <div class="step-content" style="text-align: center;">
                         <p class="step-number">STEP 1</p>
                         <h3 class="step-title">ENROLMENT</h3>
                         <p class="step-desc">Join easily by contacting Bala Saraswathi Chits or visiting any branch. Select a chit plan tailored to your financial needs.</p>
                       </div>
                     </div>
-                    <div class="step" style="position: relative; z-index: 1;">
+                    <div class="step" style="position: relative; z-index: 1; text-align: center;">
                       <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
-                      <div class="step-content">
+                      <div class="step-content" style="text-align: center;">
                         <p class="step-number">STEP 2</p>
                         <h3 class="step-title">CONTRIBUTION</h3>
                         <p class="step-desc">Make regular fixed contributions each month or week, ensuring flexibility and convenience.</p>
                       </div>
                     </div>
-                    <div class="step" style="position: relative; z-index: 1;">
+                    <div class="step" style="position: relative; z-index: 1; text-align: center;">
                       <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
-                      <div class="step-content">
+                      <div class="step-content" style="text-align: center;">
                         <p class="step-number">STEP 3</p>
                         <h3 class="step-title">BIDDING/AUCTION</h3>
                         <p class="step-desc">In each cycle, members join an auction to bid for the pooled funds. The member with the lowest bid wins the lump sum, and the remaining amount is distributed to others as dividends.</p>
                       </div>
                     </div>
-                    <div class="step" style="position: relative; z-index: 1;">
+                    <div class="step" style="position: relative; z-index: 1; text-align: center;">
                       <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
-                      <div class="step-content">
+                      <div class="step-content" style="text-align: center;">
                         <p class="step-number">STEP 4</p>
                         <h3 class="step-title">DISBURSEMENT</h3>
                         <p class="step-desc">Spot payment is our specialty—funds are transferred instantly to the winning member for immediate access.</p>
                       </div>
                     </div>
-                    <div class="step" style="position: relative; z-index: 1;">
+                    <div class="step" style="position: relative; z-index: 1; text-align: center;">
                       <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
-                      <div class="step-content">
+                      <div class="step-content" style="text-align: center;">
                         <p class="step-number">STEP 5</p>
                         <h3 class="step-title">COMPLETION</h3>
                         <p class="step-desc">Once every member has received their share, the chit cycle concludes. You can then renew your journey or select a new plan to continue benefiting.</p>
