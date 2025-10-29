@@ -27,56 +27,56 @@
 
 <body class="about-page">
 
-  <header class="main-header">
-    <!-- Top bar -->
-    <div class="top-bar text-dark py-3 small" style="background:#EFF8FF;" data-aos="fade-down">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <p class="mb-0">
-                    <img src="/assets/images/phone.png" style="width:25px; margin-right:6px;">
-                    +91 9629587444
-                </p>
-            </div>
-            <div class="d-flex align-items-center">
-                <p class="mb-0 me-3">
-                    <span class="icon">
-                        <img src="/assets/images/location_11080891.svg" alt="Location Icon" style="width:18px; height:18px; margin-right:6px; vertical-align:middle;">
-                    </span>
-                    Head Office, 148B, Deverpuram Road, Tuticorin - 628003
-                </p>
-                <!-- Social icons -->
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/balasaraswathi.chits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/balasaraswathichits/" class="text-dark me-3" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+<!-- Header -->
+<header class="main-header" data-aos="fade-down">
+  <!-- ✅ Responsive Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <!-- Left Section -->
+      <div class="top-left">
+        <img src="/assets/images/icons/phone.png" alt="Phone" />
+        <span>+91 9629587444</span>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="top-right">
+        <div class="location">
+          <img src="/assets/images/icons/location.png" alt="Location" />
+          <span>Head Office, 148B, Deverpuram Road, Tuticorin - 628003</span>
         </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/balasaraswathi.chits/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/balasaraswathi_chitfunds/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/balasaraswathichits/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container d-flex align-items-center justify-content-between">
-        <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
-          <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+  </div>
+  
+  
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container d-flex align-items-center justify-content-between">
+          <a class="navbar-brand py-2" href="./index.html" style="margin-right: 32px;">
+            <img src="assets/images/logo1.png" alt="Logo" style="max-height:70px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
           aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu" style="font-family: 'Jost', Arial, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;">
-          <ul class="navbar-nav align-items-center" style="display: flex; gap: 45px;">
-            <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
-          </ul>
+        
+          <div class="collapse navbar-collapse justify-content-end" id="navMenu" style="font-family: 'Jost', Arial, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;">
+            <ul class="navbar-nav align-items-center" style="display: flex; ">
+              <li class="nav-item"><a class="nav-link " href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
+              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
-
+      </nav>
+    </header>
   <!-- About Us Banner -->
   <section class="about-banner" data-aos="zoom-in">
     <div class="about-text" data-aos="fade-up" data-aos-delay="150">
@@ -92,7 +92,7 @@
       <!-- Left Side Images -->
       <div class="about-images" data-aos="fade-right">
         <img src="./assets/images/Buildings.png" alt="Building" class="img1">
-        <img src="./assets/images/Working Space.png" alt="Office" class="img2">
+        <img src="./assets/images/Working Space.png" alt="Office" class="img2 d-none d-md-block">
       </div>
   
       <!-- Right Side Content -->
@@ -166,86 +166,70 @@
       </div>
     </div>
   </section>
-  
-  <!-- Timeline -->
-  <section class="timeline-sec" style="background:url('./assets/images/testi.png') center/cover no-repeat;" data-aos="fade-up">
-    <div class="timeline">
-<!-- radios (control panels) -->
-<input type="radio" name="year" id="y1990" checked hidden>
-<input type="radio" name="year" id="y2000" hidden>
-<input type="radio" name="year" id="y2010" hidden>
-<input type="radio" name="year" id="y2020" hidden>
-<input type="radio" name="year" id="y2025" hidden>
+<!-- ✅ Timeline Section -->
+<section class="timeline-sec" style="background:url('./assets/images/testi.png') center/cover no-repeat;" data-aos="fade-up">
+  <div class="timeline">
+    <!-- Radios (control panels) -->
+    <input type="radio" name="year" id="y1990" checked hidden>
+    <input type="radio" name="year" id="y2000" hidden>
+    <input type="radio" name="year" id="y2010" hidden>
+    <input type="radio" name="year" id="y2020" hidden>
+    <input type="radio" name="year" id="y2025" hidden>
 
-<!-- tabbar -->
-<div class="tabbar" role="tablist" aria-label="Company history">
-  <label class="tab" for="y1990" role="tab" aria-controls="p1990">1990</label>
-  <label class="tab" for="y2000" role="tab" aria-controls="p2000">2000</label>
-  <label class="tab" for="y2010" role="tab" aria-controls="p2010">2010</label>
-  <label class="tab" for="y2020" role="tab" aria-controls="p2020">2020</label>
-  <label class="tab" for="y2025" role="tab" aria-controls="p2025">2025</label>
-</div>
-
-<!-- panels -->
-<div class="panels">
-  <article class="panel" id="p1990" role="tabpanel" aria-labelledby="y1990">
-    <div class="panel-content">
-      <h3>Foundations Laid
-      </h3>
-      <span class="blue-chip">Since 1991, your partner in financial growth.</span>
-      <p>
-        The idea for community-focused savings takes shape, laying the groundwork for future growth.
-      </p>
+    <!-- Tabs -->
+    <div class="tabbar" role="tablist" aria-label="Company history">
+      <label class="tab" for="y1990" role="tab" aria-controls="p1990">1990</label>
+      <label class="tab" for="y2000" role="tab" aria-controls="p2000">2000</label>
+      <label class="tab" for="y2010" role="tab" aria-controls="p2010">2010</label>
+      <label class="tab" for="y2020" role="tab" aria-controls="p2020">2020</label>
+      <label class="tab" for="y2025" role="tab" aria-controls="p2025">2025</label>
     </div>
-  </article>
 
-  <article class="panel" id="p2000" role="tabpanel" aria-labelledby="y2000">
-    <div class="panel-content">
-      <h3>Balu Chits Established
-      </h3>
-      <span class="blue-chip">New millennium, bold ambitions.</span>
-      <p>
-        Founded by Mr. Bala Krishnan, the company launches as Balu Chits, bringing secure chit fund solutions to local members.
+    <!-- Panels -->
+    <div class="panels">
+      <article class="panel" id="p1990">
+        <div class="panel-content">
+          <h3>Foundations Laid</h3>
+          <span class="blue-chip">Since 1991, your partner in financial growth.</span>
+          <p>The idea for community-focused savings takes shape, laying the groundwork for future growth.</p>
+        </div>
+      </article>
 
-      </p>
+      <article class="panel" id="p2000">
+        <div class="panel-content">
+          <h3>Balu Chits Established</h3>
+          <span class="blue-chip">New millennium, bold ambitions.</span>
+          <p>Founded by Mr. Bala Krishnan, the company launches as Balu Chits, bringing secure chit fund solutions to local members.</p>
+        </div>
+      </article>
+
+      <article class="panel" id="p2010">
+        <div class="panel-content">
+          <h3>Private Limited Transformation</h3>
+          <span class="blue-chip">Technology-driven growth.</span>
+          <p>The brand evolves into Bala Saraswathi Chits Private Limited, expanding trust and transparency. Initial branches open in Tuticorin and Tiruchendur.</p>
+        </div>
+      </article>
+
+      <article class="panel" id="p2020">
+        <div class="panel-content">
+          <h3>Branch Expansion Post-COVID</h3>
+          <span class="blue-chip">Adapting in a changing world.</span>
+          <p>Meeting new demands, the company starts branches in Tirunelveli and several other regions, ensuring convenient service for a larger community.</p>
+        </div>
+      </article>
+
+      <article class="panel" id="p2025">
+        <div class="panel-content">
+          <h3>Ambitious Growth Plans</h3>
+          <span class="blue-chip">Future-ready, always.</span>
+          <p>With strong roots and proven reliability, Bala Saraswathi Chits plans further expansion, aiming to serve even more families and businesses across new locations.</p>
+        </div>
+      </article>
     </div>
-  </article>
+  </div>
+</section>
 
-  <article class="panel" id="p2010" role="tabpanel" aria-labelledby="y2010">
-    <div class="panel-content">
-      <h3>Private Limited Transformation</h3>
-      <span class="blue-chip">Technology-driven growth.</span>
-      <p>
-        The brand evolves into Bala Saraswathi Chits Private Limited, expanding trust and transparency. Initial branches open in Tuticorin and Tiruchendur.
-      </p>
-    </div>
-  </article>
-
-  <article class="panel" id="p2020" role="tabpanel" aria-labelledby="y2020">
-    <div class="panel-content">
-      <h3>Branch Expansion Post-COVID</h3>
-      <span class="blue-chip">Adapting in a changing world.</span>
-      <p>
-        Meeting new demands, the company starts branches in Tirunelveli and several other regions, ensuring convenient service for a larger community.
-
-      </p>
-    </div>
-  </article>
-
-  <article class="panel" id="p2025" role="tabpanel" aria-labelledby="y2025">
-    <div class="panel-content">
-      <h3>Ambitious Growth Plans</h3>
-      <span class="blue-chip">Future-ready, always.</span>
-      <p>
-        With strong roots and proven reliability, Bala Saraswathi Chits plans further expansion, aiming to serve even more families and businesses across new locations.
-
-      </p>
-    </div>
-  </article>
-</div>
-    </div>
-  </section>
-  
 
   <!-- Experience -->
   <section class="experience-sec">
@@ -366,6 +350,10 @@
     easing: 'ease-in-out'
   });
 </script>
+<!-- ✅ Bootstrap 5 JS (enables menu toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 </body>
 </html>
