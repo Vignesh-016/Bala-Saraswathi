@@ -99,7 +99,7 @@ body{
 .about-images .img1{ width:100%; border-radius:8px; }
 .about-images .img2{
   position:absolute; bottom:-120px; left:180px; width:70%;
-  border:5px solid #ffffff; border-radius:1px;
+  
   /* box-shadow:0px 5px 15px #000000; */
 }
 .about-content{ flex:1; min-width:300px; }
@@ -474,3 +474,370 @@ body,
 footer {
   font-family: 'Jost', system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, sans-serif !important;
 }
+
+/* ✅ Responsive About Banner (Fixed Crop & Spacing Issue) */
+.about-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height for perfect fit */
+  max-height: 700px;
+  min-height: 450px;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: url('./assets/images/Indian Peoples.png') center center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+/* Overlay for readability */
+.about-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* ✅ Text inside banner */
+.about-text {
+  position: relative;
+  z-index: 2;
+  padding: 0 6vw 6vh;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-text p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ✅ Remove unwanted white space below */
+.about-banner + section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ✅ Tablet View */
+@media (max-width: 992px) {
+  .about-banner {
+    height: 80vh;
+    min-height: 400px;
+  }
+  .about-text {
+    padding: 0 7vw 5vh;
+  }
+}
+
+/* ✅ Mobile View */
+@media (max-width: 576px) {
+  .about-banner {
+    height: 70vh; /* slightly taller so full image shows */
+    min-height: 380px;
+  }
+
+  .about-text {
+    padding: 0 6vw 4vh;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+/* ✅ About Banner - Fully Responsive */
+.about-banner {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  height: var(--banner-h);
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: url('./assets/images/Indian Peoples.png') center/cover no-repeat;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.about-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.about-text {
+  position: relative;
+  z-index: 2;
+  padding: 0 4vw 6vh; /* fluid padding for all screens */
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: clamp(1.8rem, 4vw, 3.8rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-text p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+}
+
+/* ✅ Tablet View */
+@media (max-width: 992px) {
+  .about-banner {
+
+    margin-top: 126px;
+  }
+  .about-text {
+    padding: 0 6vw 5vh;
+  }
+}
+
+/* ✅ Mobile View */
+@media (max-width: 576px) {
+  .about-banner {
+    width: 95%;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  .about-text {
+    padding: 0 5vw 4vh;
+  }
+
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+/* =====================================
+   SCROLLABLE RESPONSIVE TIMELINE
+   ===================================== */
+
+   .timeline-sec {
+    background: var(--section-bg, #f7faff);
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* ===== TAB BAR (YEARS) ===== */
+  .tabbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 30px;
+    padding-bottom: 8px;
+    position: relative;
+  
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+  }
+  .tabbar::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .tabbar::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 3px;
+    background: #e3ecff;
+    border-radius: 3px;
+  }
+  
+  .tab {
+    flex: 0 0 auto;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    border: 1px solid #c8d7ff;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  .tab:hover {
+    background: #2563eb;
+    color: #fff;
+  }
+  
+  /* ===== ACTIVE TAB ===== */
+  #y1990:checked ~ .tabbar label[for="y1990"],
+  #y2000:checked ~ .tabbar label[for="y2000"],
+  #y2010:checked ~ .tabbar label[for="y2010"],
+  #y2020:checked ~ .tabbar label[for="y2020"],
+  #y2025:checked ~ .tabbar label[for="y2025"] {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 4px 10px rgba(37,99,235,0.35);
+  }
+  
+  /* ===== PANELS ===== */
+  .panels {
+    position: relative;
+    min-height: 350px;
+  }
+  .panel {
+    display: none;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: url('./assets/images/Finance buildings.png') center/cover no-repeat;
+    height: 350px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+  }
+  .panel-content {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    right: 35px;
+    z-index: 2;
+    color: #fff;
+  }
+  .panel-content h3 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .blue-chip {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+  }
+  .panel-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e5e7eb;
+  }
+  
+  /* ===== SHOW ACTIVE PANEL ===== */
+  #y1990:checked ~ .panels #p1990,
+  #y2000:checked ~ .panels #p2000,
+  #y2010:checked ~ .panels #p2010,
+  #y2020:checked ~ .panels #p2020,
+  #y2025:checked ~ .panels #p2025 {
+    display: block;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  /* ===== ANIMATION ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* =====================================
+     RESPONSIVE ADJUSTMENTS
+     ===================================== */
+  
+  /* Tablet View */
+  @media (max-width: 992px) {
+    .timeline-sec {
+      padding: 60px 20px;
+    }
+    .tabbar {
+      gap: 10px;
+    }
+    .tab {
+      font-size: 0.95rem;
+      padding: 8px 18px;
+    }
+    .panel {
+      height: 300px;
+    }
+    .panel-content {
+      bottom: 25px;
+      left: 25px;
+      right: 25px;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 576px) {
+    .timeline-sec {
+      padding: 50px 16px;
+    }
+  
+    /* Make timeline scroll smoothly */
+    .tabbar {
+      gap: 8px;
+      padding-bottom: 6px;
+      justify-content: flex-start;
+    }
+    .tab {
+      min-width: 90px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+  
+    /* Panel adjustments */
+    .panels {
+      min-height: 250px;
+    }
+    .panel {
+      height: auto;
+      min-height: 250px;
+    }
+    .panel-content {
+      bottom: 20px;
+      left: 18px;
+      right: 18px;
+    }
+    .panel-content h3 {
+      font-size: 1.25rem;
+    }
+    .panel-content p {
+      font-size: 0.9rem;
+    }
+    .blue-chip {
+      font-size: 0.75rem;
+      padding: 6px 10px;
+    }
+  }
+  
