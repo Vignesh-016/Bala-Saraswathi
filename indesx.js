@@ -220,6 +220,7 @@ class TestimonialCarousel {
   }
 
   updateCarousel() {
+    // First, hide all slides and reset classes + play buttons
     this.slides.forEach((s) => {
       s.classList.remove("active", "prev", "next");
       s.style.display = "none";
@@ -229,17 +230,49 @@ class TestimonialCarousel {
       if (b) b.innerHTML = '<i class="fas fa-play"></i>';
     });
 
-    const prevIndex = (this.currentIndex - 1 + this.total) % this.total;
-    const nextIndex = (this.currentIndex + 1) % this.total;
-
+    // Always show the current (center/active) slide
     this.slides[this.currentIndex].classList.add("active");
     this.slides[this.currentIndex].style.display = "block";
 
-    this.slides[prevIndex].classList.add("prev");
-    this.slides[prevIndex].style.display = "block";
+    // Only show prev/next when actually navigating (not on page load)
+    // On page load, both are hidden. But after navigation, show prev/next as usual.
 
-    this.slides[nextIndex].classList.add("next");
-    this.slides[nextIndex].style.display = "block";
+    // Detect if this is the first load (show only the center slide)
+    // We'll use a flag on the class instance
+    if (typeof this.hasNavigated === "undefined") {
+      this.hasNavigated = false;
+    }
+
+    // Only show the prev/next slides if a navigation button was clicked at least once
+    if (this.hasNavigated) {
+      const prevIndex = (this.currentIndex - 1 + this.total) % this.total;
+      const nextIndex = (this.currentIndex + 1) % this.total;
+
+      this.slides[prevIndex].classList.add("prev");
+      this.slides[prevIndex].style.display = "block";
+
+      this.slides[nextIndex].classList.add("next");
+      this.slides[nextIndex].style.display = "block";
+    }
+  }
+
+  // Overwrite next/prev to set flag when navigation occurs
+  next() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.hasNavigated = true;
+    this.currentIndex = (this.currentIndex + 1) % this.total;
+    this.updateCarousel();
+    setTimeout(() => (this.isAnimating = false), 600);
+  }
+
+  prev() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.hasNavigated = true;
+    this.currentIndex = (this.currentIndex - 1 + this.total) % this.total;
+    this.updateCarousel();
+    setTimeout(() => (this.isAnimating = false), 600);
   }
 
   pauseAllVideos() {

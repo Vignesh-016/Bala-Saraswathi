@@ -21,7 +21,11 @@
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Google Fonts for Playfair Display and Sans Serif (Roboto as example) -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- SF Pro Display, SF Pro Text, and SF Pro Icons (Apple) CDN via Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=sf%20pro%20display@400,500,600,700,800&display=swap" rel="stylesheet">
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -196,15 +200,16 @@
     <div class="container">
       <div class="d-flex align-items-center justify-content-between mb-3">
         <div class="d-flex align-items-center gap-2" style="flex:1;">
-          <h2 class="fw-bold text-primary mb-0" style="letter-spacing:0.5px; font-family: 'Playfair Display', serif;">OUR PLANS</h2>
+          <h2 class="fw-semibold text-primary mb-0" style="letter-spacing:0.5px; font-family: 'Jost', sans-serif;">OUR PLANS</h2>
           <span style="display:inline-block; width:18px; height:18px; background:#1976f7; border-radius:50%; margin-left:10px; margin-right:10px;"></span>
           <span style="display:inline-block; height:2px; width:50px; background:#1976f7; border-radius:2px; opacity:5; margin-top:2px;"></span>
         </div>
-        <button 
+        <a 
+          href="./services.html"
           class="btn btn-outline-primary"
           style="border-width:2px; border-radius:6px; font-weight:500; padding: 0.5rem 1.5rem;">
           View all plans
-        </button>
+        </a>
       </div>
       <p class="mb-4 text-left">
         Life brings different dreams and challenges, and we’re here to support them all. 
@@ -351,14 +356,13 @@
       <div class="hero-content1">
         <div class="hero-image1"></div>
         <div class="hero-text1">
-          <h2 class="animate-text1" style="font-family: 'Playfair Display', serif;">Savings That Strengthen Your Family’s Tomorrow</h2>
+          <h2 class="animate-text1" style="font-family: 'Jost', sans-serif;">Savings That Strengthen Your Family’s Tomorrow</h2>
           <p class="animate-text1 delay-1">
             Join trusted chit funds for reliable savings and financial growth.
           </p>
-          <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-    
+          <a href="./services.html" class="btn btn-primary" style="padding: 7px 18px; font-size: 1rem;" data-bs-toggle="modal" data-bs-target="#enquiryModal">
             Start Your Journey
-            <img src="/assets/images/Home/icons/arrow-jou.png" alt="Start Icon" style="width: 40px; height: 40px; margin-left: 5px;  vertical-align: middle;">
+            <img src="/assets/images/Home/icons/arrow-jou.png" alt="Start Icon" style="width: 28px; height: 28px; margin-left: 5px; vertical-align: middle;">
           </a>
         </div>
       </div>
@@ -367,20 +371,28 @@
 
   <!-- Why People Trust Us -->
   <section class="trust-section" data-aos="fade-up">
-    <h2 style="display: flex; align-items: center; font-weight: 700; color: #1769e0; font-size: 2rem; letter-spacing: 1px; font-family: 'Playfair Display', serif;">
+    <h2 style="display: flex; align-items: center; font-weight: 550; color: #1769e0; font-size: 2rem; letter-spacing: 1px; font-family: 'Jost', sans-serif; margin-bottom: 8px;">
       WHY PEOPLE TRUST US
       <span style="display: inline-flex; align-items: center; margin-left: 16px;">
           <span style="display: inline-block; width: 16px; height: 16px; background: #1769e0; border-radius: 50%; margin-right: 10px;"></span>
           <span style="display: inline-block; width: 48px; height: 2px; background: #1769e0; opacity: 0.3;"></span>
       </span>
     </h2>
+    <p style="color: #666; font-size: 0.97rem; margin-top: 2px; max-width: 1000px; font-family: 'Jost', sans-serif; line-height: 1.7;">
+      We’ve earned the trust of thousands by providing prompt payouts, personalized service, and transparent, secure savings solutions.
+    </p>
 
   <div class="trust-container">
       <!-- Large Box -->
       <div class="trust-box box-large">
           <img src="/assets/images/Home/right.webp" alt="Spot Payment">
           <div class="trust-content">
-              <div class="trust-title">SPOT PAYMENT BENEFITS <img src="/assets/images/Home/icons/arrow-jou.png" alt="Start Icon" style="width: 28px; height: 28px; vertical-align: middle;"></div>
+              <div class="trust-title" style="display: flex; align-items: center; gap: 16px; font-weight: 700; letter-spacing: 0.5px;">
+                SPOT PAYMENT BENEFITS
+                <span style="display: inline-flex; align-items: center; justify-content: center; width: 25px; height: 25px; border: 2px solid #fff; border-radius: 50%; margin-left: 5px;">
+                  <img src="./assets/images/Home/icons/arrow-icon.png" alt="External Link Icon" style="width: 12px; height: 12px; display: block; filter: brightness(0) invert(1);">
+                </span>
+              </div>
               <div class="trust-details">
                   <p><i class="fa-solid fa-check-circle"></i> Receive your payout instantly as soon as your bid wins</p>
                   <p><i class="fa-solid fa-check-circle"></i>Access funds exactly when you need them, without delays</p>
@@ -392,8 +404,10 @@
       <div class="trust-box">
           <img src="/assets/images/Home/left1.webp" alt="Door to Door">
           <div class="trust-content">
-              <div class="trust-title">DOOR-TO-DOOR COLLECTION <i
-                      class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              <div class="trust-title">DOOR-TO-DOOR COLLECTION
+                <span style="margin-left: 7px; border: 2px solid #ffffff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; width: 26px; height: 26px; box-sizing: border-box;">
+                  <img src="/assets/images/Home/icons/arrow-icon.png" alt="Manual Icon" style="width: 12px; height: 12px; filter: brightness(0) invert(1);">
+                </div>
               <div class="trust-details">
                   <p><i class="fa-solid fa-check-circle"></i> Convenient payment collection from your location, saving time and effort</p>
                   <p><i class="fa-solid fa-check-circle"></i> Personalized service ensures your experience is smooth every month</p>
@@ -405,7 +419,10 @@
       <div class="trust-box">
           <img src="/assets/images/Home/Savings.webp" alt="Renew Discount">
           <div class="trust-content">
-              <div class="trust-title">Flexible Collateral <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <div class="trust-title">FLEXIBLE COLLATERAL
+                <span style="margin-left: 7px; border: 2px solid #ffffff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; width: 26px; height: 26px; box-sizing: border-box;">
+                  <img src="/assets/images/Home/icons/arrow-icon.png" alt="Manual Icon" style="width: 12px; height: 12px; filter: brightness(0) invert(1);">
+                </span>
               </div>
               <div class="trust-details">
                   <p><i class="fa-solid fa-check-circle"></i> Minimal security requirements make joining simple for everyone</p>
@@ -420,7 +437,7 @@
  <!-- What We Offer -->
  <section class="offer-section" data-aos="fade-up" >
   <div class="offer-header">
-        <h2 style="display: flex; align-items: center; font-weight: 700; color: #1769e0; letter-spacing: 1px; font-size: 2rem; margin-bottom: 0; font-family: 'Playfair Display', serif;">
+        <h2 style="display: flex; align-items: center; font-weight: 600; color: #1769e0; letter-spacing: 1px; font-size: 2rem; margin-bottom: 0; font-family: 'Jost', Arial, Helvetica, sans-serif;">
           WHAT WE OFFER
           <span style="display: inline-flex; align-items: center; margin-left: 12px;">
             <span style="display: inline-block; width: 16px; height: 16px; background: #1769e0; border-radius: 50%; margin-right: 10px;"></span>
@@ -546,21 +563,26 @@
     <div class="heading">
       <div class="header-left">
         <div class="title-content">
-          <h2 style="font-family: 'Playfair Display', 'Jost', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <h2 style="font-family:'Jost', sans-serif; display: flex; align-items: center; justify-content: flex-start; gap: 8px;">
             Voices Of Memories
-            <span class="decorative-dot" style="font-size: 1.3em; line-height: 1; display: flex;  margin-top: 15px; margin-bottom: 25px;">•</span>
+            <span style="display: inline-flex; align-items: center; margin-left: 12px;">
+              <span style="display: inline-block; width: 16px; height: 16px; background: #1769e0; border-radius: 50%; margin-right: 10px;"></span>
+              <span style="display: inline-block; width: 48px; height: 2px; background: #1769e0; opacity: 0.3;"></span>
+            </span>
           </h2>
-          <h3 style="font-family: 'Jost', sans-serif;">Where smiles become stories</h3>
+          <p class="testimonial-subtitle" style="font-family: 'Jost', sans-serif;">Step into frames filled with elegance, joy & heartfelt moments.
+            From grand celebrations to intimate exchanges, our gallery shows
+            not just what we look like but how your day feels here.</p>
           <div class="golden-underline"></div>
         </div>
       </div>
-      <div class="header-right">
+      <!-- <div class="header-right">
         <p>
           Step into frames filled with elegance, joy & heartfelt moments.<br>
           From grand celebrations to intimate exchanges, our gallery shows<br>
           not just what we look like but how your day feels here.
         </p>
-      </div>
+      </div> -->
     </div>
   
     <!-- Carousel Slider -->
@@ -610,9 +632,9 @@
   <section class="faq-section" data-aos="fade-up">
 <!-- Left Content -->
         <div class="faq-left">
-            <h2 style="font-family: 'Playfair Display', serif;">Frequently Asked Question</h2>
+            <h2 style="font-family: 'Jost', sans-serif;">Frequently Asked Question</h2>
             <p>Clear answers to common queries about safety, payouts, participation, and withdrawal policies. Helping you make confident, informed decisions with Bala Saraswathi Chits.</p>
-            <div class="experience">35+</div>
+            <div class="experience" style="font-family: 'SF Pro Display', 'SF Pro Text', 'SF Pro Icons', 'Apple San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;">35+</div>
             <span>Years of Experience</span>
         </div>
 

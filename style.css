@@ -172,7 +172,7 @@
                 background-position: center;
 
                 /* Boxed layout */
-                max-width: 1400px;       /* set width limit */
+                max-width: 1250px;       /* set width limit */
                 margin: 40px auto;       /* center + spacing top/bottom */
                 border-radius: 12px;     /* smooth corners */
                 overflow: hidden;        /* keep overlay clean */
@@ -884,6 +884,28 @@ footer {
                  background-color: #f8f8f8;
              }
 
+              /* ===========================
+              VIEW ALL PLANS BUTTON STYLE
+              =========================== */
+            .btn-outline-primary {
+              border: 1.8px solid #b0b0b0;      /* subtle grey border */
+              color: #555;                      /* dark grey text */
+              background-color: transparent;
+              border-radius: 8px;
+              padding: 8px 20px;
+              font-size: 16px;
+              font-weight: 500;
+              transition: all 0.3s ease;
+            }
+
+            .btn-outline-primary:hover {
+              background-color: #e8e8e8;        /* soft grey hover background */
+              color: #222;                      /* darker text */
+              border-color: #999;               /* slightly darker border */
+              transform: translateY(-1px);
+            }
+
+
              /* Mobile responsive for plans section */
              @media (max-width: 767.98px) {
                  .plans-section {
@@ -1172,14 +1194,16 @@ font-size: 1.1em;
             }
 
             .faq-left .experience {
-                font-size: 170px !important;
-                font-weight: 450;
-                color: #1663f8;
-                margin-bottom: 5px;
-                text-align: left;
-                width: 100%;
+              font-size: 175px; /* default desktop size */
+              font-weight: 10;
+              color: #1663f8;
+              margin-bottom: -40px;
+              text-align: left;
+              letter-spacing: -6px;
+              font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              transition: font-size 0.3s ease;
             }
-
+            
             .faq-left span {
                 display: block;
                 font-size: 22px;
@@ -1343,13 +1367,13 @@ font-size: 1.1em;
             }
 
             .hero-text1 h2 {
-                font-size: 2rem;
-                font-weight: bold;
+                font-size: 1.7rem;
+                font-weight: 500;
                 margin-bottom: 1rem;
             }
 
             .hero-text1 p {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 margin-bottom: 1.5rem;
             }
 
@@ -1357,7 +1381,7 @@ font-size: 1.1em;
                 display: inline-block;
                 background: #0066ff;
                 color: white;
-                padding: 12px 25px;
+                padding: 7px 16px;
                 border-radius: 8px;
                 font-weight: 600;
                 text-decoration: none;
@@ -1368,6 +1392,7 @@ font-size: 1.1em;
                 background: #0044cc;
                 transform: translateY(-3px);
             }
+
 
             /* Animations */
             .animate-text1 {
@@ -1837,7 +1862,7 @@ font-size: 1.1em;
    Testimonial Section Styles
    =========================== */
 .testimonial-section {
-    padding: 50px 60px;
+    padding: 25px 60px;
     max-width: 1600px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
@@ -1847,7 +1872,9 @@ font-size: 1.1em;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-  }
+    /* Reduce top margin for heading section */
+    margin-top: -20px;
+}
   
   /* Header */
   .testimonial-section .heading {
@@ -1855,7 +1882,7 @@ font-size: 1.1em;
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 70px;
-    padding: 0 40px;
+    padding: 0 80px;
     max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
@@ -1865,18 +1892,20 @@ font-size: 1.1em;
   
   .testimonial-section .title-content h2 {
     font-family: 'Jost', cursive;
-    font-size: 35px;
+    font-size: 33px;
     color: #0066ff;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.5px;
-    margin: 0 0 15px 0;
+    /* margin: 0 0 5px 0; */
+    margin: 0 0 2px 0; /* Reduce bottom margin to visually center with description */
   }
   
-  .testimonial-section .heading h3 {
+  .testimonial-section .heading p {
     font-family: 'Jost', cursive;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
     font-weight: 350;
+    margin-top: 4px; /* Slightly bring h3 closer upwards, set in px */
   }
   
   /* .testimonial-section .golden-underline {
