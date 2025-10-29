@@ -126,7 +126,8 @@
         
               <div class="cta-box">
                 <button class="cta-btn">Download Our Plans</button>
-                <button id="openPopup" class="cta-btn primary">Start Your Journey →</button>
+                <!-- <button id="openPopup" class="cta-btn primary">Start Your Journey →</button> -->
+                <button class="cta-btn primary" data-popup-open="enquiry">Start Your Journey →</button>
               </div>
             </div>
           </div>
@@ -134,7 +135,7 @@
 <!-- ======================
      Popup Enquiry Form
 ====================== -->
-<div id="popupOverlay" class="popup-overlay">
+<!-- <div id="popupOverlay" class="popup-overlay">
   <div class="popup-box">
     <button id="closePopup" class="close-btn">&times;</button>
     <h3 class="popup-title">Enquiry Form</h3>
@@ -356,12 +357,12 @@
                 <!-- Right Column: Steps -->
                 <div class="working-model-right" data-aos="fade-left" style="text-align: left; position: relative;">
                   <div class="steps" style="position: relative;">
-                    <div style="position: absolute; left: 13px; top: 28px; bottom: 120px; width: 2px; background: #b6d8ff; z-index: 0;"></div>
+                    <div style="position: absolute; left: 13px; top: 28px; bottom: 120px; width: 2px; z-index: 0;"></div>
                     <div class="step" style="position: relative; z-index: 1;">
                       <span class="step-icon" style="background: #1976d2; box-shadow: 0 2px 6px rgba(25,118,210,0.08);">✔</span>
                       <div class="step-content">
                         <p class="step-number">STEP 1</p>
-                        <h3 class="step-title">Enrolment</h3>
+                        <h3 class="step-title">ENROLMENT</h3>
                         <p class="step-desc">Join easily by contacting Bala Saraswathi Chits or visiting any branch. Select a chit plan tailored to your financial needs.</p>
                       </div>
                     </div>
@@ -555,6 +556,93 @@
     offset: 120
   });
 </script>
+
+<script>
+(function(){
+  // Create popup once and attach to <body>
+  const overlay = document.createElement('div');
+  overlay.className = 'bmz-popup-overlay';
+  overlay.innerHTML = `
+    <div class="bmz-popup-box">
+      <button class="bmz-popup-close" aria-label="Close">&times;</button>
+      <h3 class="bmz-popup-title">Enquiry Form</h3>
+      <form class="popup-form">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter Name" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="Enter Email ID" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="Enter your Phone Number" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Chit Value</label>
+            <select class="form-select" required>
+              <option selected disabled>Chit Value</option>
+              <option>₹1,00,000</option>
+              <option>₹2,00,000</option>
+              <option>₹5,00,000</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Tenure of Chit</label>
+            <input type="text" class="form-control" placeholder="Enter Tenure of Chit">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Monthly Income</label>
+            <input type="text" class="form-control" placeholder="Enter monthly income">
+          </div>
+          <!-- Move Branch field to right-most: put in a col-md-6 by itself at the end, after monthly income and before message -->
+          <div class="col-md-6 ms-auto">
+            <label class="form-label">Branch</label>
+            <input type="text" class="form-control" placeholder="Enter Branch">
+          </div>
+          <div class="col-6">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Enter Message"></textarea>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <button class="btn btn-primary px-5 py-2 fw-bold" type="submit">Enquire Now</button>
+        </div>  
+      </form>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const closeBtn = overlay.querySelector('.bmz-popup-close');
+
+  // Scroll lock toggle
+  const lockScroll = (lock) => {
+    document.body.style.overflow = lock ? 'hidden' : '';
+  };
+
+  // Open popup
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-popup-open="enquiry"]');
+    if (!trigger) return;
+    e.preventDefault();
+    overlay.classList.add('bmz-active');
+    lockScroll(true);
+  });
+
+  // Close popup (button or outside click or ESC)
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closePopup(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopup(); });
+
+  function closePopup() {
+    overlay.classList.remove('bmz-active');
+    lockScroll(false);
+  }
+})();
+</script>
+
 
 <!-- Your custom JS -->
       <script src="services.js"></script>

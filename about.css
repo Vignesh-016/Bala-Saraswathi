@@ -14,7 +14,7 @@
   --muted: #475569;
   --accent: #ffb400;        /* yellow icon */
   --pill-bg: #ffffff;
-  --pill-br: #e6ecf8;
+  --pill-br: #939393;
   --section-bg: #f3f7fb;
 
   /* Layout */
@@ -110,12 +110,15 @@ body{
    Mission/Vision Cards
    ========================================================= */
 .mv-wrap{
-  width:min(760px,96%); margin:32px auto;
-  display:flex; flex-direction:column; gap:18px;
+  width:min(760px,100%);
+  margin:24px 0 24px -5px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 .stack-card{
   position:relative; overflow:visible; border-radius:16px;
-  padding:22px 24px; background:#fff; color:var(--ink);
+  padding:12px 12px; background:#fff; color:var(--ink);
   border:2px solid rgba(11,102,255,.35);
   box-shadow:0 14px 28px rgba(2,6,23,.10);
   isolation:isolate;
@@ -165,12 +168,12 @@ body{
 .founder-container > div{ flex:1 1 50%; max-width:50%; }
 .founder-image{ position:relative; flex:1; max-width:1000px; }
 .founder-image img{
-  width:550px; height:400px; object-fit:cover; border-radius:10px;
+  width:600px; height:400px; object-fit:cover; border-radius:10px;
 }
 .icon-badge{
-  position:absolute; bottom:-15px; right:25px; background:#007bff; color:#fff;
-  font-size:22px; font-weight:bold; width:60px; height:60px; display:flex; align-items:center; justify-content:center;
-  border-radius:50%; border:7px solid #f0f7ff;
+  position:absolute; bottom:-15px; right:-30px; background:#007bff; color:#fff;
+  font-size:40px; font-weight:bold; width:80px; height:80px; display:flex; align-items:center; justify-content:center;
+  border-radius:50%; border:10px solid #f0f7ff;
 }
 .founder-info{ 
   flex:2; 
@@ -238,9 +241,9 @@ body{
   position:relative; z-index:2;
   display:inline-flex; align-items:center; justify-content:center;
   min-width:110px; height:46px; padding:0 18px;
-  border-radius:12px; background:var(--pill-bg);
-  border:1px solid var(--pill-br);
-  color:#9aa6b2; font-weight:600; letter-spacing:.2px; /* reduced from 800 to 600 */
+  border-radius:5px; background:var(--pill-bg);
+  border: 1px solid var(--pill-br);
+  color:#4e4e4e; font-weight:600; letter-spacing:.2px; /* reduced from 800 to 600 */
   opacity:0; visibility:hidden; transform:translateY(10px) scale(.98);
   pointer-events:none; transition:.2s ease;
 }
@@ -341,7 +344,7 @@ body{
   .exp-wrap{ grid-template-columns: 1.05fr 1.4fr; align-items:start; }
 }
 .exp-title{
-  margin:0 0 16px 0; font-size: clamp(28px, 4.2vw, 40px);
+  margin:0 0 16px 0; font-size: clamp(28px, 4.2vw, 30px);
   line-height:1.2; letter-spacing:.2px; font-weight:600;
 }
 .exp-text{
@@ -422,7 +425,7 @@ body{
 
   .about-container{ gap:28px; }
   .about-images .img2{
-    position:static; width:82%; margin:18px auto 0; border-width:12px;
+    position:static; width:100%; margin:18px auto 0; border-width:12px;
   }
 
   .founder-container{ flex-direction:column; gap:24px; }
