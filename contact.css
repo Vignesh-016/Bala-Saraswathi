@@ -1,3 +1,9 @@
+/* Override: remove underline/pseudo-element line under section titles on contact page */
+.contact-left h2.section-title::after {
+  display: none !important;
+  content: none !important;
+}
+
 /* ============ Theme ============ */
 :root{
   --ink:#0f172a;
@@ -154,13 +160,13 @@
   grid-template-columns: 1.05fr 1fr;
   gap:28px;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
 }
 
 /* ============ Left meta ============ */
 .section-title{
   font-size: clamp(22px, 3.2vw, 32px);
-  font-weight:800; margin:6px 0 10px;
+  font-weight:400; margin:6px 0 10px;
 }
 .lead{
   color:var(--muted);
@@ -193,17 +199,106 @@
   box-shadow:0 18px 36px rgba(2,6,23,.12);
   overflow:hidden;
 }
-.card-head{
-  display:flex; justify-content:center; align-items:center;
-  padding:14px 18px; background:#eaf2ff;
+
+/* --- Enquiry Card Heading Styling --- */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700;800&display=swap');
+
+/* Improved visual spacing for Enquiry Form heading */
+.card-head {
+  padding-top: 16px;
+  padding-bottom: 14px;
+  margin-bottom: 0;
 }
-.card-head span{
-  background:#fff;
-  border-radius:10px;
-  padding:10px 18px;
-  font-weight:800;
-  color:#1b2b5a;
-  box-shadow:0 8px 18px rgba(2,6,23,.08);
+.card-head span {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0967e8;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 36px 12px 36px;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: none;
+  letter-spacing: 1px;
+  line-height: 1.21;
+  text-align: center;
+  user-select: text;
+  pointer-events: none;
+  border: 0;
+}
+@media (max-width: 991px) {
+  .card-head {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin:0px 120px 0px 120px;
+  }
+  .card-head span {
+    font-size: 1.27rem;
+    padding: 9px 18px 9px 18px;
+    border-radius: 9px;
+  }
+}
+@media (max-width: 600px) {
+  .card-head {
+    padding-top: 24px;
+    padding-bottom: 3px;
+    
+  }
+  .card-head span {
+    font-size: 1.05rem;
+    /* padding: 7px 7vw 7px 7vw; */
+    width: 100%;
+    border-radius: 7px;
+  }
+}
+
+/* ============ Map section (responsive professional square) ============ */
+.map-section {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 18px;
+}
+.map-section iframe {
+  display: block;
+  width: 100%;
+  max-width: 1340px;
+  aspect-ratio: 2.1 / 1;
+  height: auto;
+  min-height: 220px;
+  background: #f4f8fc;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(37,99,235,.12);
+  transition: max-width 0.3s, min-height 0.3s;
+}
+@media (max-width: 992px) {
+  .map-section {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .map-section iframe {
+    max-width: 750px;
+    min-width: 220px;
+    min-height: 220px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .map-section {
+    padding-bottom: 8px;
+  }
+  .map-section iframe {
+    max-width: 85vw;
+    min-width: 140px;
+    min-height: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
 }
 
 /* form layout */
@@ -251,7 +346,7 @@ input:focus, select:focus, textarea:focus{
 /* ============ Responsive tweaks ============ */
 @media (max-width: 980px){
   .contact-grid{ grid-template-columns: 1fr; }
-  .contact-card{ max-width: 640px; }
+  .contact-card{ max-width: 750px; }
 }
 @media (max-width: 600px){
   .form-grid{ grid-template-columns: 1fr; }
@@ -271,18 +366,84 @@ input:focus, select:focus, textarea:focus{
   display: block;
 }
 
+/* Enhancing spacing for the main Contact Us area */
+.contact-area {
+  margin: 0px 90px 0 90px;
+  padding: 38px 0 75px 0;
+  /* max-width: 1200px; */
+  box-sizing: border-box;
+}
+@media (max-width: 1290px) {
+  .contact-area {
+    margin: 35px 48px 0 48px;
+    padding: 28px 0 48px 0;
+    max-width: 96vw;
+  }
+}
+@media (max-width: 991px) {
+  .contact-area {
+    margin: 15px 13px 0 6px;
+    padding: 18px 0 30px 0;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .contact-area {
+    margin: 15px 8px 0 13px;
+    padding: 12px 0 18px 0;
+    max-width: 100vw;
+  }
+}
+
 /* ------------------------------------------------------- */
 /* -------------------- BRANCHES SECTION ----------------- */
 /* ------------------------------------------------------- */
 
 /* ============ Fix Bootstrap Conflicts ============ */
 .branches-sec * { box-sizing: border-box !important; }
+/* Main Branches Section Responsive Margin/Padding Improvements/* 
+.branches-sec {
+  po */ion: relative;
+  padding: 42px 0 64px;
+  background: var(--bg);
+  overflow: visible; /* section can overflow, card itself is hidden */
+  margin: 0 90px 0 90px;
+}
+@media (max-width: 1290px) {
+  .branches-sec {
+    margin: 0 45px 0 45px;
+  }
+}
+@media (max-width: 991px) {
+  .branches-sec {
+    margin: 0 24px 0 24px;
+    padding: 38px 0 48px 0;
+  }
+}
+@media (max-width: 600px) {
+  .branches-sec {
+    margin: 0 24px 0 24px;
+    padding: 24px 0 30px 0;
+  }
+}
+
 .branches-sec .container {
   max-width: 1350px !important;
-  width: 100% !important;
   margin: 0 auto !important;
-  padding: 0 20px !important;
+  padding: 0 12px !important;
+  box-sizing: border-box;
 }
+@media (max-width: 991px) {
+  .branches-sec .container {
+    padding: 0 5vw !important;
+  }
+}
+@media (max-width: 600px) {
+  .branches-sec .container {
+    padding: 0 2vw !important;
+  }
+}
+
 .branches-sec h2 {
   margin: 0 0 8px 0 !important;
   font-size: clamp(22px, 3.5vw, 32px) !important;
@@ -408,24 +569,42 @@ input:focus, select:focus, textarea:focus{
 .branches-sec .dropdown .row {
   display: flex !important;
   align-items: flex-start !important;
-  gap: 10px !important;
+  gap: 8px !important; /* Reduced gap */
   padding: 6px 0 !important;
   border-bottom: none !important;        /* CHANGED: no separators inside overlay */
   margin: 0 !important;
   color: #fff !important;
 }
+
+/* New: Smaller text in dropdown */
+.branches-sec .dropdown .row span,
+.branches-sec .dropdown .row a {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
 .branches-sec .dropdown .row:last-child { border-bottom: none !important; }
 .branches-sec .dropdown .ico {
-  flex: 0 0 50px !important;
-  width: 40px !important;
-  height: 40px !important;
-  display: grid !important;
-  place-items: center !important;
+  flex: 0 0 32px !important;   /* Smaller icon container */
+  width: 32px !important;      /* Smaller icon container */
+  height: 32px !important;     /* Smaller icon container */
+  display: flex !important;            /* Switched to Flexbox */
+  align-items: center !important;      /* Vertical Centering */
+  justify-content: center !important;  /* Horizontal Centering */
   color: #fff !important;                /* CHANGED: white icons */
   background: rgba(255,255,255,.15) !important; /* CHANGED: subtle pill bg */
   border-radius: 8px !important;
   box-shadow: none !important;           /* CHANGED: no external shadow */
 }
+
+/* New: Smaller icon image */
+.branches-sec .dropdown .ico img {
+  width: 18px !important;
+  height: 18px !important;
+  filter: brightness(0) invert(1) !important; /* Forces the icon to be white */
+}
+
 .branches-sec .dropdown svg { width: 16px !important; height: 16px !important; }
 .branches-sec .dropdown a {
   color: #fff !important;                /* CHANGED: white links */
