@@ -1,9 +1,10 @@
 .services-banner {
     position: relative;
-    max-width: 1350px;       /* Boxed width */
+    max-width: 1300px;       /* Boxed width */
     margin: 60px auto;       /* Center */
     border-radius: 12px;     /* Rounded edges */
     overflow: hidden;
+    background-color: white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
@@ -43,6 +44,52 @@
     font-size: 1rem;
 }
 
+/* ===== Responsive: Services Banner ===== */
+@media (max-width: 1290px) {
+  .services-banner { margin: 40px 60px 0px 60px; }
+  .services-banner .banner-img { height: 280px; }
+  .services-content {
+    left: 5%;
+    transform: translateX(-50%);
+    bottom: 22px;
+    text-align: left;
+
+  
+
+  }
+  .services-content h2 { font-size: 1.6rem; }
+  .services-content p { font-size: 0.9rem; }
+}
+@media (max-width: 991px) {
+  .services-banner { margin: 110px 60px 0px 60px; }
+  .services-banner .banner-img { height: 280px; }
+  .services-content {
+    left: 5%;
+    transform: translateX(-50%);
+    bottom: 22px;
+    text-align: left;
+
+  
+
+  }
+  .services-content h2 { font-size: 1.6rem; }
+  .services-content p { font-size: 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  .services-banner { margin: 140px 20px 0px 20px;; border-radius: 10px; }
+  .services-banner .banner-img { height: 210px; }
+  .services-content {
+    left: 4%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .services-content h2 { font-size: 1.3rem; font-weight: 600; }
+  .services-content p { font-size: 0.7rem; }
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -52,7 +99,7 @@ body {
   
   .plans-section {
     padding: 20px;
-    max-width: 1600px;
+    max-width: 1340px;
     margin: 0 auto;
     /* Single background image for the whole two-column area */
     background-image: url('./assets/images/testi.png');
@@ -61,7 +108,53 @@ body {
     background-repeat: no-repeat;
     border-radius: 12px;
   }
+  .plans-sections {
+    padding: 15px;
+    max-width: 1500px;
+    margin: 0 auto;
+    /* Single background image for the whole two-column area */
+    /* background-image: url('./assets/images/testi.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+  }
+
+  /* Duplicate of container for services-only usage */
+  .container-new {
+    width: 100%;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: auto;
+    max-width: 1500px;
+    margin-left: auto;
+  }
+  /* @media (min-width: 576px) {
+    .container-new { max-width: 540px; }
+  }
+  @media (min-width: 768px) {
+    .container-new { max-width: 720px; }
+  }
+  @media (min-width: 992px) {
+    .container-new { max-width: 960px; }
+  } */
+  @media (min-width: 1200px) {
+    .container-new { max-width: 1140px; }
+  }
+  @media (min-width: 1400px) {
+    .container-new { max-width: 1300px; }
+  }
   
+  /* Width/padding adjustments only for the requested ranges */
+  @media (min-width: 300px) and (max-width: 600px) {
+    .container-new { padding-left: 12px; padding-right: 12px; }
+    .plans-content { padding-left: 8px; padding-right: 8px; }
+  }
+
+  @media (min-width: 991px) and (max-width: 1240px) {
+    .container-new { max-width: 1180px; padding-left: 16px; padding-right: 16px; }
+    .plans-container { gap: 16px; }
+  }
   .plans-container {
     display: flex;              /* keep two columns */
     align-items: stretch;       /* equal height columns */
@@ -140,7 +233,7 @@ body {
     /* no individual background/color here */
     text-align: center;
     min-height: 560px;   
-    padding: 0px 22px 0px 22px;       /* equal height with left */
+    padding: 0px 0px 0px 22px;       /* equal height with left */
     display: flex;
     flex-direction: column;
     align-self: stretch;        /* force equal height */
@@ -157,6 +250,92 @@ body {
     object-fit: cover;
     border-radius: 8px;
   }
+
+/* ===== Responsive: Plans Section (match banner style of hardcoded margins) ===== */
+@media (max-width: 1290px) {
+  .plans-section { margin: 15px 45px 0 45px; }
+  .plans-container { gap: 16px; }
+  .banner img { height: 260px; }
+}
+
+/* ===== Responsive: OUR PLANS section (scoped to .plans-sections) ===== */
+@media (max-width: 1290px) {
+  .plans-sections { margin: 15px 0px 0 0px; }
+}
+
+@media (max-width: 991px) {
+  .plans-sections { margin: 15px 45px 0 45px; }
+  .plans-sections .plans-scroll { gap: 16px; }
+}
+
+@media (max-width: 600px) {
+  .plans-sections { margin: 9px 5px 0 5px; border-radius: 10px; }
+  .plans-sections .plans-scroll { gap: 12px; }
+}
+
+@media (max-width: 991px) {
+  .plans-section { margin: 15px 45px 0 45px; }
+  .plans-container { flex-direction: column; }
+  .plans-sidebar,
+  .plans-content { min-height: auto; height: auto; }
+  .plans-content { padding: 0 0px; }
+  .banner img { height: 240px;  }
+  #planTitle { font-size: 28px; text-align: left; }
+  #planDesc { font-size: 15px; }
+  .months-box { padding: 18px; }
+  .cta-box { gap: 12px; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .plans-section { margin: 9px 5px 0 5px; border-radius: 10px; }
+  .plans-container { gap: 12px; }
+  .banner img { height: 200px; }
+  #planTitle { font-size: 22px; text-align: left; }
+  #planDesc { font-size: 14px; }
+  .plan-btn { padding: 10px 14px; }
+  .cta-box { gap: 10px; }
+}
+
+/* Fine-tuned mobile/tablet layout for 300px–640px width */
+@media (max-width: 640px) {
+  /* Keep section margins as pinned; only adjust inner layout */
+  .plans-content { padding: 0 4px; }
+  .months-box { padding: 16px 14px; border-radius: 8px; }
+
+  /* Stack month toggles vertically and center */
+  .month-btn { 
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 16px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .months-box .month-btn + .month-btn { margin-left: 0; }
+
+  /* Description readability */
+  #monthDesc, .month-desc { 
+    font-size: 14px; 
+    line-height: 1.6; 
+    margin-top: 6px;
+    text-align: left;
+  }
+
+  /* CTAs: full-width buttons stacked */
+  .cta-box { 
+    flex-direction: column; 
+    align-items: stretch; 
+    justify-content: center; 
+    gap: 12px;
+  }
+  .cta-btn { 
+    width: 90%; 
+    justify-content: space-between; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    border-radius: 8px; 
+  }
+  .cta-btn::after { width: 22px; height: 22px; }
+}
 
   #planTitle {
     margin-top: 0;
@@ -339,15 +518,28 @@ body {
   /* padding: 60px 0; */
 }
 
+/* ===== Responsive: Working Model (follow margin-based pattern) ===== */
+@media (max-width: 1290px) {
+  .working-model { margin: 40px 60px 0 60px; border-radius: 12px; }
+}
+
+@media (max-width: 991px) {
+  .working-model { margin: 0px 60px 0 60px; }
+}
+
+@media (max-width: 600px) {
+  .working-model { margin: 10px 20px 0 20px; border-radius: 10px; }
+}
+
 /* Desktop: two-column layout */
 .working-model-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
-  max-width: 1340px;
+  max-width: 1270px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0px;
   box-sizing: border-box;
 }
 
@@ -387,8 +579,38 @@ body {
   font-size: 26px;
   font-weight: bold;
   color: #0072ff;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   text-align: center;
+}
+
+/* New: exact copy of section-title styling for reuse without altering existing design */
+.section-title-v2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0072ff;
+  text-align: center;
+}
+
+/* Same design as section-title but guaranteed with no underline/decoration */
+.section-title-clean {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0072ff;
+  text-align: center;
+  text-decoration: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove any decorative underline lines added via pseudo-elements or borders */
+.working-model .section-title,
+.working-model .section-title::before,
+.working-model .section-title::after {
+  text-decoration: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+  content: none !important;
 }
 
 .section-desc {
