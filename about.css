@@ -20,7 +20,6 @@
   /* Layout */
   --container-max: 1300px;     /* content max width */
   --container-x: 24px;         /* container side padding */
-  --section-y: 72px;           /* section vertical spacing */
 
   /* Banners / Panels */
   --banner-h: 500px;                /* About hero banner height (desktop) */
@@ -398,9 +397,28 @@ body{
 .timeline,
 .exp-wrap{
   width:min(var(--container-max), 100%);
-  margin:0 auto;
+  margin:32px auto; /* default margin, can be adjusted in media queries */
   padding-left:var(--container-x);
   padding-right:var(--container-x);
+}
+
+@media (max-width: 991px) {
+  .about-text,
+  .about-container,
+  .founder-container,
+  .timeline,
+  .exp-wrap{
+    margin:22px auto;
+  }
+}
+@media (max-width: 575px) {
+  .about-text,
+  .about-container,
+  .founder-container,
+  .timeline,
+  .exp-wrap{
+    margin:14px auto;
+  }
 }
 
 /* remove extra side padding where we already boxed things */
@@ -415,7 +433,6 @@ body{
 @media (max-width: 991px){
   :root{
     --container-x: 18px;
-    --section-y: 56px;
     --banner-h: 360px;               /* shorter hero */
     --timeline-banner-height: 260px; /* shorter panels */
   }
@@ -447,7 +464,6 @@ body{
 @media (max-width: 575px){
   :root{
     --container-x: 14px;
-    --section-y: 48px;
     --banner-h: 300px;               /* mobile hero height */
     --timeline-banner-height: 220px; /* mobile panels */
   }
