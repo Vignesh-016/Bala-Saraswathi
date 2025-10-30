@@ -514,21 +514,36 @@ body {
 /* Add background color to the whole section */
 .working-model {
   background: #f6faff; /* Soft blue-tinted background, edit as desired */
-  width: 100%;
+  /* width: 100%; */
   /* padding: 60px 0; */
 }
 
 /* ===== Responsive: Working Model (follow margin-based pattern) ===== */
 @media (max-width: 1290px) {
-  .working-model { margin: 40px 60px 0 60px; border-radius: 12px; }
+  .working-model { margin:20px 90px 0 60px; border-radius: 12px;width: 90%; }
+}
+
+/* Ensure image comes first and steps next below 1200px */
+@media (max-width: 1200px) {
+  .working-model-left {
+    order: 1;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  .working-model-right {
+    order: 2;
+    width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 @media (max-width: 991px) {
-  .working-model { margin: 0px 60px 0 60px; }
+  .working-model { margin: -10px 10px 0 35px; }
 }
 
 @media (max-width: 600px) {
   .working-model { margin: 10px 20px 0 20px; border-radius: 10px; }
+  
 }
 
 /* Desktop: two-column layout */
@@ -541,6 +556,13 @@ body {
   margin: 0 auto;
   padding: 0 0px;
   box-sizing: border-box;
+}
+
+.working-model-mains {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .working-model-left {
