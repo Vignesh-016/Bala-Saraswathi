@@ -541,20 +541,15 @@ footer {
 /* ✅ Mobile View */
 @media (max-width: 576px) {
   .about-banner {
-    height: 70vh; /* slightly taller so full image shows */
-    min-height: 380px;
+    width: 94%;
+    margin: 0 auto 20px auto;
+    height: 280px;
+    border-radius: 10px;
+    padding-left: 10px; /* Optional, tweak as needed */
+    padding-right: 10px;
   }
-
   .about-text {
-    padding: 0 6vw 4vh;
-  }
-
-  .about-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .about-text p {
-    font-size: 0.95rem;
+    padding: 0 5vw 2vh;
   }
 }
 /* ✅ About Banner - Fully Responsive */
@@ -605,6 +600,7 @@ footer {
   .about-banner {
 
     margin-top: 126px;
+    /* margin: 126px 0px 30px 10px; */
   }
   .about-text {
     padding: 0 6vw 5vh;
@@ -617,6 +613,7 @@ footer {
     width: 95%;
     height: 280px;
     border-radius: 10px;
+
   }
 
   .about-text {
