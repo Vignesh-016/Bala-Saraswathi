@@ -631,3 +631,218 @@ footer {
     font-size: 0.95rem;
   }
 }
+/* ============================
+   FOOTER SECTION STYLING
+   ============================ */
+   .footer-section {
+    background: #eff8ff;
+    padding: 60px 0 30px;
+    font-family: 'Jost', sans-serif;
+    color: #333;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  
+  .footer-col h4 {
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-col ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+  }
+  
+  .footer-col ul li a:hover {
+    color: #0066cc;
+  }
+  
+  /* --- Logo Column --- */
+  .footer-logo {
+    max-width: 80px;
+    margin-bottom: 10px;
+  }
+  .logo-col p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin-right: 1rem;
+  }
+  
+  /* --- Search Form --- */
+  .footer-search {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .footer-search input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  .footer-search button {
+    background: #0066cc;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  .footer-search button i {
+    font-size: 0.9rem;
+  }
+  
+  /* --- Follow Us Column --- */
+  .follow-col p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+  }
+  .follow-col i {
+    color: #0066cc;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    color: #0066cc;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  }
+  .social-links a:hover {
+    background: #0066cc;
+    color: #fff;
+  }
+  
+  /* --- Footer Bottom --- */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #d8e7f7;
+    padding-top: 16px;
+  }
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* ============================
+     RESPONSIVE DESIGN
+     ============================ */
+  
+  /* Tablet */
+  @media (max-width: 992px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      text-align: left;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      text-align: center;
+    }
+    .footer-col h4 {
+      margin-bottom: 10px;
+    }
+    .footer-search {
+      justify-content: center;
+    }
+    .footer-search input {
+      width: 60%;
+    }
+    .follow-col p {
+      justify-content: center;
+    }
+    .social-links {
+      justify-content: center;
+    }
+    .logo-col p {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+  }
+  /* Mobile */
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: left; /* ✅ changed from center */
+  }
+
+  .footer-col h4 {
+    margin-bottom: 10px;
+    text-align: left; /* ✅ left-align headings */
+  }
+
+  .footer-search {
+    justify-content: flex-start; /* ✅ align search to left */
+  }
+
+  .footer-search input {
+    width: 70%;
+  }
+
+  .follow-col p {
+    justify-content: flex-start; /* ✅ left-align contact items */
+  }
+
+  .social-links {
+    justify-content: flex-start; /* ✅ icons start from left */
+  }
+
+  .logo-col p {
+    margin: 0;
+    max-width: 340px;
+    text-align: left; /* ✅ ensure paragraph left-aligned */
+  }
+
+  .footer-bottom {
+    text-align: left; /* ✅ copyright text left-aligned */
+    padding-left: 10px;
+  }
+}

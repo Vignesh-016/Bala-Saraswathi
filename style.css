@@ -1138,20 +1138,23 @@ footer {
             /* plan title underline  */
 
              /* Ensures underline matches text width only */
-          .plan-title-underline {
+          .plan-title-underline,
+          .plansv2-title-underline {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             position: relative;
             width: fit-content;
           }
-          .plan-title-text {
+          .plan-title-text,
+          .plansv2-title-text {
             position: relative;
             z-index: 1;
             font-family: inherit;
             font-size: inherit;
           }
-          .plan-title-underline-bar {
+          .plan-title-underline-bar,
+          .plansv2-title-underline-bar {
             display: block;
             height: 3px;
             background: #fff;
@@ -1162,13 +1165,16 @@ footer {
             transition: opacity 0.22s, width 0.28s cubic-bezier(.5,1.7,.55,.95);
           }
           .plan-card:hover .plan-title-underline .plan-title-underline-bar,
-          .plan-card:focus-within .plan-title-underline .plan-title-underline-bar {
+          .plan-card:focus-within .plan-title-underline .plan-title-underline-bar,
+          .plansv2-card:hover .plansv2-title-underline .plansv2-title-underline-bar,
+          .plansv2-card:focus-within .plansv2-title-underline .plansv2-title-underline-bar {
             width: 100%;
             opacity: 1;
           }
           
 /* Container scroll */
-.plan-hover-icon-bg {
+.plan-hover-icon-bg,
+.plansv2-hover-icon-bg {
 display: inline-flex;
 align-items: center;
 justify-content: center;
@@ -1181,7 +1187,7 @@ color: #fff;
 font-size: 1.1em;
 }
 @media (max-width: 500px) {
-.plan-hover-icon-bg { width: 26px; height: 26px; font-size: 1em; }
+.plan-hover-icon-bg, .plansv2-hover-icon-bg { width: 26px; height: 26px; font-size: 1em; }
 }
     .plans-scroll {
     display: flex;
@@ -1192,7 +1198,8 @@ font-size: 1.1em;
   }
   
   /* Plan card */
-  .plan-card {
+  .plan-card,
+  .plansv2-card {
     position: relative;
     flex: 0 0 auto;
     width: 309px;
@@ -1205,7 +1212,8 @@ font-size: 1.1em;
   }
   
   /* Top-right icon */
-  .plan-icon {
+  .plan-icon,
+  .plansv2-icon {
     position: absolute;
     top: 12px;
     right: 12px;
@@ -1221,13 +1229,15 @@ font-size: 1.1em;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     z-index: 2;
   }
-  .plan-icon:hover {
+  .plan-icon:hover,
+  .plansv2-icon:hover {
     background: #0d6efd;
     color: #fff;
   }
   
   /* Overlay */
-  .plan-overlay {
+  .plan-overlay,
+  .plansv2-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.5);   
@@ -1238,40 +1248,46 @@ font-size: 1.1em;
     color: #fff;
     transition: background 0.3s ease;
   }
-  .plan-card:hover .plan-overlay {
+  .plan-card:hover .plan-overlay,
+  .plansv2-card:hover .plansv2-overlay {
     background: rgba(0,0,0,0.55);
     backdrop-filter: blur(6px);
   }
   
   /* Title always visible */
-  .plan-title {
+  .plan-title,
+  .plansv2-title {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
   }
   
   /* Hover content (hidden initially) */
-  .plan-hover {
+  .plan-hover,
+  .plansv2-hover {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s ease;
   }
-  .plan-card:hover .plan-hover {
+  .plan-card:hover .plan-hover,
+  .plansv2-card:hover .plansv2-hover {
     opacity: 1;
     max-height: 300px;
     margin-top: 12px;
   }
   
   /* Price */
-  .plan-price {
+  .plan-price,
+  .plansv2-price {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
   }
   
   /* Inquiry button */
-  .inquiry-btn {
+  .inquiry-btn,
+  .plansv2-inquiry-btn {
     display: inline-block;
     margin-top: 12px;
     background: #0d6efd;
@@ -1283,7 +1299,8 @@ font-size: 1.1em;
     font-weight: 600;
     transition: background 0.3s ease;
   }
-  .inquiry-btn:hover {
+  .inquiry-btn:hover,
+  .plansv2-inquiry-btn:hover {
     background: #004bb5;
   }
   
@@ -1296,7 +1313,8 @@ font-size: 1.1em;
   }
   
 
-            .plan-desc {
+            .plan-desc,
+            .plansv2-desc {
                 font-size: 14px;
                 opacity: 0.8;
                 margin-bottom: 15px;
