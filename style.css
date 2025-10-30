@@ -19,16 +19,16 @@
                 margin-left: 1rem;
                 transition: color 0.3s;
             }
-
             .main-header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1050; /* stays above everything */
-                background: #fff; /* ensure solid background */
-                box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional nice shadow */
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              z-index: 1050;
+              background: #fff;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             }
+            
                 /* ✅ Default navbar link style */
                 .navbar-light .navbar-nav .nav-link {
                   color: #363636;
@@ -47,7 +47,7 @@
 
                 /* ✅ Optional hover effect (same color as active) */
                 .navbar-light .navbar-nav .nav-link:hover {
-                  color: #000 !important;
+                  color: #006bb5 !important;
                 }
                     
 
@@ -104,12 +104,10 @@
                     border-bottom: none;
                 }
                 .navbar-nav .nav-link:hover {
-                    background: linear-gradient(135deg, #0d6efd, #0056b3);
                     color: white !important;
                     transform: translateX(3px);
                 }
                 .navbar-nav .nav-link.active {
-                    background: linear-gradient(135deg, #0d6efd, #0056b3);
                     color: white !important;
                 }
                 .navbar-nav .nav-link::before {
@@ -119,7 +117,6 @@
                     top: 0;
                     height: 100%;
                     width: 3px;
-                    background: #0d6efd;
                     transform: scaleY(0);
                     transition: transform 0.3s ease;
                 }
@@ -210,7 +207,7 @@
             
 
             .navbar-light .navbar-nav .nav-link:hover {
-                color: #0d6efd;
+                color: #ffffff;
             }
 
      
@@ -2529,4 +2526,9 @@ font-size: 1.1em;
     width: 100%;
   }
 
+  }
+  .top-bar {
+    position: relative;
+    background-color: #f8f9fa;
+    z-index: 1040; /* below the navbar */
   }
