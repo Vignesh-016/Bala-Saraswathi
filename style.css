@@ -668,6 +668,8 @@ footer {
                HERO SECTION (current markup)
                Desktop unchanged. Responsive only.
             =============================== */
+
+           
             /* Tablet: scale down neatly, preserve balance and arc */
             @media (max-width: 992px) {
               .hero-section { overflow: hidden; }
@@ -1003,6 +1005,121 @@ footer {
             @media (max-width: 991px) {
                 .trust-container {
                     grid-template-columns: 1fr;
+                }
+            }
+
+
+            @media (max-width: 1200px) {
+                .trust-section {
+                    padding: 40px 6%;
+                    margin: 0px -35px 0px -35px;
+                }
+            }
+
+            /* Tablet: adjust typography and media sizing */
+            @media (max-width: 991px) {
+                .trust-section {
+                    padding: 40px 6%;
+                    margin: 0px -20px 0px -15px;
+                }
+
+                .trust-section h2 {
+                    font-size: 24px;
+                }
+
+                .trust-box img {
+                    height: 220px;
+                }
+                .box-large img{
+                  height: 400px;
+                }
+                .box-large img {
+                  object-position: 30% 10%;
+                  background-position: 30% 10%;
+                }
+
+                .trust-content {
+                    bottom: 16px;
+                    padding: 16px;
+                }
+
+                .trust-title {
+                    font-size: 18px;
+                }
+
+                /* Arrow icon circle and inner arrow */
+                .trust-title span {
+                    width: 22px !important;
+                    height: 22px !important;
+                }
+
+                .trust-title span img {
+                    width: 10px !important;
+                    height: 10px !important;
+                }
+
+                .trust-details p {
+                    font-size: 14px;
+                    margin: 6px 0;
+                }
+
+                .trust-details i {
+                    font-size: 14px;
+                }
+            }
+          
+  
+
+            /* Mobile: further reduce sizes for compact tiles */
+            @media (max-width: 576px) {
+                .trust-section {
+                    padding: 32px 5%;
+                    margin: 0px 0px 0px 5px;
+                }
+
+                .trust-section h2 {
+                    font-size: 20px;
+                }
+
+                .trust-box {
+                    border-radius: 10px;
+                }
+
+                .trust-box img {
+                    height: 190px;
+                }
+
+                .trust-content {
+                    bottom: 12px;
+                    padding: 12px 12px 10px 12px;
+                }
+
+                .trust-title {
+                    font-size: 16px;
+                }
+
+                .trust-title i {
+                    font-size: 12px;
+                }
+
+                /* Arrow icon circle and inner arrow on small screens */
+                .trust-title span {
+                    width: 20px !important;
+                    height: 20px !important;
+                }
+
+                .trust-title span img {
+                    width: 9px !important;
+                    height: 9px !important;
+                }
+
+                .trust-details p {
+                    font-size: 13px;
+                    line-height: 1.5;
+                }
+
+                .trust-details i {
+                    font-size: 13px;
                 }
             }
 
@@ -2830,7 +2947,7 @@ font-size: 1.1em;
 .offer-subtitle {
   color: #444;
   font-size: 1rem;
-  margin: 16px auto 40px;
+  /* margin: 16px auto 40px; */
   max-width: 700px;
 }
 
@@ -2915,6 +3032,7 @@ font-size: 1.1em;
   .offer-header {
     justify-content: center;
     text-align: center;
+    margin: -80px 0px 0px 0px;
   }
   .offer-header h2 {
     font-size: 1.8rem;
@@ -2924,7 +3042,12 @@ font-size: 1.1em;
 @media (max-width: 576px) {
   .offer-section {
     padding: 60px 20px;
+    margin: 20px 0px 0px 20px;
   }
+  .offer-subtitle{
+    margin-top: 20px;
+  }
+  
   .offer-card {
     padding: 24px 18px;
   }
@@ -2935,5 +3058,336 @@ font-size: 1.1em;
     font-size: 0.9rem;
   }
 }
+
+
+
+@media (max-width: 700px) {
+  .hero-section .row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 38px !important;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  /* Remove width and box-sizing override for .col-lg-6/.col-lg-5, let them size by content */
+  .hero-section .col-lg-6 {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .hero-section .col-lg-5 {
+    order: 2;
+    text-align: center;
+    margin-top: 16px !important;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Blue arc and images scale as a group (keep positions but shrink) */
+  .hero-section .position-relative  > div:first-child {
+    min-width: 0 !important;
+    /* min-height: 20px !important; */
+    /* width: 95vw; */
+    max-width: 440px;
+    margin: 0px auto;
+    position: relative;
+  }
+  .hero-section .position-relative > div[style*='background: radial-gradient'] {
+    width: 310px ;
+    height: 180px ;
+    top: 13px ;
+    right: auto ;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-top-left-radius: 950px 920px ;
+    border-top-right-radius: 950px 920px ;
+    background: radial-gradient(circle at center, #1976d2 100%, #ededed 100%) !important;
+    z-index: 1;
+  }
+  /* Images as in desktop, just scaled proportionally, removed forced background and box shadow */
+  .hero-section .hero-img {
+    position: absolute !important;
+    z-index: 2;
+  }
+  .hero-section .hero-left {
+    left: 6px !important;
+    top: -25px !important;
+  }
+  .hero-section .hero-center {
+    left: 54px !important;
+    top: -25px !important;
+    z-index: 2;
+  }
+  /* .hero-section .hero-right {
+    right: 6px !important;
+    top: -25px !important;
+  } */
+  .hero-section .hero-img img {
+    height: 185px ;
+    max-width: 100%;
+    border-radius: 12px !important;
+    /* REMOVE background and box-shadow for natural effect */
+    background: none !important;
+    box-shadow: none !important;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-section .col-lg-5 h1 {
+    font-size: 1.13rem !important;
+    margin-bottom: 9px !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+  }
+  .hero-section .col-lg-5 p {
+    font-size: 0.91rem !important;
+    margin: 8px 0 14px !important;
+    line-height: 1.6 !important;
+  }
+  .hero-section .col-lg-5 .btn {
+    font-size: 0.98rem !important;
+    padding: 8px 14px !important;
+    border-radius: 6px !important;
+    margin-top: 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Remove old redundant hero-section mobile rules for this breakpoint */
+  .hero-section .position-relative  > div:first-child {
+    min-width: 0 !important;
+    /* min-height: 85px !important; */
+    width: 99vw;
+    /* max-width: 175px; */
+  
+    margin: 0px auto auto auto;
+    position: relative;
+  }
+  .hero-section .position-relative > div[style*='background: radial-gradient']   {
+    width: 45px !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    border-top-left-radius: 300px 304px !important;
+    border-top-right-radius: 300px 304px !important;
+    background: radial-gradient(circle at center, #1976d2 100%, #ededed 100%) !important;
+    z-index: 1;
+  }
+  .hero-section .hero-img {
+    position: absolute !important;
+  }
+  .hero-section .hero-left {
+    left: -42px !important;
+    top: 93px !important;
+    z-index: 2 !important;
+  }
+  .hero-section .hero-center {
+    left: 5px !important;
+    top: 93px !important;
+    z-index: 3 !important;
+  }
+  .hero-section .hero-right {
+    right: -42px !important;
+    top: 93px !important;
+    z-index: 2 !important;
+  }
+  .hero-section .hero-img img {
+    height: 242px !important;
+    max-width: 100%;
+    border-radius: 8px !important;
+    background: none !important;
+    box-shadow: none !important;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-section .col-lg-5 h1 {
+    font-size: 1.13rem !important;
+    margin-bottom: 9px !important;
+    font-weight: 600 !important;
+    margin-top: 50px !important;
+
+  }
+  .hero-section .col-lg-5 p {
+    font-size: 0.91rem !important;
+    margin: 8px 0 14px !important;
+    line-height: 1.6 !important;
+    text-align: center;
+  }
+  .hero-section .col-lg-5 .btn {
+    font-size: 0.98rem !important;
+    padding: 8px 14px !important;
+    border-radius: 6px !important;
+    margin-top: 5px !important;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 700px) {
+  /* HEROSECTION position-relative adjustments */
+  .hero-section .position-relative  > div:first-child  {
+    /* Add your custom styles here! */
+    /* Example: */
+    min-width: 0 !important;
+    /* min-height: 10px !important; */
+    height:10px;
+    width: 90vw;
+    max-width: 430px;
+    margin: -45px auto;
+    position: relative;
+    /* ...more as you need... */
+  }
+
+  /* HEROSECTION blue arc or background gradient (if needed) */
+ 
+
+  /* All hero images */
+  .hero-section .hero-img {
+    position: absolute !important;
+    /* Place your custom positions if needed */
+  }
+  .hero-section .hero-left {
+    /* Example: */
+    left: 0 !important;
+    top: 50px !important;
+    z-index: 2 !important;
+  }
+  .hero-section .hero-center {
+    left: 48px !important;
+    top: 50px !important;
+    z-index: 3 !important;
+  }
+  .hero-section .hero-right {
+    right: 0 !important;
+    top: 50px !important;
+    z-index: 2 !important;
+  }
+  .hero-section .hero-img img {
+    height: 242px !important;
+    max-width: 100%;
+    border-radius: 10px !important;
+    background: none !important;
+    box-shadow: none !important;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+
+
+/* second section  */
+/* ===== Responsive: Trusted Families Section ===== */
+@media (max-width: 1200px) {
+  .trustedFamiliesSection .overlay-box {
+    padding: 2.5rem 2rem;
+  }
+  .trustedFamiliesSection h2 {
+    font-size: 2.1rem;
+  }
+  .trustedFamiliesSection{
+    margin: 0px 25px 20px 25px;
+  }
+  .trustedFamiliesSection p {
+    font-size: 1.11rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .trustedFamiliesSection .overlay-box {
+    padding: 2rem 0.8rem;
+  }
+  .trustedFamiliesSection h2 {
+    font-size: 1.7rem;
+  }
+  .trustedFamiliesSection{
+    margin: 0px 30px 20px 30px;
+  }
+  .trustedFamiliesSection p {
+    font-size: 1.01rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .trustedFamiliesSection .overlay-box {
+    padding: 1.4rem 0.7rem;
+    border-radius: 12px;
+  }
+  .trustedFamiliesSection h2 {
+    font-size: 1.17rem;
+    line-height: 1.25;
+  }
+  .trustedFamiliesSection{
+    margin: 0px 30px 20px 30px;
+  }
+  .trustedFamiliesSection p {
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trustedFamiliesSection .overlay-box {
+    padding: 0.92rem 0.36rem;
+    border-radius: 10px;
+  }
+  .trustedFamiliesSection{
+    margin: 0px 20px 20px 20px;
+  }
+  .trustedFamiliesSection h2 {
+    font-size: 0.98rem;
+    letter-spacing: 0.3px;
+  }
+  .trustedFamiliesSection p {
+    font-size: 0.71rem;
+  }
+}
+
+/* Ensure left side (family) of the hero image stays visible on smaller screens */
+@media (max-width:1200px){
+  .hero-section1 .hero-image1 img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-position: center;
+    
+  }
+  .hero-section1{
+    margin: 20px 25px 0px 25px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .hero-section1{
+    margin: 40px 30px 0px 30px;
+  }
+}
+@media (max-width: 480px) {
+  
+  .hero-section1{
+    margin: 35px 20px 0px 20px;
+  }
+}
+
+/* For tablet: show left-center of the hero background image */
+@media (max-width: 991px) {
+  .hero-section1 {
+    background-position: left center ;
+    background-size: cover !important;
+  }
+   .hero-section1{
+    margin: 0px 30px 0px 30px;
+  }
+}
+/* For mobile: show left-top of the hero background image for best family visibility */
+@media (max-width: 700px) {
+  .hero-section1 {
+    background-position: 20% 20% ;
+    background-size: cover !important;
+    background: linear-gradient(360deg, black, transparent), url("/assets/images/Home/family.webp");
+  }
+}
+
 
 
